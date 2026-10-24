@@ -36,7 +36,6 @@
   var vscroll = $(".vscroll"), vring = $(".vring");
   var rows = $$(".row");
 
-  // Chapters: the fixed mark moves, scales, spreads and recolours between these states.
   var S = [
     { id: "top",      n: "Welcome",       x: 22, y: -2, s: 1,    o: 1,   sp: 0,  c: "#C9A27E" },
     { id: "services", n: "What we do",    x: 34, y: 26, s: 0.42, o: 1,   sp: 0.6, c: "#7FB0D0" },
@@ -54,7 +53,6 @@
   var brandLogo = $(".brand-logo");
   var header_x = -44, header_y = -46, header_s = 0.11;
 
-  // Size the vision-ring text so it spans the circle exactly, whatever font is loaded
   var ringText = $(".vring text");
   function fitRing() {
     if (!ringText || !ringText.getComputedTextLength) return;
@@ -152,7 +150,6 @@
         var a = S[i], b = S[j];
         var t = a === b ? 0 : sm(clamp((m - (tops[j] - H * 0.9)) / (H * 0.9)));
 
-        // While the services track is pinned, its progress drives the mark's colour and spread
         var ca = a.c, sa = a.sp;
         if (i === 1 && pinOn) {
           var ci = Math.min(Math.floor(f), PC.length - 2);
@@ -179,8 +176,6 @@
       tiltZ = relY * 0.05;
       ringRot = -y * 0.12;
 
-      // Ease to the nearest upright pose (a multiple of 360deg) on the way into Contact,
-      // instead of unwinding every accumulated turn at once
       if (tops[6]) {
         var y0 = tops[6] - H * 0.8, cp = sm(clamp((y - y0) / (H * 0.7)));
         var up = function (v) { return Math.round(v / 360) * 360; };
@@ -213,19 +208,16 @@
     if (Math.abs(dy) > 1) handleNav(dy);
     if (rm) return;
 
-    // Hero lines slide apart
     if (y < H * 1.4) heroLines.forEach(function (el) {
       el.style.transform = "translate3d(" + (el.getAttribute("data-d") * y * 0.3).toFixed(1) + "px,0,0)";
     });
 
-    // Services track + parallax words + tabs
     if (pinOn) {
       track.style.setProperty("--track", f.toFixed(3));
       words.forEach(function (w, n) { w.style.transform = "translate3d(" + ((f - n) * -16).toFixed(2) + "vw,0,0)"; });
       dots.forEach(function (dt, n) { dt.classList.toggle("is-on", n === Math.round(f)); });
     }
 
-    // Principle cards tilt up into place
     var Rtop = M.cardsTop - y;
     cards.forEach(function (c, n) {
       var e = sm(clamp((H - Rtop - n * H * 0.06) / (H * 0.5)));
@@ -233,7 +225,6 @@
       c.style.opacity = (0.15 + 0.85 * e).toFixed(3);
     });
 
-    // Strip scrolls sideways and skews with scroll speed
     var rel = y - (tops[3] - H);
     var sk = clamp(v * -0.3, -14, 14);
     trs.forEach(function (tr) {
@@ -241,11 +232,9 @@
       tr.style.transform = "translate3d(" + (-dir * rel * 0.6).toFixed(1) + "px,0,0) skewX(" + sk.toFixed(2) + "deg)";
     });
 
-    // Vision ring turns
     var vp = clamp((y - tops[4]) / Math.max(1, vscroll.offsetHeight - H));
     vring.style.transform = "rotate(" + (vp * 540).toFixed(1) + "deg) scale(" + (0.82 + 0.18 * vp).toFixed(3) + ")";
 
-    // Team rows slide in from alternating sides
     rows.forEach(function (r, n) {
       var rcTop = M.rowTops[n] - y;
       var e = sm(clamp((H * 0.95 - rcTop) / (H * 0.4)));
@@ -271,11 +260,20 @@
     target = window.scrollY;
     if (!raf) raf = requestAnimationFrame(tick);
   }, { passive: true });
-  var resizeRaf = 0;
+
+  // Resize: ignore iOS address-bar height bumps (same width, small delta)
+  var lastW = window.innerWidth, lastH = window.innerHeight, resizeRaf = 0;
   window.addEventListener("resize", function () {
     if (resizeRaf) return;
-    resizeRaf = requestAnimationFrame(function () { resizeRaf = 0; setMode(); });
+    resizeRaf = requestAnimationFrame(function () {
+      resizeRaf = 0;
+      var w = window.innerWidth, h = window.innerHeight;
+      if (w === lastW && Math.abs(h - lastH) < 120) { lastH = h; return; }
+      lastW = w; lastH = h;
+      setMode();
+    });
   }, { passive: true });
+
   window.addEventListener("load", function () { measure(); update(cur, 0); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { measure(); update(cur, 0); });
   document.addEventListener("visibilitychange", function () {

@@ -194,11 +194,11 @@
         <p class="hint">Tell us about your project. We reply within 1 business day.</p>
         <div class="hp" aria-hidden="true"><label for="f-web">Leave this empty</label><input id="f-web" name="website_url" tabindex="-1" autocomplete="off"></div>
         <div class="two">
-          <label>Your name<input name="name" required autocomplete="name" placeholder="Aarav Sharma"></label>
-          <label>Email address<input type="email" name="email" required autocomplete="email" placeholder="aarav@example.com"></label>
+          <label>Your name<input name="name" required autocomplete="name" autocapitalize="words" placeholder="Aarav Sharma"></label>
+          <label>Email address<input type="email" name="email" required autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" placeholder="aarav@example.com"></label>
         </div>
         <div class="two">
-          <label>Phone / WhatsApp<input type="tel" name="phone" autocomplete="tel" placeholder="+91 98765 43210"></label>
+          <label>Phone / WhatsApp<input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210"></label>
           <label>Service<select name="service">
             <option>Software Development</option>
             <option>Telecalling Services</option>
@@ -208,7 +208,7 @@
             <option>General Inquiry</option>
           </select></label>
         </div>
-        <label>Project overview<textarea name="message" rows="4" required placeholder="Scope, timeline or goals"></textarea></label>
+        <label>Project overview<textarea name="message" rows="4" required autocapitalize="sentences" enterkeyhint="send" placeholder="Scope, timeline or goals"></textarea></label>
         <button class="btn" type="submit" id="send">Send inquiry</button>
         <p class="fine">No tracking cookies. Your details are used only to reply to this inquiry. <a href="privacy.html">Privacy notice</a></p>
         <p class="status" id="status" role="status"></p>
