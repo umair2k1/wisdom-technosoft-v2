@@ -1,0 +1,367 @@
+--- a/index.html	2026-10-24 20:07:09.320561170 +0000
++++ b/index.html	2026-10-24 20:07:34.561540822 +0000
+@@ -1,10 +1,14 @@
+ <!DOCTYPE html>
+-<html lang="en">
++<html lang="en-IN">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Wisdom Technosoft — Software, Telecalling &amp; Data | Nagpur</title>
+ <meta name="description" content="Wisdom Technosoft is a Nagpur-based BPO and software studio delivering software development, telecalling and data management services.">
++<meta property="og:type" content="website">
++<meta property="og:title" content="Wisdom Technosoft — Software, Telecalling &amp; Data">
++<meta property="og:description" content="A Nagpur studio that builds your software, runs your customer calls and keeps your data accurate.">
++<meta property="og:locale" content="en_IN">
+ <meta name="theme-color" content="#04222B">
+ <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+ <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
+@@ -21,7 +25,7 @@
+ <div class="orb" aria-hidden="true">
+   <svg viewBox="-150 -150 300 300">
+     <circle class="o-ring" r="135"/>
+-    <image href="assets/logo-ghost.png" xlink:href="assets/logo-ghost.png" x="-100" y="-81.25" width="200" height="162.5"/>
++    <image href="assets/logo-ghost.png" x="-100" y="-81.25" width="200" height="162.5"/>
+   </svg>
+ </div>
+ <div class="bar" aria-hidden="true"><i></i></div>
+@@ -35,10 +39,10 @@
+   <a class="btn" href="#contact">Start a project</a>
+ </header>
+ 
+-<main id="main">
++<main id="main" tabindex="-1">
+ 
+ <section class="s hero" id="top" style="--bg:var(--deep);--fg:var(--ivory)">
+-  <h1>
++  <h1 class="w">
+     <span class="hlm"><span class="hl" data-d="1"><span>Software.</span></span></span>
+     <span class="hlm"><span class="hl" data-d="-1"><span>Conversations.</span></span></span>
+     <span class="hlm"><span class="hl" data-d="1"><span>Clean data.</span></span></span>
+@@ -89,6 +93,7 @@
+ 
+ <section class="s approach" id="approach" style="--bg:var(--bone);--fg:var(--ink)">
+   <div class="w">
++    <p class="eyebrow">How we deliver</p>
+     <h2 class="big">Care in the details.</h2>
+     <p class="aside">Four principles guide every project, from the first call to the final handover.</p>
+     <div class="cards">
+@@ -110,18 +115,21 @@
+     <div class="vstick">
+       <svg class="vring" viewBox="0 0 400 400" aria-hidden="true">
+         <defs><path id="rp" d="M200 200m-170 0a170 170 0 1 1 340 0a170 170 0 1 1-340 0"/></defs>
+-        <text><textPath href="#rp" textLength="1060" lengthAdjust="spacing">Clarity &#10022; Care &#10022; Consistency &#10022; Clarity &#10022; Care &#10022; Consistency &#10022;</textPath></text>
++        <text><textPath href="#rp">Clarity &#10022; Care &#10022; Consistency &#10022; Clarity &#10022; Care &#10022; Consistency &#10022;&#160;</textPath></text>
+       </svg>
+     </div>
+   </div>
+   <div class="w vstate">
++    <p class="eyebrow">Our vision</p>
+     <h2 class="vq">To be among the top business process outsourcing providers &mdash; known for clarity, care and consistency.</h2>
+-    <p class="mission">In an industry where simplification of data is the key to success, we aim to be resourceful, innovative and responsive to our clients&rsquo; needs &mdash; delivering consistent quality, and helping our clients&rsquo; businesses succeed because doing so will boost our own.</p>
++    <p class="eyebrow eb-m">Our mission</p>
++    <p class="mission">In an industry where simplifying data is the key to success, we aim to be resourceful, innovative and responsive to our clients&rsquo; needs &mdash; delivering consistent quality and helping their businesses succeed, because their success boosts our own.</p>
+   </div>
+ </section>
+ 
+ <section class="s team" id="team" style="--bg:var(--bone);--fg:var(--ink)">
+   <div class="w">
++    <p class="eyebrow">Our team</p>
+     <h2 class="big">The people behind the work.</h2>
+     <p class="aside">A small, senior team across software, telecalling and data &mdash; working as one.</p>
+     <ul class="rows">
+@@ -135,6 +143,7 @@
+ 
+ <section class="s contact" id="contact" style="--bg:var(--teal);--fg:var(--ivory)">
+   <div class="w">
++    <p class="eyebrow">Contact</p>
+     <h2 class="big">Let&rsquo;s build something worth keeping.</h2>
+     <div class="clayout">
+       <div class="cinfo">
+@@ -159,7 +168,7 @@
+         </div>
+         <label>Project overview<textarea name="message" rows="4" required placeholder="Scope, timeline or goals"></textarea></label>
+         <button class="btn" type="submit" id="send">Send inquiry</button>
+-        <p class="fine">No tracking cookies. Your details are used only to reply to this inquiry. <a href="/privacy.html">Privacy notice</a></p>
++        <p class="fine">No tracking cookies. Your details are used only to reply to this inquiry. <a href="privacy.html">Privacy notice</a></p>
+         <p class="status" id="status" role="status"></p>
+       </form>
+     </div>
+@@ -169,7 +178,7 @@
+ 
+ <footer class="foot" style="--fg:var(--ivory)">
+   <p>&copy; 2026 Wisdom Technosoft. Software. Telecalling. Data. Done with care.</p>
+-  <p><a href="/privacy.html">Privacy notice</a> &middot; Nagpur, Maharashtra, India &middot; <a href="#top">Back to top</a></p>
++  <p><a href="privacy.html">Privacy notice</a> &middot; Nagpur, Maharashtra, India &middot; <a href="#top">Back to top</a></p>
+ </footer>
+ 
+ <script src="script.js" defer></script>
+--- a/styles.css	2026-10-24 20:07:09.320588984 +0000
++++ b/styles.css	2026-10-24 20:09:58.427908311 +0000
+@@ -1,5 +1,5 @@
+ :root{--deep:#04222B;--teal:#063340;--bone:#EDE7DB;--ink:#14201F;--tan:#C9A27E;--slate:#6E8FA8;--ivory:#F4F0E8;
+---ease:cubic-bezier(.22,1,.36,1);--g:clamp(20px,5vw,72px);--nav:72px;--disp:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif}
++--ease:cubic-bezier(.22,1,.36,1);--g:clamp(20px,5vw,72px);--nav:72px;--gx:max(var(--g),calc((100vw - 1500px)/2));--disp:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif}
+ *,*::before,*::after{box-sizing:border-box}
+ html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+ body{margin:0;isolation:isolate;background:var(--deep);color:var(--ivory);font:400 1rem/1.65 "DM Sans",system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+@@ -10,6 +10,7 @@
+ ::selection{background:var(--tan);color:var(--ink)}
+ .skip{position:fixed;left:12px;top:12px;z-index:300;padding:10px 16px;background:var(--tan);color:var(--ink);transform:translateY(-200%)}
+ .skip:focus{transform:none}
++main:focus{outline:0}
+ 
+ /* Fixed scroll-driven mark: sits above section backgrounds, below content */
+ .orb{position:fixed;left:50%;top:50%;width:min(62vmin,640px);height:min(62vmin,640px);aspect-ratio:1;margin:calc(min(62vmin,640px)/-2) 0 0 calc(min(62vmin,640px)/-2);z-index:0;pointer-events:none;perspective:900px;opacity:0;will-change:transform,opacity}
+@@ -23,22 +24,26 @@
+ 
+ .nav{position:fixed;inset:0 0 auto;z-index:160;height:var(--nav);display:flex;align-items:center;justify-content:space-between;padding-inline:var(--g);transition:transform .5s var(--ease)}
+ .nav.hide{transform:translateY(-110%)}
++.nav.hide:focus-within{transform:none}
+ .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 15px var(--disp);letter-spacing:-.01em;color:#fff;mix-blend-mode:difference}
+ .brand-logo{height:34px;width:auto;display:block;will-change:opacity}
+ .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 26px;border:0;border-radius:999px;background:var(--tan);color:var(--ink);font:600 15px "DM Sans",sans-serif;text-decoration:none;cursor:pointer;transition:transform .35s var(--ease),background .3s}
+ .btn:hover{background:#dcb994;transform:translateY(-2px)}
++.nav .btn{box-shadow:0 0 0 1px rgba(20,32,31,.2)}
+ .lnk{font-weight:500;text-underline-offset:6px;text-decoration:underline}
+ 
+-.s{position:relative;color:var(--fg)}
++.s{position:relative;color:var(--fg);overflow-x:clip}
+ .s::before{content:"";position:absolute;inset:0;background:var(--bg);z-index:-1}
+ .w{position:relative;z-index:1;width:min(100% - var(--g)*2,1500px);margin-inline:auto}
+ .big{font:800 clamp(2.8rem,8.4vw,9rem)/.92 var(--disp);letter-spacing:-.045em;max-width:13ch;text-wrap:balance}
+ .aside{margin-top:20px;max-width:38ch;opacity:.7}
++.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:clamp(18px,2.4vw,28px);font:600 12px/1.2 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
++.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+ 
+ /* Hero */
+-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:calc(var(--nav) + 4vh) 0 5vh;position:relative}
+-.hero h1{position:relative;z-index:1;padding-inline:var(--g);font:800 clamp(3.1rem,14.2vw,16rem)/.88 var(--disp);letter-spacing:-.05em}
+-.hlm{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
++.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:calc(var(--nav) + 4vh) 0 max(5vh,64px);position:relative}
++.hero h1{position:relative;z-index:1;font:800 clamp(3rem,13.4vw,13.5rem)/.88 var(--disp);letter-spacing:-.05em}
++.hlm{display:block;clip-path:inset(0 -100vw);padding-bottom:.1em;margin-bottom:-.1em}
+ .hl{display:block;will-change:transform}
+ .hl>span{display:inline-block}
+ .hlm:nth-child(2) .hl{padding-left:7vw}
+@@ -54,11 +59,11 @@
+ .js .ready .hero-foot{opacity:1;transform:none}
+ 
+ /* Services: pinned horizontal scroll on wide screens */
+-.pin-head{position:relative;z-index:3;padding:calc(var(--nav) + 12px) var(--g) 0;font:700 1rem var(--disp)}
+-.dots{position:relative;z-index:3;display:flex;gap:10px;padding:10px var(--g) 0;font-size:13px}
++.pin-head{position:relative;z-index:3;padding:calc(var(--nav) + 12px) var(--gx) 0;font:700 1rem var(--disp)}
++.dots{position:relative;z-index:3;display:none;gap:10px;padding:10px var(--gx) 0;font-size:13px}
+ .dot{padding:5px 14px;border:1px solid rgba(244,240,232,.3);border-radius:999px;opacity:.55;transition:all .4s}
+ .dot.is-on{background:var(--ivory);color:var(--teal);opacity:1;border-color:var(--ivory)}
+-.panel{position:relative;padding:48px var(--g)}
++.panel{position:relative;padding:48px var(--gx)}
+ .pword{font:800 clamp(5.5rem,22vw,24rem)/.82 var(--disp);letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px rgba(244,240,232,.3)}
+ .pbody{position:relative;z-index:1;max-width:560px;margin-top:24px}
+ .pbody h2{font:700 clamp(1.9rem,3.6vw,3.2rem)/1.05 var(--disp);letter-spacing:-.03em;margin-bottom:14px}
+@@ -66,10 +71,13 @@
+ .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+ .tags li{padding:6px 14px;border:1px solid rgba(244,240,232,.3);border-radius:999px;font-size:13px}
+ .services.is-pin{height:400svh}
+-.is-pin .pin{position:sticky;top:0;height:100svh;overflow:hidden;z-index:1}
+-.is-pin .track{display:flex;width:300vw;height:100svh;will-change:transform}
+-.is-pin .panel{flex:0 0 100vw;height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:9vh}
+-.is-pin .pword{position:absolute;left:var(--g);top:15vh;white-space:nowrap}
++.is-pin .pin{position:sticky;top:0;height:100svh;overflow:hidden;z-index:1;display:flex;flex-direction:column}
++.is-pin .dots{display:flex}
++.is-pin .track{display:flex;flex:1 1 auto;min-height:0;width:300vw;will-change:transform}
++.is-pin .panel{flex:0 0 100vw;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:9vh}
++.is-pin .pword{position:absolute;left:var(--gx);top:15vh;white-space:nowrap}
++.services:not(.is-pin) .pin-head{padding-top:56px}
++.services:not(.is-pin) .panel+.panel{border-top:1px solid rgba(244,240,232,.14)}
+ 
+ /* Approach */
+ .approach{padding-block:clamp(5rem,12vw,11rem)}
+@@ -90,10 +98,11 @@
+ .vscroll{height:220svh}
+ .vstick{position:sticky;top:0;height:100svh;display:grid;place-items:center;overflow:hidden;z-index:1}
+ .vring{width:min(88vmin,780px);aspect-ratio:1;overflow:visible;will-change:transform}
+-.vring text{font:800 38px var(--disp);fill:var(--ivory)}
++.vring text{font:800 30px var(--disp);fill:var(--ivory)}
+ .vstate{padding-block:clamp(4rem,9vw,8rem)}
+ .vq{font:700 clamp(2rem,5.2vw,5rem)/1.05 var(--disp);letter-spacing:-.04em;max-width:20ch;text-wrap:balance}
+-.mission{margin-top:32px;max-width:56ch;font-size:clamp(1.05rem,1.5vw,1.3rem);opacity:.72}
++.eb-m{margin-top:clamp(36px,5vw,56px);margin-bottom:14px}
++.mission{max-width:56ch;font-size:clamp(1.05rem,1.5vw,1.3rem);opacity:.72}
+ 
+ /* Team */
+ .team{padding-block:clamp(5rem,11vw,10rem)}
+@@ -112,24 +121,28 @@
+ .cinfo dt{font-size:13px;opacity:.6;margin-bottom:4px}
+ .cinfo dd a{text-decoration:none;opacity:.88}
+ .cinfo dd a:hover{color:var(--tan)}
++.cinfo dd a[href^="tel"]{white-space:nowrap}
+ .wa{background:transparent;border:1px solid rgba(163,247,191,.5);color:#a3f7bf}
+ .wa:hover{background:rgba(37,211,102,.18)}
+-.cform{display:flex;flex-direction:column;gap:16px;padding:clamp(22px,4vw,40px);border:1px solid rgba(244,240,232,.18);border-radius:8px;background:rgba(4,34,43,.55)}
++.cform{display:flex;flex-direction:column;gap:16px;padding:clamp(22px,4vw,40px);border:1px solid rgba(244,240,232,.18);border-radius:8px;background:rgba(4,34,43,.55);color-scheme:dark}
+ .cform h3{font:700 1.5rem var(--disp);letter-spacing:-.02em}
+ .hint{opacity:.7;font-size:14px;margin-top:-8px}
+ .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+ .cform label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;opacity:.9}
+ .cform input,.cform select,.cform textarea{width:100%;padding:12px 14px;border:1px solid rgba(244,240,232,.22);border-radius:6px;background:rgba(244,240,232,.06);color:var(--ivory);font:inherit;font-size:15px}
+ .cform select option{background:var(--deep)}
++.cform textarea{resize:vertical;min-height:120px}
+ .cform input:focus,.cform select:focus,.cform textarea:focus{outline:0;border-color:var(--tan);background:rgba(244,240,232,.1)}
+ .cform .btn{width:100%}
+ .fine{font-size:12px;opacity:.6}
+-.status{display:none;padding:12px 14px;border-radius:6px;font-size:14px}
+-.status.ok{display:block;background:rgba(76,175,80,.22);color:#c8e6c9}
+-.status.err{display:block;background:rgba(239,83,80,.22);color:#ffcdd2}
++.status{border-radius:6px;font-size:14px}
++.status:empty{margin-top:-16px}
++.status.ok,.status.err{padding:12px 14px}
++.status.ok{background:rgba(76,175,80,.22);color:#c8e6c9}
++.status.err{background:rgba(239,83,80,.22);color:#ffcdd2}
+ .hp{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+ 
+-.foot{position:relative;z-index:1;background:var(--deep);padding:28px var(--g) 64px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-size:13px;color:var(--fg);opacity:.8}
++.foot{position:relative;z-index:1;background:var(--deep);padding:28px var(--gx) 64px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-size:13px;color:var(--fg);opacity:.8}
+ .foot a{text-decoration:none}
+ 
+ @media (max-width:1000px){
+@@ -140,10 +153,11 @@
+   .cards{grid-template-columns:1fr}
+   .card{min-height:220px}
+   .two{grid-template-columns:1fr}
+-  .brand span{display:none}
++  .nav .btn{padding:11px 18px;font-size:14px}
+   .hlm:nth-child(2) .hl{padding-left:0}
+   .chap{display:none}
+ }
++@media (max-width:420px){.brand span{display:none}}
+ @media (prefers-reduced-motion:reduce){
+   html{scroll-behavior:auto}
+   *,*::before,*::after{transition-duration:.001ms!important;transition-delay:0ms!important}
+--- a/script.js	2026-10-24 20:07:09.320603724 +0000
++++ b/script.js	2026-10-24 20:07:34.562192097 +0000
+@@ -6,9 +6,10 @@
+   var lerp = function (a, b, t) { return a + (b - a) * t; };
+   var sm = function (t) { return t * t * (3 - 2 * t); };
+   var rgb = function (h) { return [1, 3, 5].map(function (i) { return parseInt(h.slice(i, i + 2), 16); }); };
++  var hex = function (n) { return ("0" + n.toString(16)).slice(-2); };
+   var mix = function (a, b, t) {
+     var A = rgb(a), B = rgb(b);
+-    return "rgb(" + A.map(function (v, i) { return Math.round(lerp(v, B[i], t)); }).join() + ")";
++    return "#" + A.map(function (v, i) { return hex(Math.round(lerp(v, B[i], t))); }).join("");
+   };
+ 
+   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+@@ -26,9 +27,9 @@
+   // Chapters: the fixed mark moves, scales, spreads and recolours between these states.
+   var S = [
+     { id: "top",      n: "Welcome",       x: 22, y: -2, s: 1,    o: 1,   sp: 0,  c: "#C9A27E" },
+-    { id: "services", n: "What we do",    x: 34, y: 26, s: 0.42, o: 1,   sp: 1,  c: "#7FB0D0" },
++    { id: "services", n: "What we do",    x: 34, y: 26, s: 0.42, o: 1,   sp: 0.6, c: "#7FB0D0" },
+     { id: "approach", n: "How we deliver", x: 0,  y: 0,  s: 1.7,  o: 0.13, sp: 0.2, c: "#C9A27E" },
+-    { id: "strip",    n: "Our work",      x: 0,  y: 0,  s: 0.6,  o: 0,   sp: 0,  c: "#C9A27E" },
++    { id: "strip",    n: "At a glance",      x: 0,  y: 0,  s: 0.6,  o: 0,   sp: 0,  c: "#C9A27E" },
+     { id: "vision",   n: "Vision",        x: 0,  y: 0,  s: 0.5,  o: 1,   sp: 0.7, c: "#C9A27E" },
+     { id: "team",     n: "Team",          x: -36, y: 24, s: 0.35, o: 0.5, sp: 0.3, c: "#6E8FA8" },
+     { id: "contact",  n: "Contact",       x: -29, y: 20, s: 0.62, o: 1,   sp: 0,  c: "#C9A27E" }
+@@ -40,7 +41,17 @@
+   var brandLogo = $(".brand-logo");
+   var header_x = -44, header_y = -46, header_s = 0.11;
+ 
++  // Size the vision-ring text so it spans the circle exactly, whatever font is loaded
++  var ringText = $(".vring text");
++  function fitRing() {
++    if (!ringText || !ringText.getComputedTextLength) return;
++    ringText.style.fontSize = "38px";
++    var len = ringText.getComputedTextLength();
++    if (len > 0) ringText.style.fontSize = (38 * 1064 / len).toFixed(2) + "px";
++  }
++
+   function measure() {
++    fitRing();
+     H = window.innerHeight;
+     var W = window.innerWidth;
+     tops = els.map(function (e) { return e.getBoundingClientRect().top + window.scrollY; });
+@@ -78,6 +89,8 @@
+ 
+     var curX, curY, curS, curO, ringOp, tiltY = 0, tiltZ = 0, ringRot = 0, sp = 0, col = S[0].c;
+     var activeChapter = 0;
++    var p = clamp((y - tops[1]) / Math.max(1, sv.offsetHeight - H));
++    var f = p * (panels.length - 1);
+ 
+     if (y <= introDist) {
+       activeChapter = 0;
+@@ -115,21 +128,20 @@
+         var a = S[i], b = S[j];
+         var t = a === b ? 0 : sm(clamp((m - (tops[j] - H * 0.9)) / (H * 0.9)));
+ 
++        // While the services track is pinned, its progress drives the mark's colour and spread
++        var ca = a.c, sa = a.sp;
++        if (i === 1 && pinOn) {
++          var ci = Math.min(Math.floor(f), PC.length - 2);
++          ca = mix(PC[ci], PC[ci + 1], f - ci);
++          sa = 0.6 + p * 1.4;
++        }
++
+         curX = lerp(a.x, b.x, t) * (narrow ? 0.45 : 1);
+         curY = lerp(a.y, b.y, t);
+         curS = lerp(a.s, b.s, t);
+         curO = lerp(a.o, b.o, t) * (narrow ? 0.6 : 1);
+-        sp = lerp(a.sp, b.sp, t);
+-        col = mix(a.c, b.c, t);
+-
+-        // Services progress (pinned horizontal track)
+-        var p = clamp((y - tops[1]) / Math.max(1, sv.offsetHeight - H));
+-        var f = p * (panels.length - 1);
+-        if (i === 1 && !t && pinOn) {
+-          var ci = Math.min(Math.floor(f), PC.length - 2);
+-          col = mix(PC[ci], PC[ci + 1], f - ci);
+-          sp = 0.6 + p * 1.4;
+-        }
++        sp = lerp(sa, b.sp, t);
++        col = mix(ca, b.c, t);
+       }
+ 
+       var relY = y - introDist;
+@@ -137,12 +149,14 @@
+       tiltZ = relY * 0.05;
+       ringRot = -y * 0.12;
+ 
+-      // Settle smoothly to 0deg upright orientation when entering contact / bottom
++      // Ease to the nearest upright pose (a multiple of 360deg) on the way into Contact,
++      // instead of unwinding every accumulated turn at once
+       if (tops[6]) {
+-        var contactProgress = sm(clamp((y - (tops[6] - H * 0.8)) / (H * 0.7)));
+-        tiltY = lerp(tiltY, 0, contactProgress);
+-        tiltZ = lerp(tiltZ, 0, contactProgress);
+-        ringRot = lerp(ringRot, 0, contactProgress);
++        var y0 = tops[6] - H * 0.8, cp = sm(clamp((y - y0) / (H * 0.7)));
++        var up = function (v) { return Math.round(v / 360) * 360; };
++        tiltY = lerp(tiltY, up((y0 - introDist) * 0.18), cp);
++        tiltZ = lerp(tiltZ, up((y0 - introDist) * 0.05), cp);
++        ringRot = lerp(ringRot, up(-y0 * 0.12), cp);
+       }
+     }
+ 
+@@ -234,7 +248,7 @@
+     ["name", "email", "phone", "service", "message", "website_url"].forEach(function (n) { data[n] = String(fd.get(n) || "").trim(); });
+     if (data.website_url) { status.className = "status ok"; status.textContent = "Thank you. We have your message."; form.reset(); return; }
+     var label = send.textContent;
+-    send.disabled = true; send.textContent = "Sending…"; status.className = "status";
++    send.disabled = true; send.textContent = "Sending…"; status.className = "status"; status.textContent = "";
+     fetch(form.getAttribute("action"), { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) })
+       .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.message || "Failed"); return j; }); })
+       .then(function () {
+--- a/README.md	2026-10-24 20:07:09.320622477 +0000
++++ b/README.md	2026-10-24 20:07:34.562317308 +0000
+@@ -18,3 +18,10 @@
+ - Mark uses the client's official logo assets from `assets/` across the scroll orb, header brand mark, and favicons.
+ - Team rows are role placeholders, same as v1. Add names/photos once confirmed.
+ - Tweak chapter positions in the `S` array at the top of `script.js`.
++
++## Needs client input before launch
++- Team: replace the role rows with real names, roles and photos.
++- Confirm copy claims: multilingual calling, 1-business-day reply, "small, senior team", documented checks at every step.
++- Business email is a Gmail address; a domain email reads more credible.
++- Add `privacy.html`, `404.html`, `assets/` (logos, favicons, social image) and `functions/api/contact.js`.
++- Once the domain is known, add `<link rel="canonical">` and `og:image` / `og:url`.
