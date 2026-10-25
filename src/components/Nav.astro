@@ -7,9 +7,19 @@
       <img src="/assets/logo-mark-light.png" alt="Wisdom Technosoft" class="brand-logo" width="38" height="31">
       <div class="brand-text">
         <span class="brand-name">Wisdom Technosoft</span>
-        <span class="brand-sub">Software &amp; BPO Operations</span>
+        <span class="brand-sub">Engineering &bull; BPO Operations</span>
       </div>
     </a>
+
+    <!-- Center Live Telemetry HUD Pill -->
+    <div class="nav-telemetry" aria-label="System status & local time">
+      <span class="telemetry-pulse"></span>
+      <span class="telemetry-loc">NAGPUR HQ</span>
+      <span class="telemetry-sep">&bull;</span>
+      <span class="telemetry-stat live-latency">18ms</span>
+      <span class="telemetry-sep">&bull;</span>
+      <span class="telemetry-time live-clock">--:--:-- IST</span>
+    </div>
 
     <nav class="nav-links" aria-label="Primary navigation">
       <a href="#services" class="nav-link">Services</a>
@@ -20,11 +30,14 @@
     </nav>
 
     <div class="nav-actions">
+
       <a class="nav-tel" href="tel:+917447331127" title="Call directly">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         <span>+91 74473 31127</span>
       </a>
-      <a class="btn btn-nav" href="#contact">Start a project</a>
+
+      <a class="btn btn-nav magnetic" href="#contact">Start a project</a>
+
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="toggle-bar"></span>
         <span class="toggle-bar"></span>
@@ -34,6 +47,10 @@
 
   <div class="mobile-drawer" id="mobile-menu" aria-hidden="true">
     <div class="drawer-inner">
+      <div class="drawer-telemetry">
+        <span class="telemetry-pulse"></span>
+        <span>Nagpur Hub Active &bull; <strong class="live-clock">--:--:-- IST</strong></span>
+      </div>
       <nav class="drawer-links" aria-label="Mobile navigation">
         <a href="#services" class="drawer-link">Services</a>
         <a href="#approach" class="drawer-link">Approach</a>
@@ -94,26 +111,26 @@
     inset: 0 0 auto;
     z-index: 200;
     height: var(--nav);
-    background: rgba(4, 34, 43, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(4, 34, 43, 0.82);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(244, 240, 232, 0.08);
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   }
   .nav.scrolled {
-    background: rgba(4, 34, 43, 0.94);
-    border-bottom-color: rgba(244, 240, 232, 0.12);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    background: rgba(4, 34, 43, 0.95);
+    border-bottom-color: rgba(201, 162, 126, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
   }
   .nav-container {
-    max-width: 1500px;
+    max-width: 1540px;
     height: 100%;
     margin-inline: auto;
     padding-inline: var(--g);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 16px;
   }
   .brand {
     display: flex;
@@ -128,6 +145,10 @@
     width: auto;
     display: block;
     flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  .brand:hover .brand-logo {
+    transform: rotate(6deg) scale(1.05);
   }
   .brand-text {
     display: flex;
@@ -140,17 +161,66 @@
     color: var(--ivory);
   }
   .brand-sub {
-    font-size: 11px;
+    font-size: 10.5px;
     color: var(--tan);
     font-weight: 500;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     opacity: 0.9;
   }
+
+  /* Center Telemetry HUD Pill */
+  .nav-telemetry {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: rgba(6, 51, 64, 0.55);
+    border: 1px solid rgba(201, 162, 126, 0.25);
+    font-family: var(--body);
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--ivory);
+    box-shadow: inset 0 0 12px rgba(201, 162, 126, 0.08);
+  }
+  .telemetry-pulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 8px #4ade80;
+    animation: telePulse 1.8s infinite ease-in-out;
+  }
+  @keyframes telePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+  }
+  .telemetry-loc {
+    color: var(--tan);
+    font-weight: 600;
+    font-size: 11px;
+  }
+  .telemetry-sep {
+    opacity: 0.3;
+  }
+  .telemetry-stat {
+    color: #6E8FA8;
+    font-family: monospace;
+    font-size: 11px;
+  }
+  .telemetry-time {
+    color: var(--ivory);
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 11px;
+  }
+
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 22px;
   }
   .nav-link {
     font-size: 14px;
@@ -158,30 +228,34 @@
     color: var(--ivory);
     opacity: 0.78;
     text-decoration: none;
-    transition: opacity 0.2s ease, color 0.2s ease;
-    padding-block: 6px;
+    transition: opacity 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    padding: 6px 10px;
+    border-radius: 6px;
     position: relative;
   }
   .nav-link:hover {
     opacity: 1;
     color: var(--tan);
+    background: rgba(244, 240, 232, 0.04);
   }
+
   .nav-actions {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     flex-shrink: 0;
   }
+
   .nav-tel {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
     color: var(--ivory);
-    opacity: 0.8;
+    opacity: 0.85;
     text-decoration: none;
-    font-size: 13.5px;
+    font-size: 13px;
     font-weight: 500;
-    padding: 8px 12px;
+    padding: 7px 12px;
     border-radius: 999px;
     border: 1px solid rgba(244, 240, 232, 0.12);
     transition: all 0.25s ease;
@@ -193,23 +267,24 @@
     background: rgba(201, 162, 126, 0.08);
   }
   .btn-nav {
-    padding: 10px 20px;
-    min-height: 42px;
-    font-size: 14px;
+    padding: 8px 18px;
+    min-height: 38px;
+    font-size: 13.5px;
     font-weight: 600;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   }
+
   .nav-toggle {
     display: none;
     flex-direction: column;
     justify-content: center;
     gap: 6px;
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     background: transparent;
     border: 1px solid rgba(244, 240, 232, 0.14);
     border-radius: 8px;
-    padding: 10px;
+    padding: 9px;
     cursor: pointer;
     color: var(--ivory);
   }
@@ -238,8 +313,8 @@
     bottom: 0;
     height: calc(100vh - var(--nav));
     background: rgba(4, 34, 43, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border-top: 1px solid rgba(244, 240, 232, 0.1);
     padding: 24px var(--g) 40px;
     overflow-y: auto;
@@ -249,27 +324,34 @@
     display: block;
     animation: drawerFadeIn 0.25s var(--ease) forwards;
   }
-  @keyframes drawerFadeIn {
-    from { opacity: 0; transform: translateY(-8px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
   .drawer-inner {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
     max-width: 440px;
     margin-inline: auto;
+  }
+  .drawer-telemetry {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(6, 51, 64, 0.6);
+    border: 1px solid rgba(201, 162, 126, 0.2);
+    font-size: 12px;
+    color: var(--ivory);
   }
   .drawer-links {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
   .drawer-link {
     font: 700 22px/1.2 var(--disp);
     color: var(--ivory);
     text-decoration: none;
-    padding-block: 10px;
+    padding-block: 8px;
     border-bottom: 1px solid rgba(244, 240, 232, 0.06);
     transition: color 0.2s ease, padding-left 0.2s ease;
   }
@@ -281,13 +363,13 @@
   .drawer-footer {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding-top: 12px;
+    gap: 16px;
+    padding-top: 8px;
   }
   .drawer-contact-item {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
   }
   .drawer-label {
     font-size: 11px;
@@ -304,19 +386,25 @@
   .drawer-cta {
     width: 100%;
     margin-top: 8px;
-    min-height: 48px;
+    min-height: 46px;
   }
 
   body.menu-locked {
     overflow: hidden;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1180px) {
+    .nav-telemetry {
+      display: none;
+    }
+  }
+
+  @media (max-width: 960px) {
     .nav-tel {
       display: none;
     }
     .nav-links {
-      gap: 20px;
+      gap: 14px;
     }
   }
 

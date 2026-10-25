@@ -5,63 +5,137 @@
   <div class="hero-bg-glow" aria-hidden="true"></div>
   
   <div class="w hero-content">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      <span>Software Engineering &bull; Telecalling &bull; Data &bull; Healthcare BPO</span>
-    </div>
-
-    <h1 class="hero-title">
-      <span class="hl-line">Software.</span>
-      <span class="hl-line hl-accent">Conversations.</span>
-      <span class="hl-line">Clean data.</span>
-    </h1>
-
-    <div class="hero-foot">
-      <p class="hero-desc">
-        A premier Nagpur studio delivering custom software engineering, high-touch telecalling, meticulous data management, and mission-critical back-office operations &mdash; one unified team, one uncompromising standard.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn btn-hero-primary" href="#contact">
-          <span>Start a project</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a class="btn btn-hero-secondary" href="#services">Explore what we do</a>
+    <!-- Top badge with live location coordinates & status -->
+    <div class="hero-badge-row">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text" data-scramble="Engineering • Voice • Data • Healthcare BPO">Engineering &bull; Voice &bull; Data &bull; Healthcare BPO</span>
+      </div>
+      <div class="hero-coords" aria-hidden="true">
+        <span>NAGPUR HQ // 21.1458° N, 79.0882° E</span>
       </div>
     </div>
 
+    <!-- Main Grid: Left copy & Right Live Operations Console -->
+    <div class="hero-grid">
+      <!-- Left Column: Kinetic Titles & CTAs -->
+      <div class="hero-main-col">
+        <h1 class="hero-title">
+          <span class="hl-line" data-scramble="Software.">Software.</span>
+          <span class="hl-line hl-accent" data-scramble="Conversations.">Conversations.</span>
+          <span class="hl-line" data-scramble="Clean data.">Clean data.</span>
+        </h1>
+
+        <p class="hero-desc">
+          A premier Nagpur studio delivering custom software engineering, high-touch telecalling, meticulous data management, and mission-critical back-office operations &mdash; one unified team, one uncompromising standard.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-hero-primary magnetic" href="#contact">
+            <span>Start a project</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn-hero-secondary magnetic" href="#services">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>Explore Capabilities</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Operations Overview Card -->
+      <div class="hero-hud-col">
+        <div class="operations-hud tilt-card">
+          <div class="hud-header">
+            <div class="hud-status">
+              <span class="hud-dot"></span>
+              <span class="hud-tag">OPERATIONAL EXCELLENCE // NAGPUR CORE</span>
+            </div>
+            <div class="hud-telemetry-badge">
+              <span class="live-clock">--:--:-- IST</span>
+            </div>
+          </div>
+
+          <div class="operations-list">
+            <div class="op-item">
+              <span class="op-num">01</span>
+              <div class="op-content">
+                <span class="op-title">Custom Software Engineering</span>
+                <span class="op-desc">Cloud-native architectures, web platforms &amp; workflow automation scripts</span>
+              </div>
+            </div>
+            <div class="op-item">
+              <span class="op-num">02</span>
+              <div class="op-content">
+                <span class="op-title">Voice &amp; Telecalling Operations</span>
+                <span class="op-desc">Tri-lingual inbound &amp; outbound squads in English, Hindi &amp; regional languages</span>
+              </div>
+            </div>
+            <div class="op-item">
+              <span class="op-num">03</span>
+              <div class="op-content">
+                <span class="op-title">Clean Data Mining &amp; QA</span>
+                <span class="op-desc">Double-blind verification, fuzzy deduplication &amp; structured ETL pipelines</span>
+              </div>
+            </div>
+            <div class="op-item">
+              <span class="op-num">04</span>
+              <div class="op-content">
+                <span class="op-title">Healthcare Support &amp; Medical Billing</span>
+                <span class="op-desc">US medical billing, CPT/ICD coding, clean claims &amp; HIPAA-compliant QA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hud-foot">
+            <span class="hud-foot-stat">UPTIME: <strong>99.8% SLA</strong></span>
+            <span class="hud-foot-stat">SHIFT: <strong>24/7/365 READY</strong></span>
+            <span class="hud-foot-badge">NAGPUR OPERATIONS HUB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 High-Precision 3D Metric Cards -->
     <div class="hero-metrics">
-      <div class="metric-card">
+      <div class="metric-card tilt-card">
         <div class="metric-header">
-          <span class="metric-num">99.8%</span>
+          <span class="metric-num" data-scramble="99.8%">99.8%</span>
           <span class="metric-badge">Verified</span>
         </div>
-        <span class="metric-lbl">Data accuracy &amp; QA precision</span>
+        <span class="metric-lbl">Data accuracy &amp; QA precision across all pipelines</span>
+        <div class="metric-bar-wrap"><div class="metric-bar-fill" style="width: 99.8%"></div></div>
       </div>
-      <div class="metric-card">
+
+      <div class="metric-card tilt-card">
         <div class="metric-header">
-          <span class="metric-num">24/7</span>
+          <span class="metric-num" data-scramble="24/7/365">24/7/365</span>
           <span class="metric-badge">Ready</span>
         </div>
-        <span class="metric-lbl">Operational &amp; campaign coverage</span>
+        <span class="metric-lbl">Continuous shift coverage across US &amp; Indian timezones</span>
+        <div class="metric-bar-wrap"><div class="metric-bar-fill" style="width: 100%"></div></div>
       </div>
-      <div class="metric-card">
+
+      <div class="metric-card tilt-card">
         <div class="metric-header">
-          <span class="metric-num">Multi-Lingual</span>
+          <span class="metric-num" data-scramble="Tri-Lingual">Tri-Lingual</span>
           <span class="metric-badge">Voice</span>
         </div>
-        <span class="metric-lbl">B2B &amp; customer-facing callers</span>
+        <span class="metric-lbl">Neutral English, Hindi &amp; regional voice proficiency</span>
+        <div class="metric-bar-wrap"><div class="metric-bar-fill" style="width: 95%"></div></div>
       </div>
-      <div class="metric-card">
+
+      <div class="metric-card tilt-card">
         <div class="metric-header">
-          <span class="metric-num">Nagpur, IN</span>
-          <span class="metric-badge">Hub</span>
+          <span class="metric-num" data-scramble="Nagpur Hub">Nagpur Hub</span>
+          <span class="metric-badge">Optimal ROI</span>
         </div>
-        <span class="metric-lbl">Cost-effective global delivery</span>
+        <span class="metric-lbl">65&ndash;75% cost advantage over onshore US/EU models</span>
+        <div class="metric-bar-wrap"><div class="metric-bar-fill" style="width: 92%"></div></div>
       </div>
     </div>
   </div>
 </section>
+
 
 <style is:global>
   .hero {
@@ -70,7 +144,7 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    padding-top: calc(var(--nav) + 32px);
+    padding-top: calc(var(--nav) + 24px);
     padding-bottom: clamp(40px, 6vh, 80px);
     overflow: hidden;
   }
@@ -80,15 +154,23 @@
     pointer-events: none;
     z-index: 0;
     background:
-      radial-gradient(ellipse 60% 40% at 75% 30%, rgba(201, 162, 126, 0.09), transparent 70%),
-      radial-gradient(ellipse 50% 50% at 20% 70%, rgba(6, 51, 64, 0.7), transparent 70%);
+      radial-gradient(ellipse 65% 50% at 75% 25%, rgba(201, 162, 126, 0.12), transparent 70%),
+      radial-gradient(ellipse 60% 60% at 15% 75%, rgba(6, 51, 64, 0.8), transparent 75%);
   }
   .hero-content {
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: clamp(20px, 3.5vh, 40px);
+    gap: clamp(20px, 3vh, 36px);
+  }
+
+  .hero-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
   }
   .hero-badge {
     display: inline-flex;
@@ -97,70 +179,86 @@
     padding: 6px 16px;
     border-radius: 999px;
     background: rgba(244, 240, 232, 0.05);
-    border: 1px solid rgba(244, 240, 232, 0.12);
+    border: 1px solid rgba(201, 162, 126, 0.28);
     color: var(--tan);
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.04em;
     width: fit-content;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   }
   .badge-dot {
     width: 7px;
     height: 7px;
     border-radius: 50%;
     background: var(--tan);
-    box-shadow: 0 0 8px var(--tan);
+    box-shadow: 0 0 10px var(--tan);
     animation: badgePulse 2s infinite ease-in-out;
   }
-  @keyframes badgePulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.85); }
+  .hero-coords {
+    font-family: monospace;
+    font-size: 11px;
+    color: var(--slate);
+    letter-spacing: 0.1em;
+    opacity: 0.85;
   }
+
+  /* Grid Layout: Left Content & Right HUD */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.95fr;
+    gap: clamp(28px, 4vw, 56px);
+    align-items: center;
+  }
+  .hero-main-col {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(18px, 2.8vh, 28px);
+  }
+
   .hero-title {
-    font: 800 clamp(2.8rem, 6.8vw, 6.4rem)/0.98 var(--disp);
+    font: 800 clamp(2.8rem, 6.2vw, 5.8rem)/0.96 var(--disp);
     letter-spacing: -0.04em;
-    max-width: 16ch;
     margin: 0;
   }
   .hl-line {
     display: block;
     color: var(--ivory);
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .hl-line:hover {
+    transform: translateX(8px);
   }
   .hl-line.hl-accent {
     color: var(--tan);
-    padding-left: clamp(0px, 3vw, 40px);
+    padding-left: clamp(0px, 2.5vw, 36px);
   }
-  .hero-foot {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 28px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(244, 240, 232, 0.12);
-  }
+
   .hero-desc {
-    max-width: 54ch;
-    font-size: clamp(1rem, 1.35vw, 1.18rem);
+    max-width: 52ch;
+    font-size: clamp(1.02rem, 1.25vw, 1.16rem);
     line-height: 1.65;
     color: var(--ivory);
     opacity: 0.85;
   }
+
   .hero-actions {
     display: flex;
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
+    padding-top: 4px;
   }
   .btn-hero-primary {
     gap: 10px;
-    background: var(--tan);
+    background: linear-gradient(135deg, var(--tan) 0%, #D9B48F 100%);
     color: var(--ink);
     padding: 14px 28px;
     font-size: 15px;
     font-weight: 600;
-    box-shadow: 0 4px 20px rgba(201, 162, 126, 0.25);
+    box-shadow: 0 4px 24px rgba(201, 162, 126, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   .btn-hero-primary svg {
     transition: transform 0.25s ease;
@@ -168,40 +266,187 @@
   .btn-hero-primary:hover svg {
     transform: translateX(4px);
   }
+
   .btn-hero-secondary {
-    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(6, 51, 64, 0.6);
     color: var(--ivory);
-    border: 1px solid rgba(244, 240, 232, 0.22);
+    border: 1px solid rgba(244, 240, 232, 0.2);
     padding: 14px 24px;
-    font-size: 15px;
+    font-size: 14.5px;
     font-weight: 500;
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
     transition: all 0.25s ease;
+    text-decoration: none;
   }
   .btn-hero-secondary:hover {
-    background: rgba(244, 240, 232, 0.08);
-    border-color: rgba(244, 240, 232, 0.4);
-    color: var(--ivory);
+    background: rgba(201, 162, 126, 0.12);
+    border-color: var(--tan);
+    color: var(--tan);
     transform: translateY(-2px);
   }
 
+  /* Operations HUD Right Column */
+  .hero-hud-col {
+    position: relative;
+    width: 100%;
+  }
+  .operations-hud {
+    background: rgba(4, 34, 43, 0.88);
+    border: 1px solid rgba(201, 162, 126, 0.25);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.45),
+      inset 0 0 20px rgba(6, 51, 64, 0.6);
+    backdrop-filter: blur(16px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .operations-hud::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle 350px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.14), transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hud-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background: rgba(6, 51, 64, 0.6);
+    border-bottom: 1px solid rgba(244, 240, 232, 0.08);
+  }
+  .hud-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hud-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 8px #4ade80;
+    animation: telePulse 1.8s infinite;
+  }
+  .hud-tag {
+    font-family: monospace;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--tan);
+  }
+  .hud-telemetry-badge {
+    font-family: monospace;
+    font-size: 11px;
+    color: var(--ivory);
+    opacity: 0.8;
+  }
+
+  .operations-list {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 18px;
+    gap: 10px;
+  }
+  .op-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: rgba(6, 51, 64, 0.4);
+    border: 1px solid rgba(244, 240, 232, 0.06);
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  .op-item:hover {
+    background: rgba(201, 162, 126, 0.08);
+    border-color: rgba(201, 162, 126, 0.25);
+  }
+  .op-num {
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--tan);
+    background: rgba(201, 162, 126, 0.12);
+    padding: 3px 6px;
+    border-radius: 4px;
+    line-height: 1;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  .op-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .op-title {
+    font-family: var(--body);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--ivory);
+  }
+  .op-desc {
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: var(--ivory);
+    opacity: 0.72;
+  }
+
+  /* HUD Footer */
+  .hud-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px;
+    background: rgba(6, 51, 64, 0.5);
+    border-top: 1px solid rgba(244, 240, 232, 0.08);
+    font-family: monospace;
+    font-size: 10px;
+    color: var(--ivory);
+    opacity: 0.8;
+  }
+  .hud-foot-badge {
+    color: var(--tan);
+    font-weight: 600;
+  }
   /* Metric cards */
   .hero-metrics {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    margin-top: clamp(8px, 2vh, 24px);
+    margin-top: clamp(8px, 1.5vh, 20px);
   }
   .metric-card {
     background: rgba(6, 51, 64, 0.45);
     border: 1px solid rgba(244, 240, 232, 0.08);
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 18px 20px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  .metric-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle 240px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.16), transparent 70%);
+    pointer-events: none;
   }
   .metric-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(201, 162, 126, 0.3);
+    border-color: rgba(201, 162, 126, 0.4);
     background: rgba(6, 51, 64, 0.7);
   }
   .metric-header {
@@ -209,19 +454,18 @@
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    margin-bottom: 6px;
   }
   .metric-num {
-    font: 700 clamp(1.4rem, 2.2vw, 1.9rem)/1.1 var(--disp);
+    font: 700 clamp(1.4rem, 2vw, 1.85rem)/1.1 var(--disp);
     color: var(--ivory);
     letter-spacing: -0.02em;
   }
   .metric-badge {
-    font-size: 10px;
+    font-size: 9.5px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.08em;
-    padding: 2px 7px;
+    padding: 3px 8px;
     border-radius: 999px;
     background: rgba(201, 162, 126, 0.15);
     color: var(--tan);
@@ -230,11 +474,27 @@
     font-size: 12.5px;
     line-height: 1.4;
     color: var(--ivory);
-    opacity: 0.65;
+    opacity: 0.7;
     display: block;
   }
+  .metric-bar-wrap {
+    height: 3px;
+    background: rgba(244, 240, 232, 0.08);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+  .metric-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--tan) 0%, #D9B48F 100%);
+    border-radius: 2px;
+  }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1100px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
     .hero-metrics {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -242,24 +502,19 @@
 
   @media (max-width: 640px) {
     .hero {
-      padding-top: calc(var(--nav) + 24px);
-      padding-bottom: 48px;
-      min-height: auto;
+      padding-top: calc(var(--nav) + 16px);
+      padding-bottom: 40px;
     }
-    .hero-badge {
-      font-size: 11.5px;
-      padding: 5px 12px;
+    .hero-badge-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
     }
     .hero-title {
       font-size: clamp(2.4rem, 10vw, 3.4rem);
     }
     .hl-line.hl-accent {
       padding-left: 0;
-    }
-    .hero-foot {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 20px;
     }
     .hero-actions {
       flex-direction: column;
@@ -271,10 +526,13 @@
     }
     .hero-metrics {
       grid-template-columns: 1fr;
-      gap: 10px;
+      gap: 12px;
     }
-    .metric-card {
-      padding: 14px 16px;
+    .hud-tabs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .hud-tab {
+      border-bottom: 1px solid rgba(244, 240, 232, 0.06);
     }
   }
 </style>

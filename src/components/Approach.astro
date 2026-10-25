@@ -5,8 +5,8 @@
   <div class="w approach-container">
     <div class="approach-header">
       <div class="header-main">
-        <p class="eyebrow">How We Deliver &bull; Operating Disciplines</p>
-        <h2 class="approach-title">Care in the details. Certainty in the outcomes.</h2>
+        <p class="eyebrow" data-scramble="How We Deliver • Operating Disciplines">How We Deliver &bull; Operating Disciplines</p>
+        <h2 class="approach-title" data-scramble="Care in the details. Certainty in the outcomes.">Care in the details. Certainty in the outcomes.</h2>
       </div>
       <p class="approach-aside">
         Four guiding principles govern every engagement &mdash; from the initial discovery call to 24/7 production maintenance and scale.
@@ -15,28 +15,34 @@
 
     <div class="approach-grid">
       <!-- 01 Quality -->
-      <div class="approach-card">
+      <div class="approach-card tilt-card">
+        <div class="laser-border" aria-hidden="true"></div>
         <div class="card-num-bar">
-          <span class="card-num">01</span>
+          <span class="card-num" data-scramble="01">01</span>
           <span class="card-tag">Standard</span>
         </div>
         <div class="card-content">
           <h3 class="card-heading">Uncompromising Quality</h3>
           <p class="card-text">
-            We sweat the edge cases so the final product feels effortless. Software goes through multi-tier testing, and data tasks pass double-blind verification.
+            We sweat the edge cases so the final product feels effortless. Software goes through multi-tier automated test suites, and data tasks pass double-blind verification.
           </p>
+          <div class="approach-metric-chip">
+            <span class="chip-dot"></span>
+            <span>99.8% Verified Precision Target</span>
+          </div>
           <ul class="card-points">
-            <li>Strict code review standards</li>
-            <li>Multi-tier data verification</li>
-            <li>Zero-regression mindset</li>
+            <li>Strict code review &amp; lint standards</li>
+            <li>Multi-tier double-blind data verification</li>
+            <li>Zero-regression release cadence</li>
           </ul>
         </div>
       </div>
 
       <!-- 02 Timelines -->
-      <div class="approach-card">
+      <div class="approach-card tilt-card">
+        <div class="laser-border" aria-hidden="true"></div>
         <div class="card-num-bar">
-          <span class="card-num">02</span>
+          <span class="card-num" data-scramble="02">02</span>
           <span class="card-tag">Execution</span>
         </div>
         <div class="card-content">
@@ -44,18 +50,23 @@
           <p class="card-text">
             Promises kept. Deadlines respected. Clear milestones and transparent sprint progress mean you never have to chase updates or wonder about launch status.
           </p>
+          <div class="approach-metric-chip">
+            <span class="chip-dot"></span>
+            <span>100% On-Time Milestone Adherence</span>
+          </div>
           <ul class="card-points">
-            <li>Realistic milestone planning</li>
-            <li>Weekly status cadences</li>
-            <li>Guaranteed SLA commitments</li>
+            <li>Predictable milestone planning</li>
+            <li>Weekly status cadences &amp; live dashboards</li>
+            <li>Strict contractual SLA commitments</li>
           </ul>
         </div>
       </div>
 
       <!-- 03 Innovation -->
-      <div class="approach-card">
+      <div class="approach-card tilt-card">
+        <div class="laser-border" aria-hidden="true"></div>
         <div class="card-num-bar">
-          <span class="card-num">03</span>
+          <span class="card-num" data-scramble="03">03</span>
           <span class="card-tag">Tooling</span>
         </div>
         <div class="card-content">
@@ -63,18 +74,23 @@
           <p class="card-text">
             Current technology, considered choices, and automation pipelines. We adopt modern architectures and workflow scripts to keep your operations agile.
           </p>
+          <div class="approach-metric-chip">
+            <span class="chip-dot"></span>
+            <span>Cloud-Native &amp; Automation First</span>
+          </div>
           <ul class="card-points">
-            <li>Modern cloud-native stacks</li>
-            <li>Automated data pipelines</li>
-            <li>Continuous workflow tuning</li>
+            <li>Modern cloud-native edge stacks</li>
+            <li>Automated data pipelines &amp; ETL scripts</li>
+            <li>Continuous workflow tuning &amp; tooling</li>
           </ul>
         </div>
       </div>
 
       <!-- 04 Client satisfaction -->
-      <div class="approach-card">
+      <div class="approach-card tilt-card">
+        <div class="laser-border" aria-hidden="true"></div>
         <div class="card-num-bar">
-          <span class="card-num">04</span>
+          <span class="card-num" data-scramble="04">04</span>
           <span class="card-tag">Partnership</span>
         </div>
         <div class="card-content">
@@ -82,10 +98,14 @@
           <p class="card-text">
             Our success is entirely measured by yours. You work with a dedicated, communicative team that acts as an integrated extension of your company.
           </p>
+          <div class="approach-metric-chip">
+            <span class="chip-dot"></span>
+            <span>Direct Principal &amp; Lead Access</span>
+          </div>
           <ul class="card-points">
-            <li>Dedicated account ownership</li>
-            <li>Direct executive access</li>
-            <li>Long-term scalability focus</li>
+            <li>Dedicated account ownership squad</li>
+            <li>Direct executive &amp; technical access</li>
+            <li>Multi-year scalability focus</li>
           </ul>
         </div>
       </div>
@@ -95,9 +115,10 @@
 
 <style is:global>
   .approach {
-    padding-block: clamp(60px, 9vh, 120px);
+    padding-block: clamp(64px, 10vh, 120px);
     background: var(--bone);
     color: var(--ink);
+    position: relative;
   }
   .approach-container {
     display: flex;
@@ -114,13 +135,14 @@
     border-bottom: 1px solid rgba(20, 32, 31, 0.15);
   }
   .header-main {
-    max-width: 640px;
+    max-width: 760px;
   }
   .approach-title {
     font: 800 clamp(2rem, 4.2vw, 3.6rem)/1.05 var(--disp);
     letter-spacing: -0.03em;
     color: var(--ink);
     margin-top: 8px;
+    contain: layout style;
   }
   .approach-aside {
     max-width: 44ch;
@@ -138,17 +160,52 @@
   .approach-card {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
     background: var(--teal);
     color: var(--ivory);
     padding: clamp(24px, 3vw, 32px);
-    border-radius: 16px;
+    border-radius: 18px;
     border: 1px solid rgba(244, 240, 232, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
   }
+  .approach-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle 280px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.18), transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Laser Border Tracing Effect on Hover */
+  .laser-border {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: linear-gradient(90deg, transparent 0%, var(--tan) 50%, transparent 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+  }
+  .approach-card:hover .laser-border {
+    opacity: 1;
+    animation: laserSpin 3s linear infinite;
+  }
+  @keyframes laserSpin {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+
   .approach-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 36px rgba(4, 34, 43, 0.2);
+    border-color: rgba(201, 162, 126, 0.4);
+    box-shadow: 0 16px 36px rgba(4, 34, 43, 0.25);
   }
   .card-num-bar {
     display: flex;
@@ -156,6 +213,8 @@
     justify-content: space-between;
     padding-bottom: 16px;
     border-bottom: 1px solid rgba(244, 240, 232, 0.1);
+    position: relative;
+    z-index: 2;
   }
   .card-num {
     font: 800 24px/1 var(--disp);
@@ -177,6 +236,8 @@
     flex-direction: column;
     gap: 12px;
     flex-grow: 1;
+    position: relative;
+    z-index: 2;
   }
   .card-heading {
     font: 700 clamp(1.3rem, 1.8vw, 1.6rem)/1.15 var(--disp);
@@ -187,8 +248,31 @@
     font-size: 0.95rem;
     line-height: 1.55;
     color: var(--ivory);
-    opacity: 0.8;
+    opacity: 0.82;
   }
+
+  .approach-metric-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: rgba(4, 34, 43, 0.6);
+    border: 1px solid rgba(201, 162, 126, 0.25);
+    font-family: monospace;
+    font-size: 10.5px;
+    color: var(--tan);
+    margin-top: 4px;
+    width: fit-content;
+  }
+  .chip-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 6px #4ade80;
+  }
+
   .card-points {
     display: flex;
     flex-direction: column;

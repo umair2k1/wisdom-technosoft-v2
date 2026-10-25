@@ -3,10 +3,10 @@
   "type": "module",
   "version": "2.0.0",
   "scripts": {
-    "dev": "node ./node_modules/astro/astro.js dev",
-    "start": "node ./node_modules/astro/astro.js dev",
-    "build": "node ./node_modules/astro/astro.js build",
-    "preview": "node ./node_modules/astro/astro.js preview"
+    "dev": "node \"./node_modules/astro/astro.js\" dev",
+    "start": "node \"./node_modules/astro/astro.js\" dev",
+    "build": "node \"./node_modules/astro/astro.js\" build",
+    "preview": "node \"./node_modules/astro/astro.js\" preview"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.2.0",

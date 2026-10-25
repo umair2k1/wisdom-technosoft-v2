@@ -1,63 +1,68 @@
 ---
 ---
 
-<div class="orb" aria-hidden="true">
-  <svg viewBox="-150 -150 300 300">
-    <circle class="o-ring" r="135"/>
-    <image href="/assets/logo-ghost.png" xlink:href="/assets/logo-ghost.png" x="-100" y="-81.25" width="200" height="162.5"/>
-  </svg>
+<!-- Ambient Atmospheric Background -->
+<div class="ambient-backdrop" aria-hidden="true">
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
 </div>
-<div class="bar" aria-hidden="true"><i></i></div>
+
+<!-- Scroll Progress Edge Bar -->
+<div class="scroll-progress-bar" aria-hidden="true"></div>
 
 <style is:global>
-  .orb {
+  .ambient-backdrop {
     position: fixed;
-    right: -5vw;
-    top: 20vh;
-    width: min(52vmin, 560px);
-    height: min(52vmin, 560px);
-    aspect-ratio: 1;
+    inset: 0;
+    pointer-events: none;
     z-index: 0;
+    overflow: hidden;
+  }
+  .ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.12;
     pointer-events: none;
-    opacity: 0.14;
-    transition: opacity 0.5s ease;
-    will-change: transform;
   }
-  .orb svg {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
+  .glow-1 {
+    width: min(60vw, 600px);
+    height: min(60vw, 600px);
+    top: -10vw;
+    right: -10vw;
+    background: radial-gradient(circle, var(--tan) 0%, transparent 70%);
   }
-  .o-ring {
-    fill: none;
-    stroke: var(--tan, #C9A27E);
-    stroke-width: 1.5;
-    stroke-dasharray: 4px 8px;
-    opacity: 0.6;
+  .glow-2 {
+    width: min(50vw, 500px);
+    height: min(50vw, 500px);
+    bottom: 10vh;
+    left: -10vw;
+    background: radial-gradient(circle, rgba(6, 51, 64, 0.8) 0%, transparent 70%);
   }
-  .bar {
+
+  .scroll-progress-bar {
     position: fixed;
-    right: 0;
     top: 0;
-    bottom: 0;
+    right: 0;
     width: 3px;
-    z-index: 210;
+    height: 100vh;
+    transform-origin: top;
+    background: linear-gradient(180deg, var(--tan) 0%, #D9B48F 100%);
+    z-index: 100;
     pointer-events: none;
-    background: rgba(244, 240, 232, 0.05);
   }
-  .bar i {
-    display: block;
-    height: 100%;
-    background: var(--tan);
-    transform: scaleY(0);
-    transform-origin: 50% 0;
+  @supports (animation-timeline: scroll()) {
+    .scroll-progress-bar {
+      animation: progress-grow linear;
+      animation-timeline: scroll();
+    }
+    @keyframes progress-grow {
+      from { transform: scaleY(0); }
+      to { transform: scaleY(1); }
+    }
   }
-  body:not(.has-orb) .bar,
-  body:not(.has-orb) .orb {
-    display: none;
-  }
-  @media (max-width: 768px), (max-height: 680px) {
-    .orb {
+  @media (max-width: 900px) {
+    .scroll-progress-bar {
       display: none;
     }
   }

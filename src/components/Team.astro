@@ -5,8 +5,8 @@
   <div class="w team-container">
     <div class="team-header">
       <div class="header-main">
-        <p class="eyebrow">Leadership &amp; Talent &bull; Dedicated Expertise</p>
-        <h2 class="team-title">The people behind the work.</h2>
+        <p class="eyebrow" data-scramble="Leadership & Talent • Dedicated Expertise">Leadership &amp; Talent &bull; Dedicated Expertise</p>
+        <h2 class="team-title" data-scramble="The people behind the work.">The people behind the work.</h2>
       </div>
       <p class="team-aside">
         A senior multidisciplinary team across software engineering, voice operations, and data analytics &mdash; working as one integrated unit to deliver measurable client value.
@@ -15,37 +15,47 @@
 
     <div class="team-grid">
       <!-- 1 Executive Leadership -->
-      <div class="team-card">
+      <div class="team-card tilt-card">
+        <div class="holographic-foil" aria-hidden="true"></div>
         <div class="team-card-top">
           <span class="role-badge">Managing Director</span>
-          <span class="unit-code">01</span>
+          <span class="unit-code" data-scramble="DIV-01">DIV-01</span>
         </div>
         <div class="team-card-body">
-          <h3 class="team-division">Executive Leadership</h3>
+          <h3 class="team-division" data-scramble="Executive Leadership">Executive Leadership</h3>
           <p class="division-domain">Strategy, Vision &amp; Governance</p>
           <p class="division-desc">
             Directs long-term corporate direction, strategic technology investments, and client governance to ensure enduring partnerships and enterprise scale.
           </p>
+          <div class="division-meter-row">
+            <span class="meter-lbl">Governance &amp; Strategy</span>
+            <div class="meter-track"><div class="meter-fill" style="width: 100%"></div></div>
+          </div>
         </div>
         <div class="division-tags">
           <span>Enterprise Strategy</span>
           <span>Governance</span>
-          <span>Growth</span>
+          <span>Global Growth</span>
         </div>
       </div>
 
       <!-- 2 Operations & Delivery -->
-      <div class="team-card">
+      <div class="team-card tilt-card">
+        <div class="holographic-foil" aria-hidden="true"></div>
         <div class="team-card-top">
           <span class="role-badge">Managing Director</span>
-          <span class="unit-code">02</span>
+          <span class="unit-code" data-scramble="DIV-02">DIV-02</span>
         </div>
         <div class="team-card-body">
-          <h3 class="team-division">Operations &amp; Delivery</h3>
+          <h3 class="team-division" data-scramble="Operations & Delivery">Operations &amp; Delivery</h3>
           <p class="division-domain">Execution &amp; Operational Scale</p>
           <p class="division-desc">
             Leads 24/7 delivery pipelines, telecalling campaigns, workforce management, and resource allocation to maintain uninterrupted service excellence.
           </p>
+          <div class="division-meter-row">
+            <span class="meter-lbl">24/7 SLA Adherence</span>
+            <div class="meter-track"><div class="meter-fill" style="width: 99.8%"></div></div>
+          </div>
         </div>
         <div class="division-tags">
           <span>24/7 Operations</span>
@@ -55,17 +65,22 @@
       </div>
 
       <!-- 3 Process & Quality -->
-      <div class="team-card">
+      <div class="team-card tilt-card">
+        <div class="holographic-foil" aria-hidden="true"></div>
         <div class="team-card-top">
           <span class="role-badge">Consultant</span>
-          <span class="unit-code">03</span>
+          <span class="unit-code" data-scramble="DIV-03">DIV-03</span>
         </div>
         <div class="team-card-body">
-          <h3 class="team-division">Process &amp; Quality</h3>
+          <h3 class="team-division" data-scramble="Process & Quality">Process &amp; Quality</h3>
           <p class="division-domain">Audits, Compliance &amp; Standards</p>
           <p class="division-desc">
             Designs and enforces stringent standard operating procedures, multi-tier data verification, and compliance-driven healthcare QA protocols.
           </p>
+          <div class="division-meter-row">
+            <span class="meter-lbl">Audit &amp; Compliance Accuracy</span>
+            <div class="meter-track"><div class="meter-fill" style="width: 99.9%"></div></div>
+          </div>
         </div>
         <div class="division-tags">
           <span>Quality Audits</span>
@@ -75,17 +90,22 @@
       </div>
 
       <!-- 4 Client Partnerships -->
-      <div class="team-card">
+      <div class="team-card tilt-card">
+        <div class="holographic-foil" aria-hidden="true"></div>
         <div class="team-card-top">
           <span class="role-badge">Consultant</span>
-          <span class="unit-code">04</span>
+          <span class="unit-code" data-scramble="DIV-04">DIV-04</span>
         </div>
         <div class="team-card-body">
-          <h3 class="team-division">Client Partnerships</h3>
+          <h3 class="team-division" data-scramble="Client Partnerships">Client Partnerships</h3>
           <p class="division-domain">Relationship &amp; Account Success</p>
           <p class="division-desc">
             Acts as the primary consultative bridge between client stakeholder goals and delivery milestones, maintaining absolute project transparency.
           </p>
+          <div class="division-meter-row">
+            <span class="meter-lbl">Client Retention &amp; CSAT</span>
+            <div class="meter-track"><div class="meter-fill" style="width: 98%"></div></div>
+          </div>
         </div>
         <div class="division-tags">
           <span>Account Success</span>
@@ -99,14 +119,15 @@
 
 <style is:global>
   .team-section {
-    padding-block: clamp(60px, 10vh, 120px);
+    padding-block: clamp(64px, 10vh, 120px);
     background: var(--bone);
     color: var(--ink);
+    position: relative;
   }
   .team-container {
     display: flex;
     flex-direction: column;
-    gap: clamp(32px, 5vh, 52px);
+    gap: clamp(32px, 5vh, 56px);
   }
   .team-header {
     display: flex;
@@ -140,80 +161,151 @@
     gap: 20px;
   }
   .team-card {
-    background: #e2dbcd;
-    border: 1px solid rgba(20, 32, 31, 0.12);
-    border-radius: 16px;
-    padding: clamp(22px, 3vw, 28px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
+    background: var(--teal);
+    color: var(--ivory);
+    padding: clamp(24px, 3vw, 32px);
+    border-radius: 18px;
+    border: 1px solid rgba(244, 240, 232, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .team-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle 280px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.18), transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Holographic Specular Foil Effect */
+  .holographic-foil {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      125deg,
+      transparent 0%,
+      rgba(201, 162, 126, 0.1) 20%,
+      rgba(255, 255, 255, 0.15) 35%,
+      rgba(110, 143, 168, 0.2) 50%,
+      rgba(217, 180, 143, 0.15) 65%,
+      transparent 100%
+    );
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.6s ease;
+    transform: translateY(10%);
+    z-index: 2;
+  }
+  .team-card:hover .holographic-foil {
+    opacity: 1;
+    transform: translateY(-10%);
   }
   .team-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(20, 32, 31, 0.1);
-    border-color: rgba(20, 32, 31, 0.25);
+    border-color: rgba(201, 162, 126, 0.4);
+    box-shadow: 0 16px 36px rgba(4, 34, 43, 0.28);
   }
+
   .team-card-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(244, 240, 232, 0.1);
+    position: relative;
+    z-index: 3;
   }
   .role-badge {
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     padding: 3px 10px;
     border-radius: 999px;
-    background: var(--ink);
-    color: var(--bone);
+    background: rgba(201, 162, 126, 0.14);
+    color: var(--tan);
   }
   .unit-code {
-    font: 800 16px/1 var(--disp);
-    color: var(--ink);
-    opacity: 0.4;
+    font-family: monospace;
+    font-size: 11.5px;
+    color: var(--slate);
+    font-weight: 700;
   }
+
   .team-card-body {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+    flex-grow: 1;
+    position: relative;
+    z-index: 3;
   }
   .team-division {
-    font: 700 clamp(1.3rem, 1.8vw, 1.6rem)/1.15 var(--disp);
-    color: var(--ink);
+    font: 700 clamp(1.25rem, 1.8vw, 1.55rem)/1.15 var(--disp);
+    color: var(--ivory);
     letter-spacing: -0.02em;
   }
   .division-domain {
-    font-size: 12.5px;
+    font-size: 11.5px;
     font-weight: 600;
-    color: #43635e;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
+    color: var(--tan);
   }
   .division-desc {
     font-size: 0.94rem;
     line-height: 1.55;
-    color: var(--ink);
-    opacity: 0.78;
-    margin-top: 4px;
+    color: var(--ivory);
+    opacity: 0.82;
   }
+
+  .division-meter-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 8px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(244, 240, 232, 0.1);
+  }
+  .meter-lbl {
+    font-family: monospace;
+    font-size: 10.5px;
+    color: var(--slate);
+  }
+  .meter-track {
+    height: 3px;
+    background: rgba(244, 240, 232, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--tan) 0%, #D9B48F 100%);
+    border-radius: 2px;
+  }
+
   .division-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     padding-top: 14px;
-    border-top: 1px dashed rgba(20, 32, 31, 0.15);
+    border-top: 1px solid rgba(244, 240, 232, 0.08);
+    position: relative;
+    z-index: 3;
   }
   .division-tags span {
-    font-size: 11px;
-    font-weight: 500;
     padding: 3px 8px;
-    background: rgba(20, 32, 31, 0.06);
-    border-radius: 4px;
-    color: var(--ink);
+    background: rgba(244, 240, 232, 0.06);
+    border: 1px solid rgba(244, 240, 232, 0.1);
+    border-radius: 999px;
+    font-size: 11px;
+    color: var(--ivory);
+    opacity: 0.8;
   }
 
   @media (max-width: 1100px) {

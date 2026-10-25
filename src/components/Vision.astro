@@ -4,14 +4,15 @@
 <section class="s vision-section" id="vision" style="--bg:var(--deep);--fg:var(--ivory)">
   <div class="w vision-container">
     <div class="vision-top">
-      <p class="eyebrow">Vision &amp; Values &bull; Purpose &amp; Direction</p>
-      <h2 class="vision-headline">Built on trust. Driven by precision.</h2>
+      <p class="eyebrow" data-scramble="Vision & Values • Purpose & Direction">Vision &amp; Values &bull; Purpose &amp; Direction</p>
+      <h2 class="vision-headline" data-scramble="Built on trust. Driven by precision.">Built on trust. Driven by precision.</h2>
     </div>
 
     <div class="vision-main-layout">
-      <!-- Left: Rotating Crest Emblem -->
-      <div class="vision-emblem-card">
+      <!-- Left: Interactive 3D Reactor & Crest Emblem -->
+      <div class="vision-emblem-card tilt-card">
         <div class="emblem-wrapper">
+          <div class="emblem-ambient-glow" aria-hidden="true"></div>
           <svg class="vision-ring" viewBox="0 0 400 400" aria-hidden="true">
             <defs>
               <path id="vrp" d="M200 200m-160 0a160 160 0 1 1 320 0a160 160 0 1 1-320 0"/>
@@ -21,16 +22,20 @@
             </text>
           </svg>
           <div class="emblem-center">
-            <img src="/assets/logo-mark-light.png" alt="Wisdom Technosoft Crest" width="64" height="52">
-            <span class="emblem-year">Est. Nagpur</span>
+            <img src="/assets/logo-mark-light.png" alt="Wisdom Technosoft Crest" width="68" height="56" class="emblem-logo">
+            <span class="emblem-year">Est. Nagpur &bull; Global Operations</span>
           </div>
+        </div>
+        <div class="emblem-telemetry">
+          <span class="telemetry-chip">99.8% PRECISION</span>
+          <span class="telemetry-chip">24/7 COVERAGE</span>
         </div>
         <p class="emblem-quote">&ldquo;Simplifying complexity through disciplined execution.&rdquo;</p>
       </div>
 
       <!-- Right: Vision and Mission statements -->
       <div class="vision-statements">
-        <div class="statement-card vision-card">
+        <div class="statement-card vision-card tilt-card">
           <div class="card-tag-pill">Our Vision</div>
           <h3 class="statement-title">
             To stand among the top business process outsourcing and software development providers globally &mdash; renowned for clarity, care, and consistency.
@@ -38,9 +43,13 @@
           <p class="statement-desc">
             We envision a standard of service where technical capability and human dedication merge seamlessly to deliver measurable business advantage for every client we serve.
           </p>
+          <div class="statement-stats-row">
+            <div class="s-stat"><span class="s-stat-num" data-scramble="100%">100%</span><span class="s-stat-lbl">Milestone Reliability</span></div>
+            <div class="s-stat"><span class="s-stat-num" data-scramble="98.7%">98.7%</span><span class="s-stat-lbl">Clean Claims Rate</span></div>
+          </div>
         </div>
 
-        <div class="statement-card mission-card">
+        <div class="statement-card mission-card tilt-card">
           <div class="card-tag-pill">Our Mission</div>
           <p class="mission-text">
             In an industry where simplifying data and scaling operations are key to modern enterprise success, we provide resourceful software, high-touch voice solutions, and error-free data management &mdash; helping client businesses flourish, because their enduring success boosts our own.
@@ -51,26 +60,29 @@
 
     <!-- 3 Core Pillars -->
     <div class="values-grid">
-      <div class="value-item">
+      <div class="value-item tilt-card">
         <div class="value-header">
           <span class="value-dot"></span>
-          <h4>Clarity</h4>
+          <h4 data-scramble="Clarity">Clarity</h4>
         </div>
         <p>Transparent communication, predictable milestones, documented metrics, and zero ambiguity in deliverables.</p>
+        <span class="value-subtag">Predictable Sprints &bull; Documented SOPs</span>
       </div>
-      <div class="value-item">
+      <div class="value-item tilt-card">
         <div class="value-header">
           <span class="value-dot"></span>
-          <h4>Care</h4>
+          <h4 data-scramble="Care">Care</h4>
         </div>
         <p>Treating every customer conversation, line of code, and medical claim with the dedication of true stakeholders.</p>
+        <span class="value-subtag">Empathy &bull; Active Listening &bull; Precision</span>
       </div>
-      <div class="value-item">
+      <div class="value-item tilt-card">
         <div class="value-header">
           <span class="value-dot"></span>
-          <h4>Consistency</h4>
+          <h4 data-scramble="Consistency">Consistency</h4>
         </div>
         <p>Repeatable operational excellence with strict multi-stage quality assurance and 99.8% SLA adherence.</p>
+        <span class="value-subtag">99.8% QA &bull; Automated Audits &bull; 24/7</span>
       </div>
     </div>
   </div>
@@ -87,6 +99,8 @@
     display: flex;
     flex-direction: column;
     gap: clamp(36px, 6vh, 64px);
+    position: relative;
+    z-index: 2;
   }
   .vision-top {
     max-width: 700px;
@@ -100,141 +114,220 @@
 
   .vision-main-layout {
     display: grid;
-    grid-template-columns: 380px 1fr;
-    gap: 32px;
+    grid-template-columns: 400px 1fr;
+    gap: clamp(28px, 4vw, 56px);
     align-items: stretch;
   }
 
-  /* Emblem card */
+  /* Left Emblem Card */
   .vision-emblem-card {
-    background: rgba(6, 51, 64, 0.45);
-    border: 1px solid rgba(244, 240, 232, 0.1);
+    background: rgba(6, 51, 64, 0.55);
+    border: 1px solid rgba(201, 162, 126, 0.28);
     border-radius: 20px;
-    padding: clamp(30px, 4vw, 40px);
+    padding: clamp(28px, 4vw, 40px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 20px;
     position: relative;
-    backdrop-filter: blur(12px);
+    overflow: hidden;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  }
+  .vision-emblem-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle 320px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.16), transparent 70%);
+    pointer-events: none;
   }
   .emblem-wrapper {
     position: relative;
-    width: min(260px, 75vw);
+    width: min(240px, 70vw);
     aspect-ratio: 1;
     display: grid;
     place-items: center;
   }
-  .vision-ring {
+  .emblem-ambient-glow {
     position: absolute;
-    inset: 0;
+    inset: 10%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201, 162, 126, 0.25) 0%, transparent 70%);
+    filter: blur(20px);
+    pointer-events: none;
+  }
+  .vision-ring {
     width: 100%;
     height: 100%;
-    animation: rotateSeal 40s linear infinite;
+    animation: ringSpin 24s linear infinite;
+    transform-origin: 50% 50%;
   }
   .vision-ring text {
-    font: 800 24px var(--disp);
     fill: var(--tan);
-    letter-spacing: 0.12em;
+    font: 700 11.5px/1 var(--body);
+    letter-spacing: 0.18em;
+  }
+  @keyframes ringSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
   .emblem-center {
+    position: absolute;
+    inset: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    z-index: 2;
+    justify-content: center;
+    gap: 6px;
   }
-  .emblem-center img {
-    height: 48px;
-    width: auto;
+  .emblem-logo {
+    transition: transform 0.3s ease;
+  }
+  .vision-emblem-card:hover .emblem-logo {
+    transform: scale(1.1) rotate(6deg);
   }
   .emblem-year {
     font-size: 11px;
     text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--tan);
+    font-weight: 600;
+  }
+  .emblem-telemetry {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .telemetry-chip {
+    font-family: monospace;
+    font-size: 10px;
     font-weight: 700;
-    letter-spacing: 0.14em;
-    color: var(--ivory);
-    opacity: 0.65;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(201, 162, 126, 0.12);
+    border: 1px solid rgba(201, 162, 126, 0.25);
+    color: var(--tan);
   }
   .emblem-quote {
-    font-size: 0.95rem;
-    font-style: italic;
+    font: italic 500 1.05rem/1.5 var(--body);
     color: var(--ivory);
-    opacity: 0.75;
-    margin-top: 24px;
-    max-width: 26ch;
-    line-height: 1.5;
+    opacity: 0.88;
+    max-width: 28ch;
   }
 
-  @keyframes rotateSeal {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  /* Statements */
+  /* Right Statements */
   .vision-statements {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
   .statement-card {
-    background: rgba(6, 51, 64, 0.35);
-    border: 1px solid rgba(244, 240, 232, 0.08);
-    border-radius: 16px;
-    padding: clamp(24px, 3.5vw, 36px);
+    background: rgba(6, 51, 64, 0.5);
+    border: 1px solid rgba(244, 240, 232, 0.1);
+    border-radius: 20px;
+    padding: clamp(28px, 4vw, 40px);
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    backdrop-filter: blur(8px);
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(14px);
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  .statement-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle 350px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.16), transparent 70%);
+    pointer-events: none;
+  }
+  .statement-card:hover {
+    border-color: rgba(201, 162, 126, 0.35);
+    background: rgba(6, 51, 64, 0.7);
   }
   .card-tag-pill {
-    width: fit-content;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(201, 162, 126, 0.15);
+    border: 1px solid rgba(201, 162, 126, 0.3);
+    color: var(--tan);
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 3px 12px;
-    border-radius: 999px;
-    background: rgba(201, 162, 126, 0.15);
-    color: var(--tan);
+    letter-spacing: 0.08em;
+    width: fit-content;
   }
   .statement-title {
-    font: 700 clamp(1.4rem, 2.4vw, 2.1rem)/1.18 var(--disp);
+    font: 700 clamp(1.4rem, 2.2vw, 1.9rem)/1.22 var(--disp);
     color: var(--ivory);
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
   }
-  .statement-desc,
-  .mission-text {
-    font-size: 1.02rem;
+  .statement-desc {
+    font-size: 1rem;
     line-height: 1.65;
     color: var(--ivory);
-    opacity: 0.82;
+    opacity: 0.8;
+  }
+  .statement-stats-row {
+    display: flex;
+    gap: 24px;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(244, 240, 232, 0.1);
+    margin-top: 4px;
+  }
+  .s-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .s-stat-num {
+    font: 700 1.4rem/1 var(--disp);
+    color: var(--tan);
+  }
+  .s-stat-lbl {
+    font-size: 11.5px;
+    color: var(--slate);
+  }
+  .mission-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--ivory);
+    opacity: 0.88;
   }
 
-  /* Values 3-column */
+  /* 3 Values */
   .values-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   .value-item {
-    background: rgba(6, 51, 64, 0.4);
+    background: rgba(4, 34, 43, 0.7);
     border: 1px solid rgba(244, 240, 232, 0.08);
-    border-radius: 14px;
-    padding: 22px 24px;
+    border-radius: 16px;
+    padding: clamp(20px, 2.8vw, 28px);
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    transition: transform 0.25s ease, border-color 0.25s ease;
+    gap: 12px;
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .value-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle 240px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.15), transparent 70%);
+    pointer-events: none;
   }
   .value-item:hover {
+    border-color: rgba(201, 162, 126, 0.35);
     transform: translateY(-3px);
-    border-color: rgba(201, 162, 126, 0.3);
   }
   .value-header {
     display: flex;
@@ -246,25 +339,30 @@
     height: 8px;
     border-radius: 50%;
     background: var(--tan);
+    box-shadow: 0 0 10px var(--tan);
   }
   .value-header h4 {
-    font: 700 1.25rem/1.2 var(--disp);
+    font: 700 clamp(1.2rem, 1.6vw, 1.45rem)/1.2 var(--disp);
     color: var(--ivory);
     letter-spacing: -0.01em;
   }
   .value-item p {
-    font-size: 0.92rem;
-    line-height: 1.55;
+    font-size: 0.94rem;
+    line-height: 1.6;
     color: var(--ivory);
-    opacity: 0.75;
+    opacity: 0.8;
+  }
+  .value-subtag {
+    font-family: monospace;
+    font-size: 10.5px;
+    color: var(--tan);
+    opacity: 0.85;
+    margin-top: auto;
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 1024px) {
     .vision-main-layout {
       grid-template-columns: 1fr;
-    }
-    .vision-emblem-card {
-      padding-block: 36px;
     }
     .values-grid {
       grid-template-columns: 1fr;
@@ -273,7 +371,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     .vision-ring {
-      animation: none;
+      animation: none !important;
     }
   }
 </style>

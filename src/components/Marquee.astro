@@ -2,58 +2,76 @@
 ---
 
 <section class="s strip-section" id="strip" style="--bg:var(--tan);--fg:var(--ink)" aria-label="Key highlights ticker">
+  <!-- Glowing gradient background line -->
+  <div class="ticker-glow-line" aria-hidden="true"></div>
+
   <div class="marquee-track" aria-hidden="true">
     <div class="marquee-group">
-      <span class="m-item">Software Development <span class="m-sep">&bull;</span></span>
-      <span class="m-item">B2B Telecalling <span class="m-sep">&bull;</span></span>
-      <span class="m-item">Clean Data Processing <span class="m-sep">&bull;</span></span>
-      <span class="m-item">US Medical Billing <span class="m-sep">&bull;</span></span>
-      <span class="m-item">Industrial Solutions <span class="m-sep">&bull;</span></span>
-      <span class="m-item">Nagpur Delivery Hub <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">ENGINEERING</span> Custom Software Development <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">VOICE</span> B2B Telecalling Operations <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">DATA</span> Clean Data Mining &amp; QA <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">RCM</span> US Medical Billing <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">BPO</span> Industrial Process Support <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">HUB</span> Nagpur Delivery Squads <span class="m-sep">&bull;</span></span>
     </div>
     <div class="marquee-group" aria-hidden="true">
-      <span class="m-item">Software Development <span class="m-sep">&bull;</span></span>
-      <span class="m-item">B2B Telecalling <span class="m-sep">&bull;</span></span>
-      <span class="m-item">Clean Data Processing <span class="m-sep">&bull;</span></span>
-      <span class="m-item">US Medical Billing <span class="m-sep">&bull;</span></span>
-      <span class="m-item">Industrial Solutions <span class="m-sep">&bull;</span></span>
-      <span class="m-item">Nagpur Delivery Hub <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">ENGINEERING</span> Custom Software Development <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">VOICE</span> B2B Telecalling Operations <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">DATA</span> Clean Data Mining &amp; QA <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">RCM</span> US Medical Billing <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">BPO</span> Industrial Process Support <span class="m-sep">&bull;</span></span>
+      <span class="m-item"><span class="m-badge">HUB</span> Nagpur Delivery Squads <span class="m-sep">&bull;</span></span>
     </div>
   </div>
 
   <div class="marquee-track reverse" aria-hidden="true">
     <div class="marquee-group">
-      <span class="m-item outline">Clarity in Code <span class="m-sep">&bull;</span></span>
-      <span class="m-item outline">Care in Conversations <span class="m-sep">&bull;</span></span>
-      <span class="m-item outline">Consistency in Data <span class="m-sep">&bull;</span></span>
-      <span class="m-item outline">Global Standards <span class="m-sep">&bull;</span></span>
-      <span class="m-item outline">Dedicated Teams <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">CLARITY IN CODE <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">CARE IN CONVERSATIONS <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">CONSISTENCY IN DATA <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">GLOBAL SLA STANDARDS <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">DEDICATED TEAMS <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">99.8% PRECISION <span class="m-sep">&bull;</span></span>
     </div>
     <div class="marquee-group" aria-hidden="true">
-      <span class="m-item outline">Clarity in Code <span class="m-sep">&bull;</span></span>
-      <span class="m-item outline">Care in Conversations <span class="m-sep">&bull;</span></span>
-      <span class="m-item outline">Consistency in Data <span class="m-sep">&bull;</span></span>
-      <span class="m-item outline">Global Standards <span class="m-sep">&bull;</span></span>
-      <span class="m-item outline">Dedicated Teams <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">CLARITY IN CODE <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">CARE IN CONVERSATIONS <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">CONSISTENCY IN DATA <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">GLOBAL SLA STANDARDS <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">DEDICATED TEAMS <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">99.8% PRECISION <span class="m-sep">&bull;</span></span>
     </div>
   </div>
 </section>
 
 <style is:global>
   .strip-section {
-    padding-block: clamp(20px, 3vh, 36px);
+    padding-block: clamp(24px, 3.8vh, 44px);
     overflow: hidden;
-    background: var(--tan);
+    background: linear-gradient(135deg, var(--tan) 0%, #D9B48F 100%);
     color: var(--ink);
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+    position: relative;
+    box-shadow: inset 0 2px 14px rgba(0, 0, 0, 0.15);
+  }
+  .ticker-glow-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
   }
   .marquee-track {
     display: flex;
     overflow: hidden;
     user-select: none;
     gap: 0;
+  }
+  .marquee-track:hover .marquee-group {
+    animation-play-state: paused;
   }
   .marquee-group {
     flex-shrink: 0;
@@ -62,6 +80,7 @@
     justify-content: space-around;
     min-width: 100%;
     animation: scrollTrack 24s linear infinite;
+    will-change: transform;
   }
   .marquee-track.reverse .marquee-group {
     animation-direction: reverse;
@@ -70,15 +89,31 @@
   .m-item {
     display: inline-flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
     font: 800 clamp(1.4rem, 3.2vw, 2.5rem)/1.1 var(--disp);
     letter-spacing: -0.03em;
-    padding-inline: 18px;
+    padding-inline: 20px;
     white-space: nowrap;
+    transition: transform 0.25s ease;
+  }
+  .m-item:hover {
+    transform: scale(1.04);
+  }
+  .m-badge {
+    font-family: monospace;
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(20, 32, 31, 0.16);
+    border: 1px solid rgba(20, 32, 31, 0.25);
+    color: var(--ink);
+    letter-spacing: 0.08em;
   }
   .m-item.outline {
     color: transparent;
     -webkit-text-stroke: 1.2px var(--ink);
+    opacity: 0.9;
   }
   .m-sep {
     font-size: 1.2em;
