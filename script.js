@@ -13,16 +13,11 @@
     }
   }
   var $ = function (s, r) { return (r || document).querySelector(s); };
-  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var $$ = function (s, r) { return Array.from((r || document).querySelectorAll(s)); };
   var clamp = function (v, a, b) { return Math.min(b === undefined ? 1 : b, Math.max(a === undefined ? 0 : a, v)); };
   var lerp = function (a, b, t) { return a + (b - a) * t; };
   var sm = function (t) { return t * t * (3 - 2 * t); };
-  var rgb = function (h) { return [1, 3, 5].map(function (i) { return parseInt(h.slice(i, i + 2), 16); }); };
-  var hex = function (n) { return ("0" + n.toString(16)).slice(-2); };
-  var mix = function (a, b, t) {
-    var A = rgb(a), B = rgb(b);
-    return "#" + A.map(function (v, i) { return hex(Math.round(lerp(v, B[i], t))); }).join("");
-  };
+  var mix = function (a, b, t) { return "color-mix(in srgb, " + b + " " + (t * 100).toFixed(1) + "%, " + a + ")"; };
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
   var wide = window.matchMedia("(min-width: 900px)");
@@ -277,15 +272,13 @@
 
   window.addEventListener("load", function () { measure(); update(cur, 0); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { measure(); update(cur, 0); });
-  document.addEventListener("visibilitychange", function () {
-    if (!document.hidden) { measure(); update(cur, 0); }
-  });
-  if (wide.addEventListener) { wide.addEventListener("change", setMode); reduce.addEventListener("change", setMode); }
+  wide.addEventListener("change", setMode);
+  reduce.addEventListener("change", setMode);
 
   setMode();
   var ready = function () { document.body.classList.add("ready"); };
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(ready); else requestAnimationFrame(ready);
   setTimeout(ready, 1000);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { setTimeout(ready, 60); });
 
   // Contact form
   var form = $("#cform"), send = $("#send"), status = $("#status");

@@ -15,33 +15,10 @@ export async function onRequestPost(context) {
   const jsonHeaders = {
     'Content-Type': 'application/json',
     'Cache-Control': 'no-store, no-cache, must-revalidate',
-    'Access-Control-Allow-Origin': env.SITE_URL || '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
   };
 
   try {
-    let body = {};
-    const contentType = request.headers.get('content-type') || '';
-
-    if (contentType.includes('application/json')) {
-      body = await request.json();
-    } else if (contentType.includes('application/x-www-form-urlencoded') || contentType.includes('multipart/form-data')) {
-      const formData = await request.formData();
-      body = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        service: formData.get('service'),
-        message: formData.get('message'),
-        website_url: formData.get('website_url'),
-      };
-    } else {
-      return new Response(
-        JSON.stringify({ success: false, message: 'Unsupported content type.' }),
-        { status: 400, headers: jsonHeaders }
-      );
-    }
+    const body = await request.json().catch(() => ({}));
 
     // 1. Honeypot check: silently discard spam bots
     if (body.website_url && String(body.website_url).trim().length > 0) {
@@ -141,17 +118,4 @@ export async function onRequestPost(context) {
       { status: 500, headers: jsonHeaders }
     );
   }
-}
-
-export async function onRequestOptions(context) {
-  const { env } = context;
-  return new Response(null, {
-    status: 204,
-    headers: {
-      'Access-Control-Allow-Origin': env.SITE_URL || '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Max-Age': '86400',
-    },
-  });
 }
