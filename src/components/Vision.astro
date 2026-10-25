@@ -1,92 +1,279 @@
 ---
 ---
 
-<section class="s vision" id="vision" style="--bg:var(--deep);--fg:var(--ivory)">
-  <div class="vscroll">
-    <div class="vstick">
-      <svg class="vring" viewBox="0 0 400 400" aria-hidden="true">
-        <defs>
-          <path id="rp" d="M200 200m-170 0a170 170 0 1 1 340 0a170 170 0 1 1-340 0"/>
-        </defs>
-        <text>
-          <textPath href="#rp">Clarity &#10022; Care &#10022; Consistency &#10022; Clarity &#10022; Care &#10022; Consistency &#10022;&#160;</textPath>
-        </text>
-      </svg>
+<section class="s vision-section" id="vision" style="--bg:var(--deep);--fg:var(--ivory)">
+  <div class="w vision-container">
+    <div class="vision-top">
+      <p class="eyebrow">Vision &amp; Values &bull; Purpose &amp; Direction</p>
+      <h2 class="vision-headline">Built on trust. Driven by precision.</h2>
     </div>
-  </div>
-  <div class="w vstate">
-    <p class="eyebrow">Our vision</p>
-    <h2 class="vq">To be among the top business process outsourcing providers &mdash; known for clarity, care and consistency.</h2>
-    <p class="eyebrow eb-m">Our mission</p>
-    <p class="mission">In an industry where simplifying data is the key to success, we aim to be resourceful, innovative and responsive to our clients&rsquo; needs &mdash; delivering consistent quality and helping their businesses succeed, because their success boosts our own.</p>
+
+    <div class="vision-main-layout">
+      <!-- Left: Rotating Crest Emblem -->
+      <div class="vision-emblem-card">
+        <div class="emblem-wrapper">
+          <svg class="vision-ring" viewBox="0 0 400 400" aria-hidden="true">
+            <defs>
+              <path id="vrp" d="M200 200m-160 0a160 160 0 1 1 320 0a160 160 0 1 1-320 0"/>
+            </defs>
+            <text>
+              <textPath href="#vrp">CLARITY &bull; CARE &bull; CONSISTENCY &bull; CLARITY &bull; CARE &bull; CONSISTENCY &bull;&#160;</textPath>
+            </text>
+          </svg>
+          <div class="emblem-center">
+            <img src="/assets/logo-mark-light.png" alt="Wisdom Technosoft Crest" width="64" height="52">
+            <span class="emblem-year">Est. Nagpur</span>
+          </div>
+        </div>
+        <p class="emblem-quote">&ldquo;Simplifying complexity through disciplined execution.&rdquo;</p>
+      </div>
+
+      <!-- Right: Vision and Mission statements -->
+      <div class="vision-statements">
+        <div class="statement-card vision-card">
+          <div class="card-tag-pill">Our Vision</div>
+          <h3 class="statement-title">
+            To stand among the top business process outsourcing and software development providers globally &mdash; renowned for clarity, care, and consistency.
+          </h3>
+          <p class="statement-desc">
+            We envision a standard of service where technical capability and human dedication merge seamlessly to deliver measurable business advantage for every client we serve.
+          </p>
+        </div>
+
+        <div class="statement-card mission-card">
+          <div class="card-tag-pill">Our Mission</div>
+          <p class="mission-text">
+            In an industry where simplifying data and scaling operations are key to modern enterprise success, we provide resourceful software, high-touch voice solutions, and error-free data management &mdash; helping client businesses flourish, because their enduring success boosts our own.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Core Pillars -->
+    <div class="values-grid">
+      <div class="value-item">
+        <div class="value-header">
+          <span class="value-dot"></span>
+          <h4>Clarity</h4>
+        </div>
+        <p>Transparent communication, predictable milestones, documented metrics, and zero ambiguity in deliverables.</p>
+      </div>
+      <div class="value-item">
+        <div class="value-header">
+          <span class="value-dot"></span>
+          <h4>Care</h4>
+        </div>
+        <p>Treating every customer conversation, line of code, and medical claim with the dedication of true stakeholders.</p>
+      </div>
+      <div class="value-item">
+        <div class="value-header">
+          <span class="value-dot"></span>
+          <h4>Consistency</h4>
+        </div>
+        <p>Repeatable operational excellence with strict multi-stage quality assurance and 99.8% SLA adherence.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <style is:global>
-  .vscroll {
-    height: 220svh;
-  }
-  .vstick {
-    position: sticky;
-    top: 0;
-    height: 100svh;
-    display: grid;
-    place-items: center;
+  .vision-section {
+    padding-block: clamp(70px, 11vh, 130px);
+    background: var(--deep);
+    position: relative;
     overflow: hidden;
-    z-index: 1;
   }
-  .vring {
-    width: min(88vmin, 780px);
-    aspect-ratio: 1;
-    overflow: visible;
-    will-change: transform;
+  .vision-container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(36px, 6vh, 64px);
   }
-  .vring text {
-    font: 800 30px var(--disp);
-    fill: var(--ivory);
+  .vision-top {
+    max-width: 700px;
   }
-  .vstate {
-    padding-block: clamp(4rem, 9vw, 8rem);
-  }
-  .vq {
-    font: 700 clamp(1.7rem, 5.2vw, 5rem)/1.05 var(--disp);
-    letter-spacing: -.04em;
-    max-width: 20ch;
-    text-wrap: balance;
-  }
-  .eb-m {
-    margin-top: clamp(36px, 5vw, 56px);
-    margin-bottom: 14px;
-  }
-  .mission {
-    max-width: 56ch;
-    font-size: clamp(1.05rem, 1.5vw, 1.3rem);
-    opacity: .72;
+  .vision-headline {
+    font: 800 clamp(2.2rem, 4.4vw, 3.8rem)/1.08 var(--disp);
+    letter-spacing: -0.03em;
+    color: var(--ivory);
+    margin-top: 10px;
   }
 
-  @media (max-width: 640px) {
-    .vscroll {
-      height: 170svh;
+  .vision-main-layout {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  /* Emblem card */
+  .vision-emblem-card {
+    background: rgba(6, 51, 64, 0.45);
+    border: 1px solid rgba(244, 240, 232, 0.1);
+    border-radius: 20px;
+    padding: clamp(30px, 4vw, 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(12px);
+  }
+  .emblem-wrapper {
+    position: relative;
+    width: min(260px, 75vw);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+  }
+  .vision-ring {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotateSeal 40s linear infinite;
+  }
+  .vision-ring text {
+    font: 800 24px var(--disp);
+    fill: var(--tan);
+    letter-spacing: 0.12em;
+  }
+  .emblem-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+  }
+  .emblem-center img {
+    height: 48px;
+    width: auto;
+  }
+  .emblem-year {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--ivory);
+    opacity: 0.65;
+  }
+  .emblem-quote {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--ivory);
+    opacity: 0.75;
+    margin-top: 24px;
+    max-width: 26ch;
+    line-height: 1.5;
+  }
+
+  @keyframes rotateSeal {
+    from {
+      transform: rotate(0deg);
     }
-    .vring {
-      width: min(88vw, 420px);
+    to {
+      transform: rotate(360deg);
     }
-    .vq {
-      font-size: clamp(1.65rem, 7vw, 2.6rem);
+  }
+
+  /* Statements */
+  .vision-statements {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .statement-card {
+    background: rgba(6, 51, 64, 0.35);
+    border: 1px solid rgba(244, 240, 232, 0.08);
+    border-radius: 16px;
+    padding: clamp(24px, 3.5vw, 36px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    backdrop-filter: blur(8px);
+  }
+  .card-tag-pill {
+    width: fit-content;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 12px;
+    border-radius: 999px;
+    background: rgba(201, 162, 126, 0.15);
+    color: var(--tan);
+  }
+  .statement-title {
+    font: 700 clamp(1.4rem, 2.4vw, 2.1rem)/1.18 var(--disp);
+    color: var(--ivory);
+    letter-spacing: -0.025em;
+  }
+  .statement-desc,
+  .mission-text {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: var(--ivory);
+    opacity: 0.82;
+  }
+
+  /* Values 3-column */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .value-item {
+    background: rgba(6, 51, 64, 0.4);
+    border: 1px solid rgba(244, 240, 232, 0.08);
+    border-radius: 14px;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+  .value-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(201, 162, 126, 0.3);
+  }
+  .value-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .value-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--tan);
+  }
+  .value-header h4 {
+    font: 700 1.25rem/1.2 var(--disp);
+    color: var(--ivory);
+    letter-spacing: -0.01em;
+  }
+  .value-item p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--ivory);
+    opacity: 0.75;
+  }
+
+  @media (max-width: 960px) {
+    .vision-main-layout {
+      grid-template-columns: 1fr;
     }
-    .mission {
-      font-size: 1rem;
+    .vision-emblem-card {
+      padding-block: 36px;
+    }
+    .values-grid {
+      grid-template-columns: 1fr;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .vscroll {
-      height: auto;
-    }
-    .vstick {
-      position: relative;
-      height: auto;
-      padding: 4rem 0;
+    .vision-ring {
+      animation: none;
     }
   }
 </style>

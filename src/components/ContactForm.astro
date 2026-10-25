@@ -1,43 +1,112 @@
 ---
 ---
 
-<section class="s contact" id="contact" style="--bg:var(--teal);--fg:var(--ivory)">
-  <div class="w">
-    <p class="eyebrow">Contact</p>
-    <h2 class="big">Let&rsquo;s build something worth keeping.</h2>
-    <div class="clayout">
-      <div class="cinfo">
-        <a class="cmail" href="mailto:wisdomtechnosoft04@gmail.com">wisdomtechnosoft04@gmail.com</a>
-        <dl>
-          <div><dt>Call</dt><dd><a href="tel:+917447331127">+91 74473 31127</a></dd></div>
-          <div><dt>Visit</dt><dd><a href="https://maps.google.com/?q=Opposite+Bank+of+Baroda,+Ward+Number+3,+Parsodi,+Trimurtee+Nagar,+Nagpur,+Maharashtra+440022" target="_blank" rel="noopener">Opposite Bank of Baroda, Ward Number 3, Parsodi, Trimurtee Nagar, Nagpur &ndash; 440022, Maharashtra</a></dd></div>
-        </dl>
-        <a class="btn wa" href="https://wa.me/917447331127?text=Hello%20Wisdom%20Technosoft%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener">Chat on WhatsApp</a>
+<section class="s contact-section" id="contact" style="--bg:var(--teal);--fg:var(--ivory)">
+  <div class="w contact-container">
+    <div class="contact-header">
+      <p class="eyebrow">Get in Touch &bull; Direct Partnership</p>
+      <h2 class="contact-title">Let&rsquo;s build something worth keeping.</h2>
+      <p class="contact-subtitle">
+        Whether you require custom software engineering, an outbound voice campaign, or accurate data and medical billing support, our team is ready to scale with you.
+      </p>
+    </div>
+
+    <div class="contact-layout">
+      <!-- Left: Contact Details & Channels -->
+      <div class="contact-info-panel">
+        <div class="sla-badge">
+          <span class="sla-dot"></span>
+          <span>We respond within 1 business day</span>
+        </div>
+
+        <div class="contact-methods">
+          <div class="method-card">
+            <span class="method-label">Direct Email</span>
+            <a class="method-val method-email" href="mailto:wisdomtechnosoft04@gmail.com">wisdomtechnosoft04@gmail.com</a>
+          </div>
+
+          <div class="method-card">
+            <span class="method-label">Direct Call</span>
+            <a class="method-val" href="tel:+917447331127">+91 74473 31127</a>
+          </div>
+
+          <div class="method-card">
+            <span class="method-label">Delivery Hub Address</span>
+            <a class="method-val method-addr" href="https://maps.google.com/?q=Opposite+Bank+of+Baroda,+Ward+Number+3,+Parsodi,+Trimurtee+Nagar,+Nagpur,+Maharashtra+440022" target="_blank" rel="noopener">
+              Opposite Bank of Baroda, Ward Number 3, Parsodi, Trimurtee Nagar, Nagpur &ndash; 440022, Maharashtra, India
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-actions-box">
+          <a class="btn btn-whatsapp" href="https://wa.me/917447331127?text=Hello%20Wisdom%20Technosoft%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
       </div>
-      <form class="cform" id="cform" action="/api/contact" method="POST">
-        <h3>Send an inquiry</h3>
-        <p class="hint">Tell us about your project. We reply within 1 business day.</p>
-        <div class="hp" aria-hidden="true"><label for="f-web">Leave this empty</label><input id="f-web" name="website_url" tabindex="-1" autocomplete="off"></div>
-        <div class="two">
-          <label>Your name<input name="name" required autocomplete="name" autocapitalize="words" placeholder="Aarav Sharma"></label>
-          <label>Email address<input type="email" name="email" required autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" placeholder="aarav@example.com"></label>
-        </div>
-        <div class="two">
-          <label>Phone / WhatsApp<input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210"></label>
-          <label>Service<select name="service">
-            <option>Software Development</option>
-            <option>Telecalling Services</option>
-            <option>Data Entry &amp; Management</option>
-            <option>Business Process &amp; Industrial Solutions</option>
-            <option>Healthcare Support / US Medical Billing</option>
-            <option>General Inquiry</option>
-          </select></label>
-        </div>
-        <label>Project overview<textarea name="message" rows="4" required autocapitalize="sentences" enterkeyhint="send" placeholder="Scope, timeline or goals"></textarea></label>
-        <button class="btn" type="submit" id="send">Send inquiry</button>
-        <p class="fine">No tracking cookies. Your details are used only to reply to this inquiry. <a href="/privacy">Privacy notice</a></p>
-        <p class="status" id="status" role="status"></p>
-      </form>
+
+      <!-- Right: Structured Form -->
+      <div class="contact-form-panel">
+        <form class="inquiry-form" id="cform" action="/api/contact" method="POST">
+          <div class="form-intro">
+            <h3 class="form-title">Send an inquiry</h3>
+            <p class="form-hint">Tell us about your project or requirements. We respect your confidentiality.</p>
+          </div>
+
+          <!-- Honeypot -->
+          <div class="hp" aria-hidden="true">
+            <label for="f-web">Leave this empty</label>
+            <input id="f-web" name="website_url" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="f-name">Your Name <span class="req">*</span></label>
+              <input id="f-name" name="name" required autocomplete="name" autocapitalize="words" placeholder="e.g. Aarav Sharma">
+            </div>
+            <div class="form-field">
+              <label for="f-email">Email Address <span class="req">*</span></label>
+              <input id="f-email" type="email" name="email" required autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" placeholder="e.g. aarav@company.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="f-phone">Phone / WhatsApp</label>
+              <input id="f-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210">
+            </div>
+            <div class="form-field">
+              <label for="f-service">Interested Service</label>
+              <div class="select-wrapper">
+                <select id="f-service" name="service">
+                  <option>Software Development</option>
+                  <option>Telecalling Services</option>
+                  <option>Data Entry &amp; Management</option>
+                  <option>Business Process &amp; Industrial Solutions</option>
+                  <option>Healthcare Support / US Medical Billing</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="f-message">Project Overview &amp; Goals <span class="req">*</span></label>
+            <textarea id="f-message" name="message" rows="4" required autocapitalize="sentences" enterkeyhint="send" placeholder="Please describe your requirements, timeline, or expected deliverables..."></textarea>
+          </div>
+
+          <div class="form-submit-row">
+            <button class="btn btn-submit" type="submit" id="send">
+              <span>Send Inquiry</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <span class="privacy-note">Zero spam. Information is solely used to reply to your inquiry.</span>
+          </div>
+
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -57,13 +126,13 @@
       });
       if (data.website_url) {
         status.className = "status ok";
-        status.textContent = "Thank you. We have your message.";
+        status.textContent = "Thank you. We have received your inquiry.";
         form.reset();
         return;
       }
-      const label = send.textContent || "Send inquiry";
+      const originalText = send.innerHTML;
       send.disabled = true;
-      send.textContent = "Sending…";
+      send.innerHTML = '<span>Sending…</span>';
       status.className = "status";
       status.textContent = "";
 
@@ -74,204 +143,323 @@
       })
         .then(function (r) {
           return r.json().then(function (j) {
-            if (!r.ok) throw new Error(j.message || "Failed");
+            if (!r.ok) throw new Error(j.message || "Failed to submit");
             return j;
           });
         })
         .then(function () {
           status.className = "status ok";
-          status.textContent = "Thank you. We will be in touch shortly.";
+          status.textContent = "Thank you! We have received your message and will be in touch shortly.";
           form.reset();
         })
         .catch(function () {
           status.className = "status err";
-          status.innerHTML = 'We could not send this online. Please email <a href="mailto:wisdomtechnosoft04@gmail.com">wisdomtechnosoft04@gmail.com</a> or call <a href="tel:+917447331127">+91 74473 31127</a>.';
+          status.innerHTML = 'Could not send inquiry online. Please email directly to <a href="mailto:wisdomtechnosoft04@gmail.com">wisdomtechnosoft04@gmail.com</a> or call <a href="tel:+917447331127">+91 74473 31127</a>.';
         })
         .finally(function () {
           send.disabled = false;
-          send.textContent = label;
+          send.innerHTML = originalText;
         });
     });
   }
 </script>
 
 <style is:global>
-  .contact {
-    padding-block: clamp(5rem, 11vw, 10rem);
+  .contact-section {
+    padding-block: clamp(70px, 11vh, 130px);
+    background: var(--teal);
+    position: relative;
+    overflow: hidden;
   }
-  .clayout {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(32px, 5vh, 48px);
+  }
+  .contact-header {
+    max-width: 720px;
+  }
+  .contact-title {
+    font: 800 clamp(2.2rem, 4.4vw, 3.8rem)/1.08 var(--disp);
+    letter-spacing: -0.03em;
+    color: var(--ivory);
+    margin-top: 10px;
+  }
+  .contact-subtitle {
+    max-width: 54ch;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ivory);
+    opacity: 0.8;
+    margin-top: 12px;
+  }
+
+  .contact-layout {
     display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: clamp(32px, 6vw, 90px);
-    margin-top: clamp(36px, 6vw, 72px);
+    grid-template-columns: 1fr 1.3fr;
+    gap: clamp(32px, 5vw, 64px);
     align-items: start;
   }
-  .cmail {
-    display: inline-block;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(244, 240, 232, .35);
-    font: 500 clamp(1.1rem, 2.2vw, 1.9rem) var(--disp);
-    letter-spacing: -.02em;
-    text-decoration: none;
-    overflow-wrap: anywhere;
+
+  /* Info panel */
+  .contact-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
   }
-  .cinfo dl {
-    margin: 32px 0;
-  }
-  .cinfo dl > div {
-    padding: 14px 0;
-    border-top: 1px solid rgba(244, 240, 232, .18);
-  }
-  .cinfo dt {
+  .sla-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(201, 162, 126, 0.12);
+    border: 1px solid rgba(201, 162, 126, 0.25);
+    color: var(--tan);
     font-size: 13px;
-    opacity: .6;
-    margin-bottom: 4px;
+    font-weight: 600;
+    width: fit-content;
   }
-  .cinfo dd a {
-    text-decoration: none;
-    opacity: .88;
+  .sla-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--tan);
+    box-shadow: 0 0 6px var(--tan);
   }
-  .cinfo dd a[href^="tel"] {
-    white-space: nowrap;
-  }
-  .wa {
-    background: transparent;
-    border: 1px solid rgba(163, 247, 191, .5);
-    color: #a3f7bf;
-    min-height: 48px;
-    padding: 14px 22px;
-  }
-  .cform {
+
+  .contact-methods {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: clamp(22px, 4vw, 40px);
-    border: 1px solid rgba(244, 240, 232, .18);
-    border-radius: 8px;
-    background: rgba(4, 34, 43, .55);
-    color-scheme: dark;
   }
-  .cform h3 {
-    font: 700 1.5rem var(--disp);
-    letter-spacing: -.02em;
-  }
-  .hint {
-    opacity: .7;
-    font-size: 14px;
-    margin-top: -8px;
-  }
-  .two {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-  .cform label {
+  .method-card {
+    background: rgba(4, 34, 43, 0.5);
+    border: 1px solid rgba(244, 240, 232, 0.08);
+    border-radius: 12px;
+    padding: 18px 20px;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    font-size: 13px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+  }
+  .method-card:hover {
+    border-color: rgba(201, 162, 126, 0.3);
+    background: rgba(4, 34, 43, 0.7);
+  }
+  .method-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--tan);
+  }
+  .method-val {
+    font-size: 1.05rem;
     font-weight: 500;
-    opacity: .9;
-  }
-  .cform input,
-  .cform select,
-  .cform textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid rgba(244, 240, 232, .22);
-    border-radius: 6px;
-    background: rgba(244, 240, 232, .06);
     color: var(--ivory);
-    font: inherit;
-    font-size: 16px;
-    min-height: 48px;
+    text-decoration: none;
+    line-height: 1.45;
+    transition: color 0.2s ease;
   }
-  .cform select option {
-    background: var(--deep);
+  .method-val:hover {
+    color: var(--tan);
   }
-  .cform textarea {
-    resize: vertical;
-    min-height: 120px;
+  .method-email {
+    font-size: 1.15rem;
+    font-weight: 600;
   }
-  .cform input:focus,
-  .cform select:focus,
-  .cform textarea:focus {
-    outline: 0;
-    border-color: var(--tan);
-    background: rgba(244, 240, 232, .1);
+  .method-addr {
+    font-size: 0.95rem;
+    opacity: 0.85;
   }
-  .cform .btn {
-    width: 100%;
-    min-height: 50px;
+
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25d366;
+    color: #04222B;
+    font-weight: 600;
+    font-size: 14.5px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.2);
+    transition: transform 0.25s ease, background 0.25s ease;
   }
-  .fine {
-    font-size: 12px;
-    opacity: .6;
+  .btn-whatsapp:hover {
+    transform: translateY(-2px);
+    background: #2ee06e;
   }
-  .fine a {
-    color: inherit;
-    text-decoration: underline;
+
+  /* Form panel */
+  .contact-form-panel {
+    background: rgba(4, 34, 43, 0.75);
+    border: 1px solid rgba(244, 240, 232, 0.12);
+    border-radius: 20px;
+    padding: clamp(24px, 4vw, 40px);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
   }
-  .status {
-    border-radius: 6px;
-    font-size: 14px;
+  .inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-  .status:empty {
-    margin-top: -16px;
+  .form-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(244, 240, 232, 0.08);
   }
-  .status.ok,
-  .status.err {
-    padding: 12px 14px;
+  .form-title {
+    font: 700 1.55rem/1.2 var(--disp);
+    color: var(--ivory);
+    letter-spacing: -0.02em;
   }
-  .status.ok {
-    background: rgba(76, 175, 80, .22);
-    color: #c8e6c9;
+  .form-hint {
+    font-size: 0.92rem;
+    color: var(--ivory);
+    opacity: 0.75;
   }
-  .status.err {
-    background: rgba(239, 83, 80, .22);
-    color: #ffcdd2;
-  }
+
   .hp {
     position: absolute;
     left: -9999px;
-    top: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-  }
-  .cform select {
-    appearance: none;
-    background-image: linear-gradient(45deg, transparent 50%, var(--ivory) 50%),
-                     linear-gradient(135deg, var(--ivory) 50%, transparent 50%);
-    background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px);
-    background-size: 6px 6px, 6px 6px;
-    background-repeat: no-repeat;
-    padding-right: 40px;
+    opacity: 0;
   }
 
-  @media (max-width: 1000px) {
-    .clayout {
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .form-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ivory);
+    opacity: 0.9;
+  }
+  .req {
+    color: var(--tan);
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: rgba(244, 240, 232, 0.06);
+    border: 1px solid rgba(244, 240, 232, 0.16);
+    color: var(--ivory);
+    font: 400 14px "DM Sans", sans-serif;
+    outline: none;
+    transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    border-color: var(--tan);
+    background: rgba(244, 240, 232, 0.1);
+    box-shadow: 0 0 0 3px rgba(201, 162, 126, 0.2);
+  }
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    color: rgba(244, 240, 232, 0.4);
+  }
+  .select-wrapper {
+    position: relative;
+  }
+  .select-wrapper select {
+    cursor: pointer;
+    appearance: none;
+    padding-right: 36px;
+  }
+  .select-wrapper::after {
+    content: "▾";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--tan);
+    pointer-events: none;
+    font-size: 14px;
+  }
+
+  .form-submit-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .btn-submit {
+    width: 100%;
+    gap: 10px;
+    background: var(--tan);
+    color: var(--ink);
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 4px 18px rgba(201, 162, 126, 0.25);
+  }
+  .btn-submit:hover {
+    background: #d4b18f;
+  }
+  .btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  .privacy-note {
+    font-size: 12px;
+    color: var(--ivory);
+    opacity: 0.65;
+    text-align: center;
+  }
+
+  .status {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: none;
+  }
+  .status.ok {
+    display: block;
+    background: rgba(46, 125, 50, 0.2);
+    border: 1px solid rgba(76, 175, 80, 0.4);
+    color: #a5d6a7;
+  }
+  .status.err {
+    display: block;
+    background: rgba(198, 40, 40, 0.2);
+    border: 1px solid rgba(239, 83, 80, 0.4);
+    color: #ef9a9a;
+  }
+  .status.err a {
+    color: var(--ivory);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 900px) {
+    .contact-layout {
       grid-template-columns: 1fr;
     }
   }
+
   @media (max-width: 640px) {
-    .two {
+    .form-row {
       grid-template-columns: 1fr;
     }
-    .clayout {
-      margin-top: 28px;
-      gap: 28px;
-    }
-    .cinfo dl {
-      margin: 24px 0;
-    }
-    .cinfo dl > div {
-      padding: 12px 0;
-    }
-    .cform {
-      padding: 20px;
-      gap: 14px;
+    .contact-form-panel {
+      padding: 20px 16px;
     }
   }
 </style>

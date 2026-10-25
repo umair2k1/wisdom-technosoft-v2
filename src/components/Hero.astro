@@ -2,16 +2,63 @@
 ---
 
 <section class="s hero" id="top" style="--bg:var(--deep);--fg:var(--ivory)">
-  <h1 class="w">
-    <span class="hlm"><span class="hl" data-d="1"><span>Software.</span></span></span>
-    <span class="hlm"><span class="hl" data-d="-1"><span>Conversations.</span></span></span>
-    <span class="hlm"><span class="hl" data-d="1"><span>Clean data.</span></span></span>
-  </h1>
-  <div class="w hero-foot">
-    <p>A Nagpur studio that builds your software, runs your customer calls, keeps your data accurate and supports the operations behind them &mdash; one team, one standard.</p>
-    <div class="actions">
-      <a class="btn" href="#contact">Start a project</a>
-      <a class="lnk" href="#services">See what we do</a>
+  <div class="hero-bg-glow" aria-hidden="true"></div>
+  
+  <div class="w hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>Software Engineering &bull; Telecalling &bull; Data &bull; Healthcare BPO</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="hl-line">Software.</span>
+      <span class="hl-line hl-accent">Conversations.</span>
+      <span class="hl-line">Clean data.</span>
+    </h1>
+
+    <div class="hero-foot">
+      <p class="hero-desc">
+        A premier Nagpur studio delivering custom software engineering, high-touch telecalling, meticulous data management, and mission-critical back-office operations &mdash; one unified team, one uncompromising standard.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-hero-primary" href="#contact">
+          <span>Start a project</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn btn-hero-secondary" href="#services">Explore what we do</a>
+      </div>
+    </div>
+
+    <div class="hero-metrics">
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-num">99.8%</span>
+          <span class="metric-badge">Verified</span>
+        </div>
+        <span class="metric-lbl">Data accuracy &amp; QA precision</span>
+      </div>
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-num">24/7</span>
+          <span class="metric-badge">Ready</span>
+        </div>
+        <span class="metric-lbl">Operational &amp; campaign coverage</span>
+      </div>
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-num">Multi-Lingual</span>
+          <span class="metric-badge">Voice</span>
+        </div>
+        <span class="metric-lbl">B2B &amp; customer-facing callers</span>
+      </div>
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-num">Nagpur, IN</span>
+          <span class="metric-badge">Hub</span>
+        </div>
+        <span class="metric-lbl">Cost-effective global delivery</span>
+      </div>
     </div>
   </div>
 </section>
@@ -21,116 +68,213 @@
     min-height: 100svh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: calc(var(--nav) + 4vh) 0 max(5vh, 64px);
+    justify-content: center;
     position: relative;
+    padding-top: calc(var(--nav) + 32px);
+    padding-bottom: clamp(40px, 6vh, 80px);
+    overflow: hidden;
   }
-  .hero h1 {
+  .hero-bg-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 75% 30%, rgba(201, 162, 126, 0.09), transparent 70%),
+      radial-gradient(ellipse 50% 50% at 20% 70%, rgba(6, 51, 64, 0.7), transparent 70%);
+  }
+  .hero-content {
     position: relative;
-    z-index: 1;
-    font: 800 clamp(2.2rem, 12.2vw, 13.5rem)/.88 var(--disp);
-    letter-spacing: -.05em;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3.5vh, 40px);
   }
-  .hlm {
-    display: block;
-    clip-path: inset(0 -100vw);
-    padding-bottom: .1em;
-    margin-bottom: -.1em;
-  }
-  .hl {
-    display: block;
-  }
-  .hl > span {
-    display: inline-block;
-  }
-  .hlm:nth-child(2) .hl {
-    padding-left: 7vw;
-  }
-  .hlm:nth-child(3) .hl {
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(244, 240, 232, 0.05);
+    border: 1px solid rgba(244, 240, 232, 0.12);
     color: var(--tan);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    width: fit-content;
+    backdrop-filter: blur(8px);
+  }
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--tan);
+    box-shadow: 0 0 8px var(--tan);
+    animation: badgePulse 2s infinite ease-in-out;
+  }
+  @keyframes badgePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+  }
+  .hero-title {
+    font: 800 clamp(2.8rem, 6.8vw, 6.4rem)/0.98 var(--disp);
+    letter-spacing: -0.04em;
+    max-width: 16ch;
+    margin: 0;
+  }
+  .hl-line {
+    display: block;
+    color: var(--ivory);
+  }
+  .hl-line.hl-accent {
+    color: var(--tan);
+    padding-left: clamp(0px, 3vw, 40px);
   }
   .hero-foot {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
-    gap: 24px;
-    margin-top: clamp(28px, 5vh, 56px);
+    gap: 28px;
     padding-top: 24px;
-    border-top: 1px solid rgba(244, 240, 232, .2);
+    border-top: 1px solid rgba(244, 240, 232, 0.12);
   }
-  .hero-foot p {
-    max-width: 42ch;
-    opacity: .78;
-    font-size: 1.05rem;
+  .hero-desc {
+    max-width: 54ch;
+    font-size: clamp(1rem, 1.35vw, 1.18rem);
+    line-height: 1.65;
+    color: var(--ivory);
+    opacity: 0.85;
   }
-  .actions {
+  .hero-actions {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 16px;
+    flex-wrap: wrap;
   }
-  .js .hl > span {
-    transform: translateY(110%);
-    transition: transform 1.2s var(--ease);
+  .btn-hero-primary {
+    gap: 10px;
+    background: var(--tan);
+    color: var(--ink);
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(201, 162, 126, 0.25);
   }
-  .js .hlm:nth-child(2) .hl > span {
-    transition-delay: .12s;
+  .btn-hero-primary svg {
+    transition: transform 0.25s ease;
   }
-  .js .hlm:nth-child(3) .hl > span {
-    transition-delay: .24s;
+  .btn-hero-primary:hover svg {
+    transform: translateX(4px);
   }
-  .js .ready .hl > span {
-    transform: none;
+  .btn-hero-secondary {
+    background: transparent;
+    color: var(--ivory);
+    border: 1px solid rgba(244, 240, 232, 0.22);
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.25s ease;
   }
-  .js .hero-foot {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 1s .8s, transform 1s .8s var(--ease);
+  .btn-hero-secondary:hover {
+    background: rgba(244, 240, 232, 0.08);
+    border-color: rgba(244, 240, 232, 0.4);
+    color: var(--ivory);
+    transform: translateY(-2px);
   }
-  .js .ready .hero-foot {
-    opacity: 1;
-    transform: none;
+
+  /* Metric cards */
+  .hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: clamp(8px, 2vh, 24px);
+  }
+  .metric-card {
+    background: rgba(6, 51, 64, 0.45);
+    border: 1px solid rgba(244, 240, 232, 0.08);
+    border-radius: 12px;
+    padding: 18px 20px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  }
+  .metric-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(201, 162, 126, 0.3);
+    background: rgba(6, 51, 64, 0.7);
+  }
+  .metric-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .metric-num {
+    font: 700 clamp(1.4rem, 2.2vw, 1.9rem)/1.1 var(--disp);
+    color: var(--ivory);
+    letter-spacing: -0.02em;
+  }
+  .metric-badge {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: rgba(201, 162, 126, 0.15);
+    color: var(--tan);
+  }
+  .metric-lbl {
+    font-size: 12.5px;
+    line-height: 1.4;
+    color: var(--ivory);
+    opacity: 0.65;
+    display: block;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-metrics {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 640px) {
     .hero {
-      padding: calc(var(--nav) + 2vh) 0 max(6vh, 44px);
+      padding-top: calc(var(--nav) + 24px);
+      padding-bottom: 48px;
+      min-height: auto;
     }
-    .hero-foot {
-      margin-top: 20px;
-      padding-top: 18px;
-      gap: 18px;
+    .hero-badge {
+      font-size: 11.5px;
+      padding: 5px 12px;
     }
-    .hero-foot p {
-      font-size: .95rem;
-      max-width: 34ch;
+    .hero-title {
+      font-size: clamp(2.4rem, 10vw, 3.4rem);
     }
-    .actions {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 12px;
-      width: 100%;
-    }
-    .actions .btn {
-      width: 100%;
-      min-height: 50px;
-    }
-    .actions .lnk {
-      text-align: center;
-      font-size: .95rem;
-    }
-    .hlm:nth-child(2) .hl {
+    .hl-line.hl-accent {
       padding-left: 0;
     }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .js .hl > span {
-      transform: none;
+    .hero-foot {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 20px;
     }
-    .js .hero-foot {
-      opacity: 1;
-      transform: none;
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .hero-actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+    .hero-metrics {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .metric-card {
+      padding: 14px 16px;
     }
   }
 </style>

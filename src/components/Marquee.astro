@@ -1,51 +1,102 @@
 ---
 ---
 
-<section class="s strip" id="strip" style="--bg:var(--tan);--fg:var(--ink)" aria-hidden="true">
-  <div class="srow">
-    <div class="tr" data-s="1">
-      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
-      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
-      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
-      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
-      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
-      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
+<section class="s strip-section" id="strip" style="--bg:var(--tan);--fg:var(--ink)" aria-label="Key highlights ticker">
+  <div class="marquee-track" aria-hidden="true">
+    <div class="marquee-group">
+      <span class="m-item">Software Development <span class="m-sep">&bull;</span></span>
+      <span class="m-item">B2B Telecalling <span class="m-sep">&bull;</span></span>
+      <span class="m-item">Clean Data Processing <span class="m-sep">&bull;</span></span>
+      <span class="m-item">US Medical Billing <span class="m-sep">&bull;</span></span>
+      <span class="m-item">Industrial Solutions <span class="m-sep">&bull;</span></span>
+      <span class="m-item">Nagpur Delivery Hub <span class="m-sep">&bull;</span></span>
+    </div>
+    <div class="marquee-group" aria-hidden="true">
+      <span class="m-item">Software Development <span class="m-sep">&bull;</span></span>
+      <span class="m-item">B2B Telecalling <span class="m-sep">&bull;</span></span>
+      <span class="m-item">Clean Data Processing <span class="m-sep">&bull;</span></span>
+      <span class="m-item">US Medical Billing <span class="m-sep">&bull;</span></span>
+      <span class="m-item">Industrial Solutions <span class="m-sep">&bull;</span></span>
+      <span class="m-item">Nagpur Delivery Hub <span class="m-sep">&bull;</span></span>
     </div>
   </div>
-  <div class="srow o">
-    <div class="tr rev" data-s="-1">
-      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
-      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
-      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
-      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
-      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
-      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
+
+  <div class="marquee-track reverse" aria-hidden="true">
+    <div class="marquee-group">
+      <span class="m-item outline">Clarity in Code <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">Care in Conversations <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">Consistency in Data <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">Global Standards <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">Dedicated Teams <span class="m-sep">&bull;</span></span>
+    </div>
+    <div class="marquee-group" aria-hidden="true">
+      <span class="m-item outline">Clarity in Code <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">Care in Conversations <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">Consistency in Data <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">Global Standards <span class="m-sep">&bull;</span></span>
+      <span class="m-item outline">Dedicated Teams <span class="m-sep">&bull;</span></span>
     </div>
   </div>
 </section>
 
 <style is:global>
-  .strip {
-    padding-block: clamp(18px, 3vw, 36px);
+  .strip-section {
+    padding-block: clamp(20px, 3vh, 36px);
     overflow: hidden;
+    background: var(--tan);
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
-  .srow {
+  .marquee-track {
+    display: flex;
     overflow: hidden;
+    user-select: none;
+    gap: 0;
+  }
+  .marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100%;
+    animation: scrollTrack 24s linear infinite;
+  }
+  .marquee-track.reverse .marquee-group {
+    animation-direction: reverse;
+    animation-duration: 28s;
+  }
+  .m-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    font: 800 clamp(1.4rem, 3.2vw, 2.5rem)/1.1 var(--disp);
+    letter-spacing: -0.03em;
+    padding-inline: 18px;
     white-space: nowrap;
   }
-  .srow.o .tr {
-    margin-left: -200vw;
-  }
-  .tr {
-    display: inline-block;
-    font: 800 clamp(3rem, 10vw, 9rem)/1.1 var(--disp);
-    letter-spacing: -.04em;
-  }
-  .srow.o .tr {
+  .m-item.outline {
     color: transparent;
-    -webkit-text-stroke: 1.5px var(--ink);
+    -webkit-text-stroke: 1.2px var(--ink);
   }
-  .tr span {
-    display: inline-block;
+  .m-sep {
+    font-size: 1.2em;
+    opacity: 0.4;
+  }
+
+  @keyframes scrollTrack {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-group {
+      animation: none;
+    }
   }
 </style>

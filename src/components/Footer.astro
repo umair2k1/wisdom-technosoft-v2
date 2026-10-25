@@ -1,35 +1,232 @@
 ---
 ---
 
-<footer class="foot" style="--fg:var(--ivory)">
-  <p>&copy; 2026 Wisdom Technosoft. Software. Telecalling. Data. Done with care.</p>
-  <p><a href="/privacy">Privacy notice</a> &middot; Nagpur, Maharashtra, India &middot; <a href="#top">Back to top</a></p>
+<footer class="site-footer" style="--fg:var(--ivory)">
+  <div class="w footer-container">
+    <div class="footer-top">
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <a class="footer-logo-link" href="#top" aria-label="Wisdom Technosoft home">
+          <img src="/assets/logo-mark-light.png" alt="Wisdom Technosoft" width="38" height="31">
+          <span class="footer-brand-title">Wisdom Technosoft</span>
+        </a>
+        <p class="footer-bio">
+          Nagpur-based software development studio and business process outsourcing partner &mdash; delivering custom code, high-touch telecalling, clean data management, and US medical billing with clarity, care, and consistency.
+        </p>
+        <div class="footer-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Nagpur &bull; Maharashtra &bull; India</span>
+        </div>
+      </div>
+
+      <!-- Links: Solutions -->
+      <div class="footer-col">
+        <h4 class="col-title">Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Software Development</a></li>
+          <li><a href="#services">Telecalling Services</a></li>
+          <li><a href="#services">Data Entry &amp; QA</a></li>
+          <li><a href="#services">Business Process Solutions</a></li>
+          <li><a href="#services">US Medical Billing</a></li>
+        </ul>
+      </div>
+
+      <!-- Links: Company -->
+      <div class="footer-col">
+        <h4 class="col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Capabilities</a></li>
+          <li><a href="#approach">Delivery Principles</a></li>
+          <li><a href="#vision">Vision &amp; Values</a></li>
+          <li><a href="#team">Leadership Team</a></li>
+          <li><a href="#contact">Start a Project</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact column -->
+      <div class="footer-col">
+        <h4 class="col-title">Direct Inquiries</h4>
+        <div class="footer-contact-items">
+          <div class="fc-item">
+            <span class="fc-lbl">Phone</span>
+            <a href="tel:+917447331127" class="fc-val">+91 74473 31127</a>
+          </div>
+          <div class="fc-item">
+            <span class="fc-lbl">Email</span>
+            <a href="mailto:wisdomtechnosoft04@gmail.com" class="fc-val">wisdomtechnosoft04@gmail.com</a>
+          </div>
+          <div class="fc-item">
+            <span class="fc-lbl">WhatsApp</span>
+            <a href="https://wa.me/917447331127" target="_blank" rel="noopener" class="fc-val">Instant Chat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2026 Wisdom Technosoft. All rights reserved.</p>
+      <div class="footer-meta">
+        <a href="/privacy" class="foot-meta-link">Privacy Notice</a>
+        <span class="meta-sep">&middot;</span>
+        <a href="#top" class="foot-meta-link back-to-top">
+          <span>Back to top</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <style is:global>
-  .foot {
+  .site-footer {
     position: relative;
-    z-index: 1;
-    background: var(--deep);
-    padding: 28px var(--gx) 64px;
+    z-index: 10;
+    background: #02161c;
+    color: var(--ivory);
+    border-top: 1px solid rgba(244, 240, 232, 0.08);
+    padding-top: clamp(48px, 8vh, 80px);
+    padding-bottom: clamp(24px, 4vh, 40px);
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(40px, 6vh, 60px);
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+    gap: clamp(24px, 4vw, 48px);
+  }
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 420px;
+  }
+  .footer-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--ivory);
+  }
+  .footer-brand-title {
+    font: 700 18px var(--disp);
+    letter-spacing: -0.02em;
+  }
+  .footer-bio {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--ivory);
+    opacity: 0.75;
+  }
+  .footer-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    color: var(--tan);
+    font-weight: 500;
+  }
+
+  .col-title {
+    font: 700 13px/1.2 var(--disp);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tan);
+    margin-bottom: 16px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-links a {
+    font-size: 13.5px;
+    color: var(--ivory);
+    opacity: 0.75;
+    text-decoration: none;
+    transition: opacity 0.2s ease, color 0.2s ease;
+  }
+  .footer-links a:hover {
+    opacity: 1;
+    color: var(--tan);
+  }
+
+  .footer-contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .fc-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .fc-lbl {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ivory);
+    opacity: 0.5;
+  }
+  .fc-val {
+    font-size: 13.5px;
+    color: var(--ivory);
+    opacity: 0.85;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .fc-val:hover {
+    color: var(--tan);
+  }
+
+  .footer-bottom {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    gap: 10px 28px;
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(244, 240, 232, 0.08);
     font-size: 13px;
-    color: var(--fg);
-    opacity: .8;
+    opacity: 0.8;
   }
-  .foot a {
+  .footer-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .foot-meta-link {
+    color: var(--ivory);
     text-decoration: none;
+    transition: color 0.2s ease;
   }
+  .foot-meta-link:hover {
+    color: var(--tan);
+  }
+  .back-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .meta-sep {
+    opacity: 0.4;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-top {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 640px) {
-    .foot {
+    .footer-top {
+      grid-template-columns: 1fr;
+    }
+    .footer-bottom {
       flex-direction: column;
       align-items: flex-start;
-      gap: 8px;
-      font-size: 12.5px;
-      padding-bottom: 48px;
     }
   }
 </style>

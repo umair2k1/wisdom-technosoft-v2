@@ -1,52 +1,234 @@
 ---
 ---
 
-<section class="s team" id="team" style="--bg:var(--bone);--fg:var(--ink)">
-  <div class="w">
-    <p class="eyebrow">Our team</p>
-    <h2 class="big">The people behind the work.</h2>
-    <p class="aside">A small, senior team across software, telecalling and data &mdash; working as one.</p>
-    <ul class="rows">
-      <li class="row"><span class="rn">Executive Leadership</span><span class="rr">Managing Director</span></li>
-      <li class="row"><span class="rn">Operations &amp; Delivery</span><span class="rr">Managing Director</span></li>
-      <li class="row"><span class="rn">Process &amp; Quality</span><span class="rr">Consultant</span></li>
-      <li class="row"><span class="rn">Client Partnerships</span><span class="rr">Consultant</span></li>
-    </ul>
+<section class="s team-section" id="team" style="--bg:var(--bone);--fg:var(--ink)">
+  <div class="w team-container">
+    <div class="team-header">
+      <div class="header-main">
+        <p class="eyebrow">Leadership &amp; Talent &bull; Dedicated Expertise</p>
+        <h2 class="team-title">The people behind the work.</h2>
+      </div>
+      <p class="team-aside">
+        A senior multidisciplinary team across software engineering, voice operations, and data analytics &mdash; working as one integrated unit to deliver measurable client value.
+      </p>
+    </div>
+
+    <div class="team-grid">
+      <!-- 1 Executive Leadership -->
+      <div class="team-card">
+        <div class="team-card-top">
+          <span class="role-badge">Managing Director</span>
+          <span class="unit-code">01</span>
+        </div>
+        <div class="team-card-body">
+          <h3 class="team-division">Executive Leadership</h3>
+          <p class="division-domain">Strategy, Vision &amp; Governance</p>
+          <p class="division-desc">
+            Directs long-term corporate direction, strategic technology investments, and client governance to ensure enduring partnerships and enterprise scale.
+          </p>
+        </div>
+        <div class="division-tags">
+          <span>Enterprise Strategy</span>
+          <span>Governance</span>
+          <span>Growth</span>
+        </div>
+      </div>
+
+      <!-- 2 Operations & Delivery -->
+      <div class="team-card">
+        <div class="team-card-top">
+          <span class="role-badge">Managing Director</span>
+          <span class="unit-code">02</span>
+        </div>
+        <div class="team-card-body">
+          <h3 class="team-division">Operations &amp; Delivery</h3>
+          <p class="division-domain">Execution &amp; Operational Scale</p>
+          <p class="division-desc">
+            Leads 24/7 delivery pipelines, telecalling campaigns, workforce management, and resource allocation to maintain uninterrupted service excellence.
+          </p>
+        </div>
+        <div class="division-tags">
+          <span>24/7 Operations</span>
+          <span>SLA Adherence</span>
+          <span>Scale</span>
+        </div>
+      </div>
+
+      <!-- 3 Process & Quality -->
+      <div class="team-card">
+        <div class="team-card-top">
+          <span class="role-badge">Consultant</span>
+          <span class="unit-code">03</span>
+        </div>
+        <div class="team-card-body">
+          <h3 class="team-division">Process &amp; Quality</h3>
+          <p class="division-domain">Audits, Compliance &amp; Standards</p>
+          <p class="division-desc">
+            Designs and enforces stringent standard operating procedures, multi-tier data verification, and compliance-driven healthcare QA protocols.
+          </p>
+        </div>
+        <div class="division-tags">
+          <span>Quality Audits</span>
+          <span>HIPAA Compliance</span>
+          <span>Process SOPs</span>
+        </div>
+      </div>
+
+      <!-- 4 Client Partnerships -->
+      <div class="team-card">
+        <div class="team-card-top">
+          <span class="role-badge">Consultant</span>
+          <span class="unit-code">04</span>
+        </div>
+        <div class="team-card-body">
+          <h3 class="team-division">Client Partnerships</h3>
+          <p class="division-domain">Relationship &amp; Account Success</p>
+          <p class="division-desc">
+            Acts as the primary consultative bridge between client stakeholder goals and delivery milestones, maintaining absolute project transparency.
+          </p>
+        </div>
+        <div class="division-tags">
+          <span>Account Success</span>
+          <span>Consultative Scoping</span>
+          <span>Reporting</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <style is:global>
-  .team {
-    padding-block: clamp(5rem, 11vw, 10rem);
+  .team-section {
+    padding-block: clamp(60px, 10vh, 120px);
+    background: var(--bone);
+    color: var(--ink);
   }
-  .rows {
-    margin-top: clamp(36px, 6vw, 72px);
-    border-top: 1px solid rgba(20, 32, 31, .2);
+  .team-container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(32px, 5vh, 52px);
   }
-  .row {
+  .team-header {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: flex-end;
     justify-content: space-between;
-    gap: 6px 24px;
-    padding: clamp(20px, 3vw, 34px) 0;
-    border-bottom: 1px solid rgba(20, 32, 31, .2);
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(20, 32, 31, 0.15);
   }
-  .rn {
-    font: 700 clamp(1.8rem, 5vw, 4.6rem)/1.05 var(--disp);
-    letter-spacing: -.04em;
+  .header-main {
+    max-width: 640px;
   }
-  .rr {
-    font-size: 14px;
-    opacity: .65;
+  .team-title {
+    font: 800 clamp(2rem, 4.2vw, 3.6rem)/1.05 var(--disp);
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-top: 8px;
+  }
+  .team-aside {
+    max-width: 44ch;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ink);
+    opacity: 0.78;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .team-card {
+    background: #e2dbcd;
+    border: 1px solid rgba(20, 32, 31, 0.12);
+    border-radius: 16px;
+    padding: clamp(22px, 3vw, 28px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(20, 32, 31, 0.1);
+    border-color: rgba(20, 32, 31, 0.25);
+  }
+  .team-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .role-badge {
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--bone);
+  }
+  .unit-code {
+    font: 800 16px/1 var(--disp);
+    color: var(--ink);
+    opacity: 0.4;
+  }
+  .team-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .team-division {
+    font: 700 clamp(1.3rem, 1.8vw, 1.6rem)/1.15 var(--disp);
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .division-domain {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #43635e;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .division-desc {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    color: var(--ink);
+    opacity: 0.78;
+    margin-top: 4px;
+  }
+  .division-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(20, 32, 31, 0.15);
+  }
+  .division-tags span {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 8px;
+    background: rgba(20, 32, 31, 0.06);
+    border-radius: 4px;
+    color: var(--ink);
+  }
+
+  @media (max-width: 1100px) {
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 640px) {
-    .row {
-      padding-block: 18px;
+    .team-grid {
+      grid-template-columns: 1fr;
     }
-    .rr {
-      width: 100%;
+    .team-header {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 </style>

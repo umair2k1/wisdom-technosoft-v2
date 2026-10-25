@@ -2,73 +2,228 @@
 ---
 
 <section class="s approach" id="approach" style="--bg:var(--bone);--fg:var(--ink)">
-  <div class="w">
-    <p class="eyebrow">How we deliver</p>
-    <h2 class="big">Care in the details.</h2>
-    <p class="aside">Four principles guide every project, from the first call to the final handover.</p>
-    <div class="cards">
-      <div class="card"><h3>Quality</h3><p>We sweat the details so the outcome feels effortless.</p></div>
-      <div class="card"><h3>Timelines</h3><p>Promises kept. Deadlines respected.</p></div>
-      <div class="card"><h3>Innovation</h3><p>Current tools, considered choices, better outcomes.</p></div>
-      <div class="card"><h3>Client satisfaction</h3><p>Success is measured by yours.</p></div>
+  <div class="w approach-container">
+    <div class="approach-header">
+      <div class="header-main">
+        <p class="eyebrow">How We Deliver &bull; Operating Disciplines</p>
+        <h2 class="approach-title">Care in the details. Certainty in the outcomes.</h2>
+      </div>
+      <p class="approach-aside">
+        Four guiding principles govern every engagement &mdash; from the initial discovery call to 24/7 production maintenance and scale.
+      </p>
+    </div>
+
+    <div class="approach-grid">
+      <!-- 01 Quality -->
+      <div class="approach-card">
+        <div class="card-num-bar">
+          <span class="card-num">01</span>
+          <span class="card-tag">Standard</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-heading">Uncompromising Quality</h3>
+          <p class="card-text">
+            We sweat the edge cases so the final product feels effortless. Software goes through multi-tier testing, and data tasks pass double-blind verification.
+          </p>
+          <ul class="card-points">
+            <li>Strict code review standards</li>
+            <li>Multi-tier data verification</li>
+            <li>Zero-regression mindset</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 02 Timelines -->
+      <div class="approach-card">
+        <div class="card-num-bar">
+          <span class="card-num">02</span>
+          <span class="card-tag">Execution</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-heading">Committed Timelines</h3>
+          <p class="card-text">
+            Promises kept. Deadlines respected. Clear milestones and transparent sprint progress mean you never have to chase updates or wonder about launch status.
+          </p>
+          <ul class="card-points">
+            <li>Realistic milestone planning</li>
+            <li>Weekly status cadences</li>
+            <li>Guaranteed SLA commitments</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 03 Innovation -->
+      <div class="approach-card">
+        <div class="card-num-bar">
+          <span class="card-num">03</span>
+          <span class="card-tag">Tooling</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-heading">Modern Innovation</h3>
+          <p class="card-text">
+            Current technology, considered choices, and automation pipelines. We adopt modern architectures and workflow scripts to keep your operations agile.
+          </p>
+          <ul class="card-points">
+            <li>Modern cloud-native stacks</li>
+            <li>Automated data pipelines</li>
+            <li>Continuous workflow tuning</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 04 Client satisfaction -->
+      <div class="approach-card">
+        <div class="card-num-bar">
+          <span class="card-num">04</span>
+          <span class="card-tag">Partnership</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-heading">Client Partnership</h3>
+          <p class="card-text">
+            Our success is entirely measured by yours. You work with a dedicated, communicative team that acts as an integrated extension of your company.
+          </p>
+          <ul class="card-points">
+            <li>Dedicated account ownership</li>
+            <li>Direct executive access</li>
+            <li>Long-term scalability focus</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <style is:global>
   .approach {
-    padding-block: clamp(5rem, 12vw, 11rem);
+    padding-block: clamp(60px, 9vh, 120px);
+    background: var(--bone);
+    color: var(--ink);
   }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin-top: clamp(40px, 7vw, 90px);
-    perspective: 1200px;
-  }
-  .card {
+  .approach-container {
     display: flex;
     flex-direction: column;
+    gap: clamp(32px, 5vh, 56px);
+  }
+  .approach-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
     justify-content: space-between;
-    min-height: 340px;
-    padding: 28px;
-    border-radius: 8px;
-    background: var(--teal);
-    color: var(--ivory);
-    transform-origin: 50% 0;
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(20, 32, 31, 0.15);
   }
-  .card h3 {
-    font: 700 clamp(1.5rem, 2.3vw, 2.2rem)/1.05 var(--disp);
-    letter-spacing: -.03em;
+  .header-main {
+    max-width: 640px;
   }
-  .card p {
-    opacity: .72;
-    max-width: 22ch;
+  .approach-title {
+    font: 800 clamp(2rem, 4.2vw, 3.6rem)/1.05 var(--disp);
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-top: 8px;
+  }
+  .approach-aside {
+    max-width: 44ch;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ink);
+    opacity: 0.78;
   }
 
-  @media (max-width: 1000px) {
-    .cards {
-      grid-template-columns: 1fr 1fr;
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .approach-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--teal);
+    color: var(--ivory);
+    padding: clamp(24px, 3vw, 32px);
+    border-radius: 16px;
+    border: 1px solid rgba(244, 240, 232, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .approach-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(4, 34, 43, 0.2);
+  }
+  .card-num-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(244, 240, 232, 0.1);
+  }
+  .card-num {
+    font: 800 24px/1 var(--disp);
+    color: var(--tan);
+    letter-spacing: -0.02em;
+  }
+  .card-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(201, 162, 126, 0.14);
+    color: var(--tan);
+  }
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+  }
+  .card-heading {
+    font: 700 clamp(1.3rem, 1.8vw, 1.6rem)/1.15 var(--disp);
+    color: var(--ivory);
+    letter-spacing: -0.02em;
+  }
+  .card-text {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--ivory);
+    opacity: 0.8;
+  }
+  .card-points {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(244, 240, 232, 0.12);
+  }
+  .card-points li {
+    font-size: 12.5px;
+    color: var(--tan);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card-points li::before {
+    content: "✓";
+    font-weight: 700;
+    color: var(--tan);
+  }
+
+  @media (max-width: 1100px) {
+    .approach-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
-  @media (max-width: 899px) {
-    .card {
-      min-height: auto;
-      padding: 24px;
-    }
-    .card h3 {
-      font-size: clamp(1.35rem, 4.6vw, 1.8rem);
-    }
-    .card p {
-      max-width: none;
-    }
-    .cards {
-      gap: 12px;
-    }
-  }
+
   @media (max-width: 640px) {
-    .cards {
+    .approach-grid {
       grid-template-columns: 1fr;
+    }
+    .approach-header {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 </style>

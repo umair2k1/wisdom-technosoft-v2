@@ -1,216 +1,525 @@
 ---
 ---
 
-<section class="s services" id="services" style="--bg:var(--teal);--fg:var(--ivory)">
-  <div class="pin">
-    <p class="pin-head">What we do</p>
-    <ol class="dots" aria-hidden="true">
-      <li class="dot is-on">Software</li>
-      <li class="dot">Telecalling</li>
-      <li class="dot">Data</li>
-      <li class="dot">Business process</li>
-      <li class="dot">Healthcare</li>
-    </ol>
-    <div class="track">
-      <article class="panel">
-        <p class="pword" aria-hidden="true">Code</p>
-        <div class="pbody">
-          <h2>Software development</h2>
-          <p>High-quality, user-friendly and scalable software built around your business &mdash; web platforms, mobile apps, internal tools and the automation that holds them together.</p>
-          <ul class="tags"><li>Web</li><li>Mobile</li><li>Custom software</li><li>Automation</li></ul>
+<section class="s services-section" id="services" style="--bg:var(--teal);--fg:var(--ivory)">
+  <div class="w services-container">
+    <div class="services-header">
+      <div class="header-left">
+        <p class="eyebrow">What We Do &bull; Core Capabilities</p>
+        <h2 class="services-title">Precision engineering &amp; operational scale.</h2>
+      </div>
+      <p class="services-subtitle">
+        From custom software engineering to high-touch voice calling, clean data processing, and US medical billing — we power the operations behind growing enterprises.
+      </p>
+    </div>
+
+    <div class="services-filter" role="tablist" aria-label="Filter services">
+      <button class="filter-tab is-active" data-filter="all" role="tab" aria-selected="true">All Services (5)</button>
+      <button class="filter-tab" data-filter="software" role="tab" aria-selected="false">Software</button>
+      <button class="filter-tab" data-filter="telecalling" role="tab" aria-selected="false">Telecalling</button>
+      <button class="filter-tab" data-filter="data" role="tab" aria-selected="false">Data &amp; QA</button>
+      <button class="filter-tab" data-filter="bpo" role="tab" aria-selected="false">Business Process</button>
+      <button class="filter-tab" data-filter="healthcare" role="tab" aria-selected="false">Healthcare BPO</button>
+    </div>
+
+    <div class="services-grid" id="services-grid">
+      <!-- 1. Software Development -->
+      <article class="service-card featured" data-category="software">
+        <div class="card-top">
+          <div class="card-icon software-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <span class="card-cat-badge">Engineering &amp; Cloud</span>
+        </div>
+        
+        <div class="card-body">
+          <h3 class="card-title">Software Development</h3>
+          <p class="card-desc">
+            High-quality, user-friendly, and scalable software built around your exact business requirements &mdash; web platforms, mobile applications, internal administrative tools, and automated cloud workflows.
+          </p>
+
+          <div class="card-highlights">
+            <span class="hl-label">Key Capabilities</span>
+            <ul class="hl-list">
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Custom Web &amp; SaaS Applications</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Cross-Platform Mobile Apps (iOS &amp; Android)</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Internal Dashboards &amp; Workflow Automation</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Cloud Infrastructure &amp; API Integrations</li>
+            </ul>
+          </div>
+
+          <div class="card-foot">
+            <ul class="tags">
+              <li>Web Platforms</li>
+              <li>Mobile Apps</li>
+              <li>Custom APIs</li>
+              <li>Automation</li>
+            </ul>
+            <a href="#contact" class="card-action" data-service-select="Software Development">
+              <span>Discuss software</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </article>
-      <article class="panel">
-        <p class="pword" aria-hidden="true">Voice</p>
-        <div class="pbody">
-          <h2>Telecalling services</h2>
-          <p>Courteous, result-oriented conversations that strengthen relationships and turn interest into qualified leads &mdash; in the languages your customers speak.</p>
-          <ul class="tags"><li>B2B campaigns</li><li>Lead generation</li><li>Multilingual</li><li>CRM</li></ul>
+
+      <!-- 2. Telecalling Services -->
+      <article class="service-card featured" data-category="telecalling">
+        <div class="card-top">
+          <div class="card-icon voice-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <span class="card-cat-badge">Customer &amp; B2B Voice</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">Telecalling Services</h3>
+          <p class="card-desc">
+            Courteous, result-oriented conversations that strengthen customer relationships, qualify leads, and drive business growth in English, Hindi, and regional languages with dedicated caller squads.
+          </p>
+
+          <div class="card-highlights">
+            <span class="hl-label">Key Capabilities</span>
+            <ul class="hl-list">
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> B2B Outbound Lead Qualification Campaigns</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Inbound Customer Support &amp; Helpdesk</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Multilingual Calling (English, Hindi, Marathi, etc.)</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Real-time CRM Sync &amp; Disposition Reports</li>
+            </ul>
+          </div>
+
+          <div class="card-foot">
+            <ul class="tags">
+              <li>B2B Campaigns</li>
+              <li>Lead Generation</li>
+              <li>Multilingual</li>
+              <li>CRM Integration</li>
+            </ul>
+            <a href="#contact" class="card-action" data-service-select="Telecalling Services">
+              <span>Discuss telecalling</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </article>
-      <article class="panel">
-        <p class="pword" aria-hidden="true">Data</p>
-        <div class="pbody">
-          <h2>Data entry &amp; management</h2>
-          <p>Precise, timely data services that keep your records reliable and your decisions sharp, with documented checks at every step.</p>
-          <ul class="tags"><li>Data entry</li><li>Quality assurance</li><li>Process design</li><li>Analytics</li></ul>
+
+      <!-- 3. Data Entry & Management -->
+      <article class="service-card" data-category="data">
+        <div class="card-top">
+          <div class="card-icon data-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <span class="card-cat-badge">Accuracy &amp; Verification</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">Data Entry &amp; Management</h3>
+          <p class="card-desc">
+            Precise, timely data services that keep your business records clean, structured, and audit-ready with multi-tier verification and 99.8% documented accuracy benchmarks.
+          </p>
+
+          <div class="card-highlights">
+            <span class="hl-label">Key Capabilities</span>
+            <ul class="hl-list">
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> High-Volume Data Entry &amp; Normalization</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Document Digitization &amp; Extraction QA</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Catalog, Inventory &amp; Records Cleansing</li>
+            </ul>
+          </div>
+
+          <div class="card-foot">
+            <ul class="tags">
+              <li>Data Entry</li>
+              <li>QA Audits</li>
+              <li>Digitization</li>
+              <li>Analytics</li>
+            </ul>
+            <a href="#contact" class="card-action" data-service-select="Data Entry & Management">
+              <span>Discuss data</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </article>
-      <article class="panel">
-        <p class="pword" aria-hidden="true">Scale</p>
-        <div class="pbody">
-          <h2>Business process &amp; industrial solutions</h2>
-          <p>End-to-end BPO and operational support &mdash; supply-chain workflows on SAP, e-commerce and web builds, plus environmental and industrial systems (STP, ETP, chemical machinery, monitoring instrumentation). Clean processes, a healthier operation.</p>
-          <ul class="tags">
-            <li>BPO</li>
-            <li>SAP / SCM</li>
-            <li>E-commerce</li>
-            <li>Web design</li>
-            <li>STP / ETP</li>
-            <li>Instrumentation</li>
-          </ul>
+
+      <!-- 4. Business Process & Industrial Solutions -->
+      <article class="service-card" data-category="bpo">
+        <div class="card-top">
+          <div class="card-icon bpo-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <span class="card-cat-badge">Operational Workflows</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">Business Process &amp; Industrial Solutions</h3>
+          <p class="card-desc">
+            End-to-end BPO and operational support &mdash; supply-chain workflows on SAP, e-commerce catalog management, and specialized industrial process support (STP, ETP, chemical machinery, instrumentation).
+          </p>
+
+          <div class="card-highlights">
+            <span class="hl-label">Key Capabilities</span>
+            <ul class="hl-list">
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> SAP &amp; Supply Chain Process Execution</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> E-Commerce Operations &amp; Web Store Builds</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Industrial Instrumentation &amp; Water Systems (STP/ETP)</li>
+            </ul>
+          </div>
+
+          <div class="card-foot">
+            <ul class="tags">
+              <li>BPO Operations</li>
+              <li>SAP / SCM</li>
+              <li>E-Commerce</li>
+              <li>Industrial Support</li>
+            </ul>
+            <a href="#contact" class="card-action" data-service-select="Business Process & Industrial Solutions">
+              <span>Discuss BPO</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </article>
-      <article class="panel">
-        <p class="pword" aria-hidden="true">Care</p>
-        <div class="pbody">
-          <h2>Healthcare support services</h2>
-          <p>Accurate, compliant back-office support for healthcare providers &mdash; including US medical billing, claims preparation and revenue-cycle workflows, handled by a trained team with documented quality checks at every step.</p>
-          <ul class="tags">
-            <li>US medical billing</li>
-            <li>Claims support</li>
-            <li>Revenue cycle</li>
-            <li>Compliance-aware QA</li>
-          </ul>
+
+      <!-- 5. Healthcare Support & US Medical Billing -->
+      <article class="service-card" data-category="healthcare">
+        <div class="card-top">
+          <div class="card-icon health-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 9v6"/><path d="M9 12h6"/></svg>
+          </div>
+          <span class="card-cat-badge">Revenue Cycle &amp; HIPAA</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">Healthcare Support &amp; US Medical Billing</h3>
+          <p class="card-desc">
+            Accurate, compliant back-office support for healthcare practices &mdash; including US medical billing, claims preparation, denial resolution, and revenue cycle management with documented audit trails.
+          </p>
+
+          <div class="card-highlights">
+            <span class="hl-label">Key Capabilities</span>
+            <ul class="hl-list">
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Accurate US Medical Claims Scrubbing &amp; Submission</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Denial Management &amp; Payer Appeals</li>
+              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Payment Posting &amp; Revenue Cycle Reconciliation</li>
+            </ul>
+          </div>
+
+          <div class="card-foot">
+            <ul class="tags">
+              <li>US Medical Billing</li>
+              <li>Claims Support</li>
+              <li>Revenue Cycle</li>
+              <li>Compliance QA</li>
+            </ul>
+            <a href="#contact" class="card-action" data-service-select="Healthcare Support / US Medical Billing">
+              <span>Discuss healthcare</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </article>
     </div>
   </div>
 </section>
 
+<script>
+  // Filter tab switching
+  const tabs = document.querySelectorAll(".filter-tab");
+  const cards = document.querySelectorAll(".service-card");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => {
+        t.classList.remove("is-active");
+        t.setAttribute("aria-selected", "false");
+      });
+      tab.classList.add("is-active");
+      tab.setAttribute("aria-selected", "true");
+
+      const filter = tab.getAttribute("data-filter");
+      cards.forEach(card => {
+        const cat = card.getAttribute("data-category");
+        if (filter === "all" || cat === filter) {
+          (card as HTMLElement).style.display = "flex";
+        } else {
+          (card as HTMLElement).style.display = "none";
+        }
+      });
+    });
+  });
+
+  // Wire card action to pre-select service in contact form
+  const actions = document.querySelectorAll("[data-service-select]");
+  actions.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const serviceName = btn.getAttribute("data-service-select");
+      const serviceSelect = document.querySelector('select[name="service"]') as HTMLSelectElement | null;
+      if (serviceSelect && serviceName) {
+        for (let i = 0; i < serviceSelect.options.length; i++) {
+          if (serviceSelect.options[i].text.includes(serviceName) || serviceName.includes(serviceSelect.options[i].text)) {
+            serviceSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    });
+  });
+</script>
+
 <style is:global>
-  .pin-head {
+  .services-section {
+    padding-block: clamp(60px, 10vh, 120px);
     position: relative;
-    z-index: 3;
-    padding: calc(var(--nav) + 12px) var(--gx) 0;
-    font: 700 1rem var(--disp);
+    background: var(--teal);
   }
-  .dots {
-    position: relative;
-    z-index: 3;
-    display: none;
-    gap: 10px;
-    padding: 10px var(--gx) 0;
-    font-size: 13px;
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(32px, 5vh, 48px);
   }
-  .dot {
-    padding: 5px 14px;
-    border: 1px solid rgba(244, 240, 232, .3);
-    border-radius: 999px;
-    opacity: .55;
-    transition: all .4s;
+  .services-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(244, 240, 232, 0.12);
   }
-  .dot.is-on {
-    background: var(--ivory);
-    color: var(--teal);
-    opacity: 1;
-    border-color: var(--ivory);
+  .header-left {
+    max-width: 640px;
   }
-  .panel {
-    position: relative;
-    padding: 48px var(--gx);
+  .services-title {
+    font: 700 clamp(2rem, 4.2vw, 3.6rem)/1.08 var(--disp);
+    letter-spacing: -0.03em;
+    color: var(--ivory);
+    margin-top: 10px;
   }
-  .pword {
-    font: 800 clamp(5.5rem, 22vw, 24rem)/.82 var(--disp);
-    letter-spacing: -.05em;
-    color: transparent;
-    -webkit-text-stroke: 1.5px rgba(244, 240, 232, .3);
+  .services-subtitle {
+    max-width: 48ch;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ivory);
+    opacity: 0.8;
   }
-  .pbody {
-    position: relative;
-    z-index: 1;
-    max-width: 560px;
-    margin-top: 24px;
-  }
-  .pbody h2 {
-    font: 700 clamp(1.9rem, 3.6vw, 3.2rem)/1.05 var(--disp);
-    letter-spacing: -.03em;
-    margin-bottom: 14px;
-  }
-  .pbody p {
-    opacity: .78;
-  }
-  .tags {
+
+  /* Filter tabs */
+  .services-filter {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 22px;
   }
-  .tags li {
-    padding: 6px 14px;
-    border: 1px solid rgba(244, 240, 232, .3);
+  .filter-tab {
+    padding: 8px 18px;
     border-radius: 999px;
-    font-size: 13px;
+    background: rgba(4, 34, 43, 0.5);
+    border: 1px solid rgba(244, 240, 232, 0.14);
+    color: var(--ivory);
+    font-size: 13.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
   }
-  .services.is-pin {
-    height: 520svh;
-    overscroll-behavior: contain;
+  .filter-tab:hover {
+    border-color: rgba(201, 162, 126, 0.4);
+    color: var(--tan);
   }
-  .is-pin .pin {
-    position: sticky;
-    top: 0;
-    height: 100svh;
-    overflow: hidden;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .is-pin .dots {
-    display: flex;
-  }
-  @property --track {
-    syntax: "<number>";
-    inherits: false;
-    initial-value: 0;
-  }
-  .is-pin .track {
-    display: flex;
-    flex: 1 1 auto;
-    min-height: 0;
-    width: 500vw;
-    transform: translate3d(calc(var(--track) * -20%), 0, 0);
-    will-change: transform;
-  }
-  .is-pin .panel {
-    flex: 0 0 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 9vh;
-  }
-  .is-pin .pword {
-    position: absolute;
-    left: var(--gx);
-    top: 15vh;
-    white-space: nowrap;
-  }
-  .is-pin .panel:nth-child(4) .pword,
-  .is-pin .panel:nth-child(5) .pword {
-    font-size: clamp(7rem, 26vw, 28rem);
-  }
-  .services:not(.is-pin) .pin-head {
-    padding-top: 56px;
-  }
-  .services:not(.is-pin) .panel + .panel {
-    border-top: 1px solid rgba(244, 240, 232, .14);
+  .filter-tab.is-active {
+    background: var(--tan);
+    color: var(--ink);
+    border-color: var(--tan);
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
 
-  @media (max-width: 899px) {
-    .pword {
-      font-size: clamp(4rem, 18vw, 7rem);
-      -webkit-text-stroke-width: 1.1px;
-      letter-spacing: -.045em;
-      line-height: .9;
+  /* Grid of services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .service-card {
+    background: rgba(4, 34, 43, 0.65);
+    border: 1px solid rgba(244, 240, 232, 0.1);
+    border-radius: 16px;
+    padding: clamp(24px, 3.5vw, 36px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(201, 162, 126, 0.12), transparent 70%);
+    transition: opacity 0.35s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 162, 126, 0.35);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    background: rgba(4, 34, 43, 0.85);
+  }
+  .service-card:hover::after {
+    opacity: 1;
+  }
+
+  .service-card[data-category="healthcare"] {
+    grid-column: span 2;
+  }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(201, 162, 126, 0.12);
+    border: 1px solid rgba(201, 162, 126, 0.25);
+    display: grid;
+    place-items: center;
+    color: var(--tan);
+  }
+  .card-cat-badge {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--tan);
+    background: rgba(201, 162, 126, 0.08);
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(201, 162, 126, 0.2);
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-grow: 1;
+  }
+  .card-title {
+    font: 700 clamp(1.4rem, 2.2vw, 1.85rem)/1.15 var(--disp);
+    color: var(--ivory);
+    letter-spacing: -0.02em;
+  }
+  .card-desc {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: var(--ivory);
+    opacity: 0.82;
+  }
+
+  .card-highlights {
+    background: rgba(6, 51, 64, 0.5);
+    border: 1px solid rgba(244, 240, 232, 0.06);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-top: 4px;
+  }
+  .hl-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--tan);
+    margin-bottom: 8px;
+  }
+  .hl-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .hl-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--ivory);
+    opacity: 0.9;
+  }
+  .check {
+    color: var(--tan);
+    flex-shrink: 0;
+  }
+
+  .card-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(244, 240, 232, 0.08);
+    margin-top: auto;
+  }
+  .service-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .service-card .tags li {
+    padding: 4px 10px;
+    background: rgba(244, 240, 232, 0.06);
+    border: 1px solid rgba(244, 240, 232, 0.12);
+    border-radius: 999px;
+    font-size: 11.5px;
+    color: var(--ivory);
+    opacity: 0.8;
+  }
+  .card-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--tan);
+    text-decoration: none;
+    transition: gap 0.2s ease, color 0.2s ease;
+  }
+  .card-action:hover {
+    gap: 10px;
+    color: #e5c7a9;
+  }
+
+  @media (max-width: 900px) {
+    .services-grid {
+      grid-template-columns: 1fr;
     }
-    .services:not(.is-pin) .pin-head {
-      padding-top: calc(var(--nav) + 20px);
-      font-size: 1.05rem;
+    .service-card[data-category="healthcare"] {
+      grid-column: span 1;
     }
-    .services:not(.is-pin) .panel {
-      padding-block: clamp(40px, 8vw, 64px);
+    .services-header {
+      flex-direction: column;
+      align-items: flex-start;
     }
-    .pbody {
-      margin-top: 16px;
+  }
+
+  @media (max-width: 640px) {
+    .card-top {
+      flex-direction: row;
+      align-items: center;
     }
-    .pbody h2 {
-      font-size: clamp(1.6rem, 5.4vw, 2.4rem);
+    .card-foot {
+      flex-direction: column;
+      align-items: flex-start;
     }
-    .pbody p {
-      font-size: .98rem;
-    }
-    .tags li {
-      font-size: 12px;
-      padding: 5px 12px;
+    .card-action {
+      margin-top: 6px;
     }
   }
 </style>
