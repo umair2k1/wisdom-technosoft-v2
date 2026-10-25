@@ -11,3 +11,14 @@ yarn-debug.log*
 .wrangler/
 dist/
 node_modules/
+.astro/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE & Tooling
+.omp/
+.vscode/
+.idea/

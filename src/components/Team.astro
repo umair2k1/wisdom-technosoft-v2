@@ -1,0 +1,52 @@
+---
+---
+
+<section class="s team" id="team" style="--bg:var(--bone);--fg:var(--ink)">
+  <div class="w">
+    <p class="eyebrow">Our team</p>
+    <h2 class="big">The people behind the work.</h2>
+    <p class="aside">A small, senior team across software, telecalling and data &mdash; working as one.</p>
+    <ul class="rows">
+      <li class="row"><span class="rn">Executive Leadership</span><span class="rr">Managing Director</span></li>
+      <li class="row"><span class="rn">Operations &amp; Delivery</span><span class="rr">Managing Director</span></li>
+      <li class="row"><span class="rn">Process &amp; Quality</span><span class="rr">Consultant</span></li>
+      <li class="row"><span class="rn">Client Partnerships</span><span class="rr">Consultant</span></li>
+    </ul>
+  </div>
+</section>
+
+<style is:global>
+  .team {
+    padding-block: clamp(5rem, 11vw, 10rem);
+  }
+  .rows {
+    margin-top: clamp(36px, 6vw, 72px);
+    border-top: 1px solid rgba(20, 32, 31, .2);
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px 24px;
+    padding: clamp(20px, 3vw, 34px) 0;
+    border-bottom: 1px solid rgba(20, 32, 31, .2);
+  }
+  .rn {
+    font: 700 clamp(1.8rem, 5vw, 4.6rem)/1.05 var(--disp);
+    letter-spacing: -.04em;
+  }
+  .rr {
+    font-size: 14px;
+    opacity: .65;
+  }
+
+  @media (max-width: 640px) {
+    .row {
+      padding-block: 18px;
+    }
+    .rr {
+      width: 100%;
+    }
+  }
+</style>

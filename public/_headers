@@ -4,6 +4,10 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
+/privacy
+  X-Robots-Tag: noindex, follow
+/privacy/
+  X-Robots-Tag: noindex, follow
 /privacy.html
   X-Robots-Tag: noindex, follow
 

@@ -1,0 +1,51 @@
+---
+---
+
+<section class="s strip" id="strip" style="--bg:var(--tan);--fg:var(--ink)" aria-hidden="true">
+  <div class="srow">
+    <div class="tr" data-s="1">
+      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
+      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
+      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
+      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
+      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
+      <span>Software development &#10022; Telecalling &#10022; Data entry &#10022; </span>
+    </div>
+  </div>
+  <div class="srow o">
+    <div class="tr rev" data-s="-1">
+      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
+      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
+      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
+      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
+      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
+      <span>Nagpur, India &#10022; Clarity &#10022; Care &#10022; Consistency &#10022; </span>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .strip {
+    padding-block: clamp(18px, 3vw, 36px);
+    overflow: hidden;
+  }
+  .srow {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .srow.o .tr {
+    margin-left: -200vw;
+  }
+  .tr {
+    display: inline-block;
+    font: 800 clamp(3rem, 10vw, 9rem)/1.1 var(--disp);
+    letter-spacing: -.04em;
+  }
+  .srow.o .tr {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--ink);
+  }
+  .tr span {
+    display: inline-block;
+  }
+</style>

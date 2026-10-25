@@ -1,0 +1,277 @@
+---
+---
+
+<section class="s contact" id="contact" style="--bg:var(--teal);--fg:var(--ivory)">
+  <div class="w">
+    <p class="eyebrow">Contact</p>
+    <h2 class="big">Let&rsquo;s build something worth keeping.</h2>
+    <div class="clayout">
+      <div class="cinfo">
+        <a class="cmail" href="mailto:wisdomtechnosoft04@gmail.com">wisdomtechnosoft04@gmail.com</a>
+        <dl>
+          <div><dt>Call</dt><dd><a href="tel:+917447331127">+91 74473 31127</a></dd></div>
+          <div><dt>Visit</dt><dd><a href="https://maps.google.com/?q=Opposite+Bank+of+Baroda,+Ward+Number+3,+Parsodi,+Trimurtee+Nagar,+Nagpur,+Maharashtra+440022" target="_blank" rel="noopener">Opposite Bank of Baroda, Ward Number 3, Parsodi, Trimurtee Nagar, Nagpur &ndash; 440022, Maharashtra</a></dd></div>
+        </dl>
+        <a class="btn wa" href="https://wa.me/917447331127?text=Hello%20Wisdom%20Technosoft%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+      <form class="cform" id="cform" action="/api/contact" method="POST">
+        <h3>Send an inquiry</h3>
+        <p class="hint">Tell us about your project. We reply within 1 business day.</p>
+        <div class="hp" aria-hidden="true"><label for="f-web">Leave this empty</label><input id="f-web" name="website_url" tabindex="-1" autocomplete="off"></div>
+        <div class="two">
+          <label>Your name<input name="name" required autocomplete="name" autocapitalize="words" placeholder="Aarav Sharma"></label>
+          <label>Email address<input type="email" name="email" required autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" placeholder="aarav@example.com"></label>
+        </div>
+        <div class="two">
+          <label>Phone / WhatsApp<input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210"></label>
+          <label>Service<select name="service">
+            <option>Software Development</option>
+            <option>Telecalling Services</option>
+            <option>Data Entry &amp; Management</option>
+            <option>Business Process &amp; Industrial Solutions</option>
+            <option>Healthcare Support / US Medical Billing</option>
+            <option>General Inquiry</option>
+          </select></label>
+        </div>
+        <label>Project overview<textarea name="message" rows="4" required autocapitalize="sentences" enterkeyhint="send" placeholder="Scope, timeline or goals"></textarea></label>
+        <button class="btn" type="submit" id="send">Send inquiry</button>
+        <p class="fine">No tracking cookies. Your details are used only to reply to this inquiry. <a href="/privacy">Privacy notice</a></p>
+        <p class="status" id="status" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById("cform") as HTMLFormElement | null;
+  const send = document.getElementById("send") as HTMLButtonElement | null;
+  const status = document.getElementById("status") as HTMLElement | null;
+
+  if (form && send && status) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const data: Record<string, string> = {};
+      ["name", "email", "phone", "service", "message", "website_url"].forEach(function (n) {
+        data[n] = String(fd.get(n) || "").trim();
+      });
+      if (data.website_url) {
+        status.className = "status ok";
+        status.textContent = "Thank you. We have your message.";
+        form.reset();
+        return;
+      }
+      const label = send.textContent || "Send inquiry";
+      send.disabled = true;
+      send.textContent = "Sending…";
+      status.className = "status";
+      status.textContent = "";
+
+      fetch(form.getAttribute("action") || "/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(data)
+      })
+        .then(function (r) {
+          return r.json().then(function (j) {
+            if (!r.ok) throw new Error(j.message || "Failed");
+            return j;
+          });
+        })
+        .then(function () {
+          status.className = "status ok";
+          status.textContent = "Thank you. We will be in touch shortly.";
+          form.reset();
+        })
+        .catch(function () {
+          status.className = "status err";
+          status.innerHTML = 'We could not send this online. Please email <a href="mailto:wisdomtechnosoft04@gmail.com">wisdomtechnosoft04@gmail.com</a> or call <a href="tel:+917447331127">+91 74473 31127</a>.';
+        })
+        .finally(function () {
+          send.disabled = false;
+          send.textContent = label;
+        });
+    });
+  }
+</script>
+
+<style is:global>
+  .contact {
+    padding-block: clamp(5rem, 11vw, 10rem);
+  }
+  .clayout {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: clamp(32px, 6vw, 90px);
+    margin-top: clamp(36px, 6vw, 72px);
+    align-items: start;
+  }
+  .cmail {
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(244, 240, 232, .35);
+    font: 500 clamp(1.1rem, 2.2vw, 1.9rem) var(--disp);
+    letter-spacing: -.02em;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+  .cinfo dl {
+    margin: 32px 0;
+  }
+  .cinfo dl > div {
+    padding: 14px 0;
+    border-top: 1px solid rgba(244, 240, 232, .18);
+  }
+  .cinfo dt {
+    font-size: 13px;
+    opacity: .6;
+    margin-bottom: 4px;
+  }
+  .cinfo dd a {
+    text-decoration: none;
+    opacity: .88;
+  }
+  .cinfo dd a[href^="tel"] {
+    white-space: nowrap;
+  }
+  .wa {
+    background: transparent;
+    border: 1px solid rgba(163, 247, 191, .5);
+    color: #a3f7bf;
+    min-height: 48px;
+    padding: 14px 22px;
+  }
+  .cform {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: clamp(22px, 4vw, 40px);
+    border: 1px solid rgba(244, 240, 232, .18);
+    border-radius: 8px;
+    background: rgba(4, 34, 43, .55);
+    color-scheme: dark;
+  }
+  .cform h3 {
+    font: 700 1.5rem var(--disp);
+    letter-spacing: -.02em;
+  }
+  .hint {
+    opacity: .7;
+    font-size: 14px;
+    margin-top: -8px;
+  }
+  .two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .cform label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: .9;
+  }
+  .cform input,
+  .cform select,
+  .cform textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid rgba(244, 240, 232, .22);
+    border-radius: 6px;
+    background: rgba(244, 240, 232, .06);
+    color: var(--ivory);
+    font: inherit;
+    font-size: 16px;
+    min-height: 48px;
+  }
+  .cform select option {
+    background: var(--deep);
+  }
+  .cform textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  .cform input:focus,
+  .cform select:focus,
+  .cform textarea:focus {
+    outline: 0;
+    border-color: var(--tan);
+    background: rgba(244, 240, 232, .1);
+  }
+  .cform .btn {
+    width: 100%;
+    min-height: 50px;
+  }
+  .fine {
+    font-size: 12px;
+    opacity: .6;
+  }
+  .fine a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  .status {
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .status:empty {
+    margin-top: -16px;
+  }
+  .status.ok,
+  .status.err {
+    padding: 12px 14px;
+  }
+  .status.ok {
+    background: rgba(76, 175, 80, .22);
+    color: #c8e6c9;
+  }
+  .status.err {
+    background: rgba(239, 83, 80, .22);
+    color: #ffcdd2;
+  }
+  .hp {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .cform select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--ivory) 50%),
+                     linear-gradient(135deg, var(--ivory) 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+  }
+
+  @media (max-width: 1000px) {
+    .clayout {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 640px) {
+    .two {
+      grid-template-columns: 1fr;
+    }
+    .clayout {
+      margin-top: 28px;
+      gap: 28px;
+    }
+    .cinfo dl {
+      margin: 24px 0;
+    }
+    .cinfo dl > div {
+      padding: 12px 0;
+    }
+    .cform {
+      padding: 20px;
+      gap: 14px;
+    }
+  }
+</style>

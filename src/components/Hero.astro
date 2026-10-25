@@ -1,0 +1,136 @@
+---
+---
+
+<section class="s hero" id="top" style="--bg:var(--deep);--fg:var(--ivory)">
+  <h1 class="w">
+    <span class="hlm"><span class="hl" data-d="1"><span>Software.</span></span></span>
+    <span class="hlm"><span class="hl" data-d="-1"><span>Conversations.</span></span></span>
+    <span class="hlm"><span class="hl" data-d="1"><span>Clean data.</span></span></span>
+  </h1>
+  <div class="w hero-foot">
+    <p>A Nagpur studio that builds your software, runs your customer calls, keeps your data accurate and supports the operations behind them &mdash; one team, one standard.</p>
+    <div class="actions">
+      <a class="btn" href="#contact">Start a project</a>
+      <a class="lnk" href="#services">See what we do</a>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .hero {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: calc(var(--nav) + 4vh) 0 max(5vh, 64px);
+    position: relative;
+  }
+  .hero h1 {
+    position: relative;
+    z-index: 1;
+    font: 800 clamp(2.2rem, 12.2vw, 13.5rem)/.88 var(--disp);
+    letter-spacing: -.05em;
+  }
+  .hlm {
+    display: block;
+    clip-path: inset(0 -100vw);
+    padding-bottom: .1em;
+    margin-bottom: -.1em;
+  }
+  .hl {
+    display: block;
+  }
+  .hl > span {
+    display: inline-block;
+  }
+  .hlm:nth-child(2) .hl {
+    padding-left: 7vw;
+  }
+  .hlm:nth-child(3) .hl {
+    color: var(--tan);
+  }
+  .hero-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: clamp(28px, 5vh, 56px);
+    padding-top: 24px;
+    border-top: 1px solid rgba(244, 240, 232, .2);
+  }
+  .hero-foot p {
+    max-width: 42ch;
+    opacity: .78;
+    font-size: 1.05rem;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .js .hl > span {
+    transform: translateY(110%);
+    transition: transform 1.2s var(--ease);
+  }
+  .js .hlm:nth-child(2) .hl > span {
+    transition-delay: .12s;
+  }
+  .js .hlm:nth-child(3) .hl > span {
+    transition-delay: .24s;
+  }
+  .js .ready .hl > span {
+    transform: none;
+  }
+  .js .hero-foot {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 1s .8s, transform 1s .8s var(--ease);
+  }
+  .js .ready .hero-foot {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding: calc(var(--nav) + 2vh) 0 max(6vh, 44px);
+    }
+    .hero-foot {
+      margin-top: 20px;
+      padding-top: 18px;
+      gap: 18px;
+    }
+    .hero-foot p {
+      font-size: .95rem;
+      max-width: 34ch;
+    }
+    .actions {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+      width: 100%;
+    }
+    .actions .btn {
+      width: 100%;
+      min-height: 50px;
+    }
+    .actions .lnk {
+      text-align: center;
+      font-size: .95rem;
+    }
+    .hlm:nth-child(2) .hl {
+      padding-left: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js .hl > span {
+      transform: none;
+    }
+    .js .hero-foot {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>

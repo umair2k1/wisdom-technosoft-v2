@@ -1,17 +1,8 @@
-/**
- * Cloudflare Pages Function: Contact Form Handler
- * Endpoint: POST /api/contact
- *
- * Runs on Cloudflare Pages Functions (Edge Workers):
- * - Zero external npm dependencies
- * - Built-in honeypot spam suppression
- * - Strict input validation
- * - Optional forwarding via Web3Forms (if FORM_SERVICE_KEY is configured)
- */
+import type { APIRoute } from 'astro';
 
-export async function onRequestPost(context) {
-  const { request, env } = context;
+export const prerender = false;
 
+export const POST: APIRoute = async ({ request, locals }) => {
   const jsonHeaders = {
     'Content-Type': 'application/json',
     'Cache-Control': 'no-store, no-cache, must-revalidate',
@@ -57,10 +48,11 @@ export async function onRequestPost(context) {
       );
     }
 
-    const destinationEmail = env.DESTINATION_EMAIL || 'wisdomtechnosoft04@gmail.com';
-    const formServiceKey = env.FORM_SERVICE_KEY;
+    const env = (locals as Record<string, any>)?.runtime?.env || process.env;
+    const destinationEmail = env?.DESTINATION_EMAIL || 'wisdomtechnosoft04@gmail.com';
+    const formServiceKey = env?.FORM_SERVICE_KEY;
 
-    // 3. Forward message if an external service key (e.g. Web3Forms) is configured
+    // 3. Forward message if external service key is configured
     if (formServiceKey) {
       const emailPayload = {
         access_key: formServiceKey,
@@ -81,7 +73,6 @@ export async function onRequestPost(context) {
       });
 
       if (!forwardRes.ok) {
-        console.error('Form forward failed with status:', forwardRes.status);
         return new Response(
           JSON.stringify({
             success: false,
@@ -90,15 +81,6 @@ export async function onRequestPost(context) {
           { status: 502, headers: jsonHeaders }
         );
       }
-    } else {
-      console.log('Inquiry received (FORM_SERVICE_KEY not set):', {
-        name,
-        email,
-        phone,
-        service,
-        chars: message.length,
-        destination: destinationEmail,
-      });
     }
 
     return new Response(
@@ -109,7 +91,6 @@ export async function onRequestPost(context) {
       { status: 200, headers: jsonHeaders }
     );
   } catch (error) {
-    console.error('Contact handler error:', error);
     return new Response(
       JSON.stringify({
         success: false,
@@ -118,4 +99,4 @@ export async function onRequestPost(context) {
       { status: 500, headers: jsonHeaders }
     );
   }
-}
+};

@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  noindex?: boolean;
+  hasOrb?: boolean;
+  bodyClass?: string;
+}
+
+const {
+  title = "Wisdom Technosoft — Software, Telecalling, Data & Healthcare BPO | Nagpur",
+  description = "Wisdom Technosoft is a Nagpur-based BPO and software studio delivering software development, telecalling, data management, industrial process support and US medical billing.",
+  canonical = "https://wisdomtechnosoft.com/",
+  noindex = false,
+  hasOrb = false,
+  bodyClass = "",
+} = Astro.props;
+
+const fullBodyClass = [
+  hasOrb ? "has-orb" : "",
+  bodyClass
+].filter(Boolean).join(" ");
+---
+
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  {noindex ? (
+    <meta name="robots" content="noindex,follow">
+  ) : (
+    <link rel="canonical" href={canonical}>
+  )}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:image" content="https://wisdomtechnosoft.com/assets/og.png">
+  <meta property="og:locale" content="en_IN">
+  <meta name="theme-color" content="#04222B">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script is:inline>document.documentElement.className="js"</script>
+</head>
+<body class={fullBodyClass}>
+  <a class="skip" href="#main">Skip to content</a>
+  <slot name="orb" />
+  <slot />
+</body>
+</html>

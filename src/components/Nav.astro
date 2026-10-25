@@ -1,0 +1,67 @@
+---
+---
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Wisdom Technosoft home">
+    <img src="/assets/logo-mark-light.png" alt="" class="brand-logo" width="42" height="34">
+    <span>Wisdom Technosoft</span>
+  </a>
+  <a class="btn" href="#contact">Start a project</a>
+</header>
+
+<style is:global>
+  .nav {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 160;
+    height: var(--nav);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--g);
+    transition: transform .5s var(--ease);
+    background: rgba(4, 34, 43, .88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(244, 240, 232, .08);
+  }
+  .nav.hide {
+    transform: translateY(-110%);
+  }
+  .nav.hide:focus-within {
+    transform: none;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font: 700 15px var(--disp);
+    letter-spacing: -.01em;
+    color: var(--ivory);
+  }
+  .brand-logo {
+    height: 34px;
+    width: auto;
+    display: block;
+    will-change: opacity;
+  }
+  .nav .btn {
+    box-shadow: 0 0 0 1px rgba(20, 32, 31, .2);
+  }
+  @media (max-width: 640px) {
+    .brand-logo {
+      height: 30px;
+    }
+    .nav .btn {
+      padding: 0 18px;
+      font-size: 14px;
+      min-height: 44px;
+    }
+  }
+  @media (max-width: 520px) {
+    .brand span {
+      display: none;
+    }
+  }
+</style>

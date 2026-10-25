@@ -1,5 +1,7 @@
 (function () {
   "use strict";
+  if (typeof window === "undefined") return;
+
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
   var navTimer;
   function handleNav(dy) {
@@ -12,6 +14,7 @@
       clearTimeout(navTimer);
     }
   }
+
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.from((r || document).querySelectorAll(s)); };
   var clamp = function (v, a, b) { return Math.min(b === undefined ? 1 : b, Math.max(a === undefined ? 0 : a, v)); };
@@ -61,7 +64,7 @@
     fitRing();
     H = window.innerHeight;
     var W = window.innerWidth;
-    tops = els.map(function (e) { return e.getBoundingClientRect().top + window.scrollY; });
+    tops = els.map(function (e) { return e ? e.getBoundingClientRect().top + window.scrollY : 0; });
 
     if (cardBox) {
       M.cardsTop = cardBox.getBoundingClientRect().top + window.scrollY;
@@ -70,7 +73,7 @@
       return r.getBoundingClientRect().top + window.scrollY;
     });
 
-    if (brandLogo) {
+    if (brandLogo && nav) {
       var rect = brandLogo.getBoundingClientRect();
       var cx = rect.left + rect.width / 2;
       var cy = (nav.classList.contains("hide") ? 36 : rect.top + rect.height / 2);
@@ -84,6 +87,7 @@
 
   var pinOn = false;
   function setMode() {
+    if (!sv || !track) return;
     pinOn = wide.matches && !reduce.matches;
     sv.classList.toggle("is-pin", pinOn);
     if (!pinOn) {
@@ -98,17 +102,17 @@
   var target = window.scrollY, cur = target, prev = cur, raf = 0, lastT = target, lastChap = "";
 
   function update(y, v) {
-    var d = target - y;
+    if (!orb) return;
     var narrow = window.innerWidth < 760;
     var rm = reduce.matches;
     var introDist = Math.min(H * 0.45, 380);
 
     var curX, curY, curS, curO, ringOp, tiltY = 0, tiltZ = 0, ringRot = 0, sp = 0, col = S[0].c;
     var activeChapter = 0;
-    var p = clamp((y - tops[1]) / Math.max(1, sv.offsetHeight - H));
+    var p = clamp((y - tops[1]) / Math.max(1, (sv ? sv.offsetHeight : H) - H));
     var f = p * (panels.length - 1);
 
-    chap.style.opacity = (y > introDist && activeChapter !== 6) ? 1 : 0;
+    if (chap) chap.style.opacity = (y > introDist && activeChapter !== 6) ? "1" : "0";
     if (y <= introDist) {
       activeChapter = 0;
       var t = sm(clamp(y / introDist));
@@ -152,7 +156,7 @@
           sa = 0.6 + p * 1.4;
 
           var pi = Math.round(clamp(f, 0, panels.length - 1));
-          if (PANEL_NAMES[pi] !== lastChap) {
+          if (chap && PANEL_NAMES[pi] !== lastChap) {
             lastChap = PANEL_NAMES[pi];
             chap.textContent = lastChap;
           }
@@ -189,53 +193,61 @@
     if (orbSvg) orbSvg.style.transform = rm ? "" : "rotateY(" + tiltY.toFixed(1) + "deg) rotateZ(" + tiltZ.toFixed(1) + "deg)";
     if (orbRing) orbRing.style.transform = rm ? "" : "rotate(" + ringRot.toFixed(1) + "deg)";
 
-    var total = document.documentElement.scrollHeight - H;
-    bar.style.transform = "scaleY(" + (total > 0 ? clamp(y / total) : 0).toFixed(4) + ")";
-    if (activeChapter !== 1) {
+    if (bar) {
+      var total = document.documentElement.scrollHeight - H;
+      bar.style.transform = "scaleY(" + (total > 0 ? clamp(y / total) : 0).toFixed(4) + ")";
+    }
+    if (chap && activeChapter !== 1) {
       if (S[activeChapter].n !== lastChap) {
         lastChap = S[activeChapter].n;
         chap.textContent = lastChap;
       }
     }
-    chap.style.opacity = (y > introDist && activeChapter !== 6) ? 1 : 0;
+    if (chap) chap.style.opacity = (y > introDist && activeChapter !== 6) ? "1" : "0";
 
     var dy = target - lastT;
     lastT = target;
-    if (Math.abs(dy) > 1) handleNav(dy);
+    if (nav && Math.abs(dy) > 1) handleNav(dy);
     if (rm) return;
 
     if (y < H * 1.4) heroLines.forEach(function (el) {
       el.style.transform = "translate3d(" + (el.getAttribute("data-d") * y * 0.3).toFixed(1) + "px,0,0)";
     });
 
-    if (pinOn) {
+    if (pinOn && track) {
       track.style.setProperty("--track", f.toFixed(3));
       words.forEach(function (w, n) { w.style.transform = "translate3d(" + ((f - n) * -16).toFixed(2) + "vw,0,0)"; });
       dots.forEach(function (dt, n) { dt.classList.toggle("is-on", n === Math.round(f)); });
     }
 
-    var Rtop = M.cardsTop - y;
-    cards.forEach(function (c, n) {
-      var e = sm(clamp((H - Rtop - n * H * 0.06) / (H * 0.5)));
-      c.style.transform = "translate3d(0," + ((1 - e) * 90).toFixed(1) + "px,0) rotateX(" + ((1 - e) * 55).toFixed(1) + "deg) rotateZ(" + ((1 - e) * (n % 2 ? 4 : -4)).toFixed(2) + "deg)";
-      c.style.opacity = (0.15 + 0.85 * e).toFixed(3);
-    });
+    if (cardBox) {
+      var Rtop = M.cardsTop - y;
+      cards.forEach(function (c, n) {
+        var e = sm(clamp((H - Rtop - n * H * 0.06) / (H * 0.5)));
+        c.style.transform = "translate3d(0," + ((1 - e) * 90).toFixed(1) + "px,0) rotateX(" + ((1 - e) * 55).toFixed(1) + "deg) rotateZ(" + ((1 - e) * (n % 2 ? 4 : -4)).toFixed(2) + "deg)";
+        c.style.opacity = (0.15 + 0.85 * e).toFixed(3);
+      });
+    }
 
-    var rel = y - (tops[3] - H);
-    var sk = clamp(v * -0.3, -14, 14);
-    trs.forEach(function (tr) {
-      var dir = Number(tr.getAttribute("data-s"));
-      tr.style.transform = "translate3d(" + (-dir * rel * 0.6).toFixed(1) + "px,0,0) skewX(" + sk.toFixed(2) + "deg)";
-    });
+    if (strip) {
+      var rel = y - (tops[3] - H);
+      var sk = clamp(v * -0.3, -14, 14);
+      trs.forEach(function (tr) {
+        var dir = Number(tr.getAttribute("data-s"));
+        tr.style.transform = "translate3d(" + (-dir * rel * 0.6).toFixed(1) + "px,0,0) skewX(" + sk.toFixed(2) + "deg)";
+      });
+    }
 
-    var vp = clamp((y - tops[4]) / Math.max(1, vscroll.offsetHeight - H));
-    vring.style.transform = "rotate(" + (vp * 540).toFixed(1) + "deg) scale(" + (0.82 + 0.18 * vp).toFixed(3) + ")";
+    if (vscroll && vring) {
+      var vp = clamp((y - tops[4]) / Math.max(1, vscroll.offsetHeight - H));
+      vring.style.transform = "rotate(" + (vp * 540).toFixed(1) + "deg) scale(" + (0.82 + 0.18 * vp).toFixed(3) + ")";
+    }
 
     rows.forEach(function (r, n) {
       var rcTop = M.rowTops[n] - y;
       var e = sm(clamp((H * 0.95 - rcTop) / (H * 0.4)));
       var nm = r.firstElementChild;
-      nm.style.transform = "translate3d(" + ((1 - e) * (n % 2 ? 1 : -1) * 160).toFixed(1) + "px,0,0)";
+      if (nm) nm.style.transform = "translate3d(" + ((1 - e) * (n % 2 ? 1 : -1) * 160).toFixed(1) + "px,0,0)";
       r.style.opacity = e.toFixed(3);
     });
   }
@@ -257,7 +269,6 @@
     if (!raf) raf = requestAnimationFrame(tick);
   }, { passive: true });
 
-  // Resize: ignore iOS address-bar height bumps (same width, small delta)
   var lastW = window.innerWidth, lastH = window.innerHeight, resizeRaf = 0;
   window.addEventListener("resize", function () {
     if (resizeRaf) return;
@@ -279,27 +290,4 @@
   var ready = function () { document.body.classList.add("ready"); };
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(ready); else requestAnimationFrame(ready);
   setTimeout(ready, 1000);
-
-  // Contact form
-  var form = $("#cform"), send = $("#send"), status = $("#status");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var fd = new FormData(form), data = {};
-    ["name", "email", "phone", "service", "message", "website_url"].forEach(function (n) { data[n] = String(fd.get(n) || "").trim(); });
-    if (data.website_url) { status.className = "status ok"; status.textContent = "Thank you. We have your message."; form.reset(); return; }
-    var label = send.textContent;
-    send.disabled = true; send.textContent = "Sending…"; status.className = "status"; status.textContent = "";
-    fetch(form.getAttribute("action"), { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) })
-      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.message || "Failed"); return j; }); })
-      .then(function () {
-        status.className = "status ok";
-        status.textContent = "Thank you. We will be in touch shortly.";
-        form.reset();
-      })
-      .catch(function () {
-        status.className = "status err";
-        status.innerHTML = "We could not send this online. Please email <a href=\"mailto:wisdomtechnosoft04@gmail.com\">wisdomtechnosoft04@gmail.com</a> or call <a href=\"tel:+917447331127\">+91 74473 31127</a>.";
-      })
-      .then(function () { send.disabled = false; send.textContent = label; });
-  });
 })();

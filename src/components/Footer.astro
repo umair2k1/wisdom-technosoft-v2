@@ -1,0 +1,35 @@
+---
+---
+
+<footer class="foot" style="--fg:var(--ivory)">
+  <p>&copy; 2026 Wisdom Technosoft. Software. Telecalling. Data. Done with care.</p>
+  <p><a href="/privacy">Privacy notice</a> &middot; Nagpur, Maharashtra, India &middot; <a href="#top">Back to top</a></p>
+</footer>
+
+<style is:global>
+  .foot {
+    position: relative;
+    z-index: 1;
+    background: var(--deep);
+    padding: 28px var(--gx) 64px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px 28px;
+    font-size: 13px;
+    color: var(--fg);
+    opacity: .8;
+  }
+  .foot a {
+    text-decoration: none;
+  }
+  @media (max-width: 640px) {
+    .foot {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12.5px;
+      padding-bottom: 48px;
+    }
+  }
+</style>

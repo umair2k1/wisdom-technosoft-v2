@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Page not found — Wisdom Technosoft"
+  description="That page is not here. Head back to the Wisdom Technosoft home page, or get in touch."
+  noindex={true}
+  bodyClass="stub"
+>
+  <header class="stub-head">
+    <a class="brand" href="/" aria-label="Wisdom Technosoft home">
+      <img src="/assets/logo-mark-light.png" alt="" class="brand-logo" width="42" height="34">
+      <span>Wisdom Technosoft</span>
+    </a>
+    <a class="stub-back" href="/">Back to site</a>
+  </header>
+
+  <main id="main" tabindex="-1" class="stub-main">
+    <div class="w">
+      <p class="eyebrow">404</p>
+      <h1 class="big">That page isn&rsquo;t here.</h1>
+      <p>The link may be old, or the address may have a typo. The rest of the site is where you left it.</p>
+
+      <p><a class="lnk" href="/">Go to the home page</a></p>
+
+      <h2 class="stub-h">Quick links</h2>
+      <ul>
+        <li><a href="/#services">What we do</a> &mdash; software, telecalling, data, business process &amp; industrial, healthcare support</li>
+        <li><a href="/#approach">How we deliver</a></li>
+        <li><a href="/#vision">Our vision &amp; mission</a></li>
+        <li><a href="/#team">Our team</a></li>
+        <li><a href="/#contact">Get in touch</a></li>
+      </ul>
+
+      <p class="stub-nav">Wisdom Technosoft, Nagpur, Maharashtra, India &middot; <a href="mailto:wisdomtechnosoft04@gmail.com">wisdomtechnosoft04@gmail.com</a> &middot; <a href="tel:+917447331127">+91 74473 31127</a></p>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  .stub {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 max(6vh, 64px);
+  }
+  .stub-head {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-inline: var(--g);
+    height: var(--nav);
+    border-bottom: 1px solid rgba(244, 240, 232, .14);
+  }
+  .stub-head .brand {
+    color: var(--ivory);
+    mix-blend-mode: normal;
+  }
+  .stub-back {
+    font-weight: 500;
+    text-underline-offset: 6px;
+    text-decoration: underline;
+    color: var(--ivory);
+    opacity: .85;
+  }
+  .stub-main {
+    padding-top: clamp(48px, 9vw, 120px);
+    padding-bottom: clamp(48px, 9vw, 120px);
+  }
+  .stub-main .big {
+    max-width: 16ch;
+  }
+  .stub-main p {
+    max-width: 60ch;
+    opacity: .78;
+    margin-top: clamp(18px, 3vw, 28px);
+    font-size: clamp(1rem, 1.3vw, 1.125rem);
+  }
+  .stub-main p + p {
+    margin-top: 14px;
+  }
+  .stub-main .lnk {
+    margin-top: clamp(28px, 4vw, 44px);
+    display: inline-block;
+    color: var(--tan);
+    text-underline-offset: 6px;
+  }
+  .stub-h {
+    font: 700 clamp(1.25rem, 2vw, 1.5rem)/1.2 var(--disp);
+    letter-spacing: -.02em;
+    margin-top: clamp(36px, 5vw, 56px);
+    max-width: 50ch;
+  }
+  .stub-main ul {
+    max-width: 60ch;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: .78;
+  }
+  .stub-main ul li {
+    padding-left: 22px;
+    position: relative;
+  }
+  .stub-main ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .75em;
+    width: 8px;
+    height: 1px;
+    background: var(--tan);
+  }
+  .stub-main a {
+    color: var(--tan);
+    text-underline-offset: 4px;
+  }
+  .stub-nav {
+    margin-top: clamp(32px, 5vw, 56px);
+    font-size: 13px;
+    opacity: .6;
+  }
+  .stub-nav a {
+    text-decoration: none;
+  }
+  @media (max-width: 640px) {
+    .stub-main {
+      padding-top: clamp(40px, 8vw, 80px);
+      padding-bottom: clamp(40px, 8vw, 80px);
+    }
+  }
+</style>

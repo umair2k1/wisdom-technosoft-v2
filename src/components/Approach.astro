@@ -1,0 +1,74 @@
+---
+---
+
+<section class="s approach" id="approach" style="--bg:var(--bone);--fg:var(--ink)">
+  <div class="w">
+    <p class="eyebrow">How we deliver</p>
+    <h2 class="big">Care in the details.</h2>
+    <p class="aside">Four principles guide every project, from the first call to the final handover.</p>
+    <div class="cards">
+      <div class="card"><h3>Quality</h3><p>We sweat the details so the outcome feels effortless.</p></div>
+      <div class="card"><h3>Timelines</h3><p>Promises kept. Deadlines respected.</p></div>
+      <div class="card"><h3>Innovation</h3><p>Current tools, considered choices, better outcomes.</p></div>
+      <div class="card"><h3>Client satisfaction</h3><p>Success is measured by yours.</p></div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .approach {
+    padding-block: clamp(5rem, 12vw, 11rem);
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: clamp(40px, 7vw, 90px);
+    perspective: 1200px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 340px;
+    padding: 28px;
+    border-radius: 8px;
+    background: var(--teal);
+    color: var(--ivory);
+    transform-origin: 50% 0;
+  }
+  .card h3 {
+    font: 700 clamp(1.5rem, 2.3vw, 2.2rem)/1.05 var(--disp);
+    letter-spacing: -.03em;
+  }
+  .card p {
+    opacity: .72;
+    max-width: 22ch;
+  }
+
+  @media (max-width: 1000px) {
+    .cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 899px) {
+    .card {
+      min-height: auto;
+      padding: 24px;
+    }
+    .card h3 {
+      font-size: clamp(1.35rem, 4.6vw, 1.8rem);
+    }
+    .card p {
+      max-width: none;
+    }
+    .cards {
+      gap: 12px;
+    }
+  }
+  @media (max-width: 640px) {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
