@@ -3,135 +3,171 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Page not found — Wisdom Technosoft"
-  description="That page is not here. Head back to the Wisdom Technosoft home page, or get in touch."
+  title="404 — Resource Not Found // Wisdom Technosoft"
+  description="Requested route does not exist on cluster. Return to Wisdom Technosoft root specification."
   noindex={true}
-  bodyClass="stub"
 >
-  <header class="stub-head">
-    <a class="brand" href="/" aria-label="Wisdom Technosoft home">
-      <img src="/assets/logo-mark-light.png" alt="" class="brand-logo" width="42" height="34">
-      <span>Wisdom Technosoft</span>
-    </a>
-    <a class="stub-back" href="/">Back to site</a>
-  </header>
+  <div class="blueprint-shell error-page" data-theme="paper">
+    <header class="error-head border-b">
+      <a class="brand font-mono" href="/" aria-label="Wisdom Technosoft Root">
+        <img src="/assets/logo-mark.png" alt="Wisdom Technosoft" width="34" height="28" />
+        <span>WISDOM TECHNOSOFT</span>
+      </a>
+      <a class="btn-industrial btn-outline-paper font-mono" href="/">&larr; RETURN TO ROOT</a>
+    </header>
 
-  <main id="main" tabindex="-1" class="stub-main">
-    <div class="w">
-      <p class="eyebrow">404</p>
-      <h1 class="big">That page isn&rsquo;t here.</h1>
-      <p>The link may be old, or the address may have a typo. The rest of the site is where you left it.</p>
-
-      <p><a class="lnk" href="/">Go to the home page</a></p>
-
-      <h2 class="stub-h">Quick links</h2>
-      <ul>
-        <li><a href="/#services">What we do</a> &mdash; software, telecalling, data, business process &amp; industrial, healthcare support</li>
-        <li><a href="/#approach">How we deliver</a></li>
-        <li><a href="/#vision">Our vision &amp; mission</a></li>
-        <li><a href="/#team">Our team</a></li>
-        <li><a href="/#contact">Get in touch</a></li>
-      </ul>
-
-      <p class="stub-nav">Wisdom Technosoft, Nagpur, Maharashtra, India &middot; <a href="mailto:wisdomtechnosoft04@gmail.com">wisdomtechnosoft04@gmail.com</a> &middot; <a href="tel:+917447331127">+91 74473 31127</a></p>
+    <div class="section-meta-bar">
+      <div class="meta-left">
+        <span class="meta-index">[STATUS // 404]</span>
+        <span class="meta-tag">ROUTING EXCEPTION &bull; RESOURCE NOT LOCATED</span>
+      </div>
+      <div class="meta-right">
+        <span class="meta-annotation font-mono">TRACE: ADDRESS_UNRESOLVED</span>
+      </div>
     </div>
-  </main>
+
+    <main id="main" tabindex="-1" class="error-content">
+      <div class="error-box">
+        <span class="tech-tag tech-tag-signal font-mono">NULL ROUTE</span>
+        <h1 class="error-title">Requested route does not exist on cluster.</h1>
+        <p class="error-desc">
+          The requested path was either deprecated, re-indexed, or entered with an invalid URI parameter. The production system is operating normally.
+        </p>
+
+        <div class="error-actions">
+          <a class="btn-industrial btn-signal" href="/">GO TO ROOT SPECIFICATION</a>
+        </div>
+
+        <div class="routes-block font-mono">
+          <span class="routes-title">[AVAILABLE SYSTEM ROUTES]</span>
+          <ul class="routes-list">
+            <li><a href="/#services"><span class="r-idx">[01]</span> Capabilities &mdash; Software, Voice, Data, RCM</a></li>
+            <li><a href="/#approach"><span class="r-idx">[02]</span> Disciplines &mdash; Operating Contract &amp; SLAs</a></li>
+            <li><a href="/#vision"><span class="r-idx">[03]</span> Spec &mdash; System Manifesto &amp; Values</a></li>
+            <li><a href="/#team"><span class="r-idx">[04]</span> Division &mdash; Leadership &amp; Governance</a></li>
+            <li><a href="/#contact"><span class="r-idx">[05]</span> Transmit &mdash; Direct Project Inquiry</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="error-footer border-t font-mono">
+      <span>WISDOM TECHNOSOFT &bull; NAGPUR CORE</span>
+      <span>DISPATCH: <a href="mailto:wisdomtechnosoft04@gmail.com">wisdomtechnosoft04@gmail.com</a> &bull; <a href="tel:+917447331127">+91 74473 31127</a></span>
+    </footer>
+  </div>
 </Layout>
 
-<style is:global>
-  .stub {
-    min-height: 100svh;
+<style>
+  .error-page {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 0 0 max(6vh, 64px);
+    background-color: var(--bg-paper);
+    color: var(--text-primary);
   }
-  .stub-head {
-    position: relative;
-    z-index: 1;
+
+  .error-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 16px var(--grid-pad);
+    background: var(--bg-paper);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-primary);
+  }
+
+  .error-content {
+    flex: 1;
+    padding: clamp(48px, 8vw, 96px) var(--grid-pad);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .error-box {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    padding-inline: var(--g);
-    height: var(--nav);
-    border-bottom: 1px solid rgba(244, 240, 232, .14);
   }
-  .stub-head .brand {
-    color: var(--ivory);
-    mix-blend-mode: normal;
+
+  .error-title {
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    letter-spacing: -0.04em;
+    line-height: 1.05;
   }
-  .stub-back {
-    font-weight: 500;
-    text-underline-offset: 6px;
-    text-decoration: underline;
-    color: var(--ivory);
-    opacity: .85;
+
+  .error-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
   }
-  .stub-main {
-    padding-top: clamp(48px, 9vw, 120px);
-    padding-bottom: clamp(48px, 9vw, 120px);
+
+  .error-actions {
+    margin-top: 8px;
   }
-  .stub-main .big {
-    max-width: 16ch;
+
+  .routes-block {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-paper);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
-  .stub-main p {
-    max-width: 60ch;
-    opacity: .78;
-    margin-top: clamp(18px, 3vw, 28px);
-    font-size: clamp(1rem, 1.3vw, 1.125rem);
+
+  .routes-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.08em;
   }
-  .stub-main p + p {
-    margin-top: 14px;
-  }
-  .stub-main .lnk {
-    margin-top: clamp(28px, 4vw, 44px);
-    display: inline-block;
-    color: var(--tan);
-    text-underline-offset: 6px;
-  }
-  .stub-h {
-    font: 700 clamp(1.25rem, 2vw, 1.5rem)/1.2 var(--disp);
-    letter-spacing: -.02em;
-    margin-top: clamp(36px, 5vw, 56px);
-    max-width: 50ch;
-  }
-  .stub-main ul {
-    max-width: 60ch;
-    margin-top: 16px;
+
+  .routes-list {
+    list-style: none;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    opacity: .78;
+    font-size: 12px;
   }
-  .stub-main ul li {
-    padding-left: 22px;
-    position: relative;
-  }
-  .stub-main ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: .75em;
-    width: 8px;
-    height: 1px;
-    background: var(--tan);
-  }
-  .stub-main a {
-    color: var(--tan);
-    text-underline-offset: 4px;
-  }
-  .stub-nav {
-    margin-top: clamp(32px, 5vw, 56px);
-    font-size: 13px;
-    opacity: .6;
-  }
-  .stub-nav a {
+
+  .routes-list a {
+    color: var(--text-muted);
     text-decoration: none;
+    transition: color 0.15s ease;
   }
-  @media (max-width: 640px) {
-    .stub-main {
-      padding-top: clamp(40px, 8vw, 80px);
-      padding-bottom: clamp(40px, 8vw, 80px);
-    }
+
+  .routes-list a:hover {
+    color: var(--accent-signal);
+  }
+
+  .r-idx {
+    color: var(--accent-signal);
+    font-weight: 700;
+  }
+
+  .error-footer {
+    padding: 16px var(--grid-pad);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 11px;
+    color: var(--text-muted);
+    background: var(--bg-surface);
+  }
+
+  .error-footer a {
+    color: var(--text-primary);
+    text-decoration: none;
   }
 </style>

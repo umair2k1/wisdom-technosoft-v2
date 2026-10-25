@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ScrollOrb from '../components/ScrollOrb.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
@@ -12,10 +11,9 @@ import ContactForm from '../components/ContactForm.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout hasOrb={true}>
-  <ScrollOrb slot="orb" />
+<Layout>
   <Nav />
-  <main id="main" tabindex="-1">
+  <main id="main" tabindex="-1" class="blueprint-shell">
     <Hero />
     <Services />
     <Approach />
@@ -25,6 +23,4 @@ import Footer from '../components/Footer.astro';
     <ContactForm />
   </main>
   <Footer />
-
-  <script src="../scripts/scroll.ts"></script>
 </Layout>
