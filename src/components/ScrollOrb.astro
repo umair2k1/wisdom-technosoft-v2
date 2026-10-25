@@ -1,68 +1,228 @@
 ---
+// Precision Vernier Scroll Ruler (Replacing generic blurred glowing background orbs)
+// Architectural precision scale along viewport right edge driven by CSS Scroll-Driven Animations
 ---
 
-<!-- Ambient Atmospheric Background -->
-<div class="ambient-backdrop" aria-hidden="true">
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
-</div>
+<aside class="vernier-caliper-rail" aria-hidden="true">
+  <!-- Top Caliper Anvil Header -->
+  <div class="caliper-anvil caliper-top">
+    <span class="anvil-code">MK-IV</span>
+    <span class="anvil-sub">0.00</span>
+  </div>
 
-<!-- Scroll Progress Edge Bar -->
-<div class="scroll-progress-bar" aria-hidden="true"></div>
+  <!-- Graduated Blueprint Scale Bar -->
+  <div class="caliper-scale">
+    <div class="tick major" style="--pos: 0%"><span class="tick-val">00</span></div>
+    <div class="tick minor" style="--pos: 5%"></div>
+    <div class="tick mid" style="--pos: 10%"><span class="tick-val">10</span></div>
+    <div class="tick minor" style="--pos: 15%"></div>
+    <div class="tick mid" style="--pos: 20%"><span class="tick-val">20</span></div>
+    <div class="tick minor" style="--pos: 25%"></div>
+    <div class="tick mid" style="--pos: 30%"><span class="tick-val">30</span></div>
+    <div class="tick minor" style="--pos: 35%"></div>
+    <div class="tick mid" style="--pos: 40%"><span class="tick-val">40</span></div>
+    <div class="tick minor" style="--pos: 45%"></div>
+    <div class="tick major" style="--pos: 50%"><span class="tick-val">50</span></div>
+    <div class="tick minor" style="--pos: 55%"></div>
+    <div class="tick mid" style="--pos: 60%"><span class="tick-val">60</span></div>
+    <div class="tick minor" style="--pos: 65%"></div>
+    <div class="tick mid" style="--pos: 70%"><span class="tick-val">70</span></div>
+    <div class="tick minor" style="--pos: 75%"></div>
+    <div class="tick mid" style="--pos: 80%"><span class="tick-val">80</span></div>
+    <div class="tick minor" style="--pos: 85%"></div>
+    <div class="tick mid" style="--pos: 90%"><span class="tick-val">90</span></div>
+    <div class="tick minor" style="--pos: 95%"></div>
+    <div class="tick major" style="--pos: 100%"><span class="tick-val">100</span></div>
+  </div>
 
-<style is:global>
-  .ambient-backdrop {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
-  }
-  .ambient-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.12;
-    pointer-events: none;
-  }
-  .glow-1 {
-    width: min(60vw, 600px);
-    height: min(60vw, 600px);
-    top: -10vw;
-    right: -10vw;
-    background: radial-gradient(circle, var(--tan) 0%, transparent 70%);
-  }
-  .glow-2 {
-    width: min(50vw, 500px);
-    height: min(50vw, 500px);
-    bottom: 10vh;
-    left: -10vw;
-    background: radial-gradient(circle, rgba(6, 51, 64, 0.8) 0%, transparent 70%);
-  }
+  <!-- Moving Vernier Caliper Slider / Cursor -->
+  <div class="vernier-caliper-runner" id="vernier-runner">
+    <div class="runner-jaw">
+      <div class="jaw-crosshair"></div>
+      <div class="runner-readout" id="vernier-pct">00%</div>
+    </div>
+    <div class="vernier-subscale">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
 
-  .scroll-progress-bar {
+  <!-- Bottom Caliper Anvil Stop -->
+  <div class="caliper-anvil caliper-bot">
+    <span class="anvil-code">WT-26</span>
+    <span class="anvil-sub">1.00</span>
+  </div>
+</aside>
+
+<!-- Background Architectural Blueprint Grid Texture -->
+<div class="blueprint-grid-canvas" aria-hidden="true"></div>
+
+<style>
+  .vernier-caliper-rail {
     position: fixed;
     top: 0;
     right: 0;
-    width: 3px;
-    height: 100vh;
-    transform-origin: top;
-    background: linear-gradient(180deg, var(--tan) 0%, #D9B48F 100%);
-    z-index: 100;
+    bottom: 0;
+    width: var(--ruler-w, 42px);
+    z-index: 180;
+    pointer-events: none;
+    border-left: 1px solid var(--border);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    transition: background-color 0.4s var(--ease), border-color 0.4s var(--ease);
+  }
+
+  .caliper-anvil {
+    padding: 8px 4px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    font-family: var(--mono);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .caliper-bot {
+    border-bottom: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .anvil-code {
+    font-size: 8px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+  }
+
+  .anvil-sub {
+    font-size: 7.5px;
+    color: var(--ink-faint);
+  }
+
+  .caliper-scale {
+    position: relative;
+    flex: 1;
+    margin: 8px 0;
+  }
+
+  .tick {
+    position: absolute;
+    top: var(--pos);
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  .tick::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: var(--ink);
+    opacity: 0.25;
+  }
+
+  .tick.minor::after {
+    width: 6px;
+    opacity: 0.15;
+  }
+
+  .tick.mid::after {
+    width: 12px;
+    opacity: 0.35;
+  }
+
+  .tick.major::after {
+    width: 18px;
+    background: var(--accent);
+    opacity: 0.8;
+  }
+
+  .tick-val {
+    font-family: var(--mono);
+    font-size: 7.5px;
+    color: var(--ink-muted);
+    margin-right: 4px;
+    line-height: 1;
+  }
+
+  .vernier-caliper-runner {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: calc(var(--ruler-w, 42px) + 1px);
+    height: 52px;
+    border: 1px solid var(--accent);
+    background: var(--surface-card);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    will-change: transform;
     pointer-events: none;
   }
-  @supports (animation-timeline: scroll()) {
-    .scroll-progress-bar {
-      animation: progress-grow linear;
-      animation-timeline: scroll();
+
+  .runner-jaw {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .jaw-crosshair {
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+  }
+
+  .runner-readout {
+    font-family: var(--mono);
+    font-size: 8.5px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .vernier-subscale {
+    display: flex;
+    gap: 3px;
+    margin-top: 5px;
+  }
+
+  .vernier-subscale span {
+    display: block;
+    width: 1px;
+    height: 6px;
+    background: var(--accent);
+    opacity: 0.7;
+  }
+
+  @supports (animation-timeline: scroll(root)) {
+    .vernier-caliper-runner {
+      animation: vernier-scroll linear both;
+      animation-timeline: scroll(root);
     }
-    @keyframes progress-grow {
-      from { transform: scaleY(0); }
-      to { transform: scaleY(1); }
+
+    @keyframes vernier-scroll {
+      from {
+        transform: translateY(32px);
+      }
+      to {
+        transform: translateY(calc(100vh - 100px));
+      }
     }
   }
+
   @media (max-width: 900px) {
-    .scroll-progress-bar {
+    .vernier-caliper-rail {
       display: none;
     }
   }

@@ -1,401 +1,465 @@
 ---
+// Wisdom Technosoft — Services Component
+// Deep Blueprint Engine Room • Asymmetric Bento Grid • Interactive System Modules
 ---
 
-<section class="s services-section" id="services" style="--bg:var(--teal);--fg:var(--ivory)">
+<section class="services-section s" id="services" data-theme-trigger="blueprint">
   <div class="w services-container">
+    
+    <!-- Section Architectural Header -->
     <div class="services-header">
-      <div class="header-left">
-        <p class="eyebrow" data-scramble="What We Do • Core Capabilities">What We Do &bull; Core Capabilities</p>
-        <h2 class="services-title" data-scramble="Precision engineering & operational scale.">Precision engineering &amp; operational scale.</h2>
+      <div class="header-blueprint-strip">
+        <span class="eyebrow">CAPABILITIES &bull; ARCHITECTURAL SUITE</span>
+        <span class="blueprint-tag active"><span class="tag-dot"></span> ENGINE ROOM // RUNTIME V2</span>
       </div>
-      <p class="services-subtitle">
-        From custom software engineering to high-touch voice calling, clean data processing, and US medical billing &mdash; we power the operations behind growing enterprises.
-      </p>
+
+      <div class="header-split">
+        <h2 class="sec-title">
+          Precision engineering. <br />
+          <span class="text-cyan">Operational scale.</span>
+        </h2>
+        <p class="sec-subtitle">
+          From cloud-native web systems to high-touch voice calling, clean data ETL pipelines, and US medical billing &mdash; we power the back-office and technology engines behind growing global enterprises.
+        </p>
+      </div>
+
+      <!-- Swiss Grid Capability Filter Tabs -->
+      <div class="services-filter-bar" role="tablist" aria-label="Filter service capabilities">
+        <button class="filter-tab is-active" data-filter="all" role="tab" aria-selected="true">
+          <span class="f-num">ALL</span> All Capabilities <span class="tab-badge">05</span>
+        </button>
+        <button class="filter-tab" data-filter="software" role="tab" aria-selected="false">
+          <span class="f-num">01</span> Software Engineering <span class="tab-badge">01</span>
+        </button>
+        <button class="filter-tab" data-filter="voice" role="tab" aria-selected="false">
+          <span class="f-num">02</span> Voice &amp; Telecalling <span class="tab-badge">01</span>
+        </button>
+        <button class="filter-tab" data-filter="data" role="tab" aria-selected="false">
+          <span class="f-num">03</span> Data Operations <span class="tab-badge">01</span>
+        </button>
+        <button class="filter-tab" data-filter="bpo" role="tab" aria-selected="false">
+          <span class="f-num">04</span> Business Process <span class="tab-badge">01</span>
+        </button>
+        <button class="filter-tab" data-filter="healthcare" role="tab" aria-selected="false">
+          <span class="f-num">05</span> Healthcare &amp; RCM <span class="tab-badge">01</span>
+        </button>
+      </div>
     </div>
 
-    <!-- Fluid Filter Tabs -->
-    <div class="services-filter" role="tablist" aria-label="Filter services">
-      <button class="filter-tab is-active magnetic" data-filter="all" role="tab" aria-selected="true">
-        All Capabilities <span class="tab-count">5</span>
-      </button>
-      <button class="filter-tab magnetic" data-filter="software" role="tab" aria-selected="false">
-        Software Engineering <span class="tab-count">1</span>
-      </button>
-      <button class="filter-tab magnetic" data-filter="telecalling" role="tab" aria-selected="false">
-        Voice &amp; Telecalling <span class="tab-count">1</span>
-      </button>
-      <button class="filter-tab magnetic" data-filter="data" role="tab" aria-selected="false">
-        Data Operations <span class="tab-count">1</span>
-      </button>
-      <button class="filter-tab magnetic" data-filter="bpo" role="tab" aria-selected="false">
-        Business Process <span class="tab-count">1</span>
-      </button>
-      <button class="filter-tab magnetic" data-filter="healthcare" role="tab" aria-selected="false">
-        Healthcare &amp; RCM <span class="tab-count">1</span>
-      </button>
-    </div>
+    <!-- Asymmetric Bento Blueprint Grid -->
+    <div class="bento-grid" id="services-grid">
 
-    <div class="services-grid" id="services-grid">
-      <!-- 1. Software Development -->
-      <article class="service-card tilt-card featured" data-category="software">
-        <div class="card-top">
-          <div class="card-icon software-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <!-- ===================================================================
+           MODULE 01: Software Development (Hero Large Bento Card)
+           =================================================================== -->
+      <article class="bento-card bento-hero grid-frame" data-category="software">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="crosshair crosshair-bl"></div>
+        <div class="crosshair crosshair-br"></div>
+
+        <div class="card-meta-bar">
+          <div class="meta-left">
+            <span class="module-code">MOD // 01</span>
+            <span class="blueprint-tag">SYSTEMS &amp; CLOUD ARCHITECTURE</span>
           </div>
-          <span class="card-cat-badge">Engineering &amp; Cloud</span>
+          <span class="status-indicator live">RUNNING</span>
         </div>
-        
-        <div class="card-body">
-          <h3 class="card-title">Software Development</h3>
-          <p class="card-desc">
-            High-quality, user-friendly, and scalable software built around your exact business requirements &mdash; web platforms, mobile applications, internal administrative tools, and automated cloud workflows.
-          </p>
 
-          <div class="card-highlights">
-            <span class="hl-label">Key Capabilities</span>
-            <ul class="hl-list">
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Custom Web &amp; SaaS Platforms (Astro, React, Node)</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Native &amp; Cross-Platform Mobile Apps (iOS &amp; Android)</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Enterprise Dashboards &amp; Automated Microservices</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Cloud Edge Infrastructure &amp; API Integrations</li>
-            </ul>
-          </div>
+        <div class="bento-hero-split">
+          <div class="bento-copy">
+            <h3 class="bento-title">Custom Software Engineering</h3>
+            <p class="bento-desc">
+              High-velocity, resilient software built around your exact business requirements &mdash; cloud-native web platforms, mobile applications, internal operational tools, and automated microservices with zero bloat.
+            </p>
 
-          <!-- Interactive Architecture Accordion -->
-          <div class="flow-accordion">
-            <button class="flow-toggle" aria-expanded="false">
-              <span class="flow-toggle-text">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                <span>Inspect System Architecture Flow</span>
-              </span>
-              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="flow-content" aria-hidden="true">
-              <div class="flow-diagram">
-                <div class="flow-step">
-                  <span class="step-num">01</span>
-                  <span class="step-title">Client Layer</span>
-                  <span class="step-desc">Web &amp; Mobile UI</span>
-                </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step active">
-                  <span class="step-num">02</span>
-                  <span class="step-title">Edge Gateway</span>
-                  <span class="step-desc">Auth &amp; Cloudflare</span>
-                </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step">
-                  <span class="step-num">03</span>
-                  <span class="step-title">Cluster API</span>
-                  <span class="step-desc">Node Microservices</span>
-                </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step">
-                  <span class="step-num">04</span>
-                  <span class="step-title">Database</span>
-                  <span class="step-desc">Postgres / Redis</span>
-                </div>
+            <div class="bento-spec-list">
+              <div class="spec-row">
+                <span class="spec-bullet">&rarr;</span>
+                <span>Custom Web &amp; SaaS Platforms (Astro, React, Node, TypeScript)</span>
               </div>
+              <div class="spec-row">
+                <span class="spec-bullet">&rarr;</span>
+                <span>Native &amp; Cross-Platform Mobile Apps (iOS &amp; Android)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-bullet">&rarr;</span>
+                <span>High-Throughput APIs, Edge Caching &amp; PostgreSQL Optimization</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-bullet">&rarr;</span>
+                <span>Automated Workflow Microservices &amp; Zero-Downtime CI/CD</span>
+              </div>
+            </div>
+
+            <div class="bento-card-actions">
+              <a href="#contact" class="btn btn-primary btn-sm" data-service-select="Software Development">
+                <span>Deploy with us</span>
+                <span>&rarr;</span>
+              </a>
+              <span class="action-note">Direct engineer consultations</span>
             </div>
           </div>
 
-          <div class="card-foot">
-            <ul class="tags">
-              <li>Web Platforms</li>
-              <li>Mobile Apps</li>
-              <li>Custom APIs</li>
-              <li>Automation</li>
-            </ul>
-            <a href="#contact" class="card-action magnetic" data-service-select="Software Development">
-              <span>Discuss software</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+          <!-- Interactive Code-to-Reality Diff Toggle -->
+          <div class="interactive-sandbox">
+            <div class="sandbox-header">
+              <span class="sandbox-title">&lang;/&rang; RUNTIME DIFF INSPECTOR</span>
+              <div class="sandbox-toggle-group">
+                <button class="sandbox-toggle-btn is-active" id="btn-marketing" type="button">What Marketing Says</button>
+                <button class="sandbox-toggle-btn" id="btn-reality" type="button">What Engineers Built</button>
+              </div>
+            </div>
+
+            <!-- View A: Marketing Claims -->
+            <div class="sandbox-view view-marketing is-visible" id="view-marketing">
+              <div class="diff-container">
+                <div class="diff-header">
+                  <span>SPEC // HYPOTHETICAL_PITCH.TS</span>
+                  <span class="text-orange">UNVERIFIED</span>
+                </div>
+                <div class="diff-line del"><span class="line-no">01</span><span>- // "AI-powered blockchain microservice"</span></div>
+                <div class="diff-line del"><span class="line-no">02</span><span>- const app = new MagicBlackBox({</span></div>
+                <div class="diff-line del"><span class="line-no">03</span><span>-   hypeCycles: Infinity,</span></div>
+                <div class="diff-line del"><span class="line-no">04</span><span>-   vendorLockin: true,</span></div>
+                <div class="diff-line del"><span class="line-no">05</span><span>-   memoryLeaks: "included"</span></div>
+                <div class="diff-line del"><span class="line-no">06</span><span>- });</span></div>
+              </div>
+              <div class="sandbox-caption">
+                <span class="warn-dot"></span> Generic AI boilerplates crash under Monday morning traffic.
+              </div>
+            </div>
+
+            <!-- View B: Real Engineering Reality -->
+            <div class="sandbox-view view-reality" id="view-reality">
+              <div class="diff-container">
+                <div class="diff-header">
+                  <span>SRC // EDGE_ROUTER.TS</span>
+                  <span class="text-cyan">VERIFIED 100% PASS</span>
+                </div>
+                <div class="diff-line add"><span class="line-no">01</span><span>+ export async function handle(req: Request) &#123;</span></div>
+                <div class="diff-line add"><span class="line-no">02</span><span>+   const hit = await edgeKV.get(req.url);</span></div>
+                <div class="diff-line add"><span class="line-no">03</span><span>+   if (hit) return new Response(hit); // p99: 4ms</span></div>
+                <div class="diff-line add"><span class="line-no">04</span><span>+   return queryPgPool(req); // Connection pooling</span></div>
+                <div class="diff-line add"><span class="line-no">05</span><span>+ &#125;</span></div>
+              </div>
+              <div class="sandbox-caption">
+                <span class="cyan-dot"></span> Real code: Type-safe, cached at edge, resilient to traffic surges.
+              </div>
+            </div>
+
+            <!-- Flow Diagram Steps -->
+            <div class="architecture-flow-stepper">
+              <div class="flow-pill active"><span class="fp-n">01</span> Edge DNS</div>
+              <div class="flow-arrow">&rarr;</div>
+              <div class="flow-pill active"><span class="fp-n">02</span> Cloudflare Edge</div>
+              <div class="flow-arrow">&rarr;</div>
+              <div class="flow-pill"><span class="fp-n">03</span> SSR Cluster</div>
+              <div class="flow-arrow">&rarr;</div>
+              <div class="flow-pill"><span class="fp-n">04</span> Postgres Pool</div>
+            </div>
           </div>
         </div>
       </article>
 
-      <!-- 2. Telecalling Services -->
-      <article class="service-card tilt-card featured" data-category="telecalling">
-        <div class="card-top">
-          <div class="card-icon voice-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <!-- ===================================================================
+           MODULE 02: Telecalling Services (Voice Operations)
+           =================================================================== -->
+      <article class="bento-card grid-frame" data-category="voice">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="card-meta-bar">
+          <div class="meta-left">
+            <span class="module-code">MOD // 02</span>
+            <span class="blueprint-tag">VOICE &amp; TELECALLING</span>
           </div>
-          <span class="card-cat-badge">Customer &amp; B2B Voice</span>
+          <span class="status-indicator active">LIVE DIALER</span>
         </div>
 
-        <div class="card-body">
-          <h3 class="card-title">Telecalling Services</h3>
-          <p class="card-desc">
-            Courteous, result-oriented conversations that strengthen customer relationships, qualify leads, and drive business growth in English, Hindi, and regional languages with dedicated caller squads.
-          </p>
+        <h3 class="bento-title">Voice &amp; Telecalling Squads</h3>
+        <p class="bento-desc">
+          Courteous, outcome-driven customer and B2B conversations. Dedicated caller squads in English, Hindi, and regional languages with live whisper QA and instant CRM sync.
+        </p>
 
-          <div class="card-highlights">
-            <span class="hl-label">Key Capabilities</span>
-            <ul class="hl-list">
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> B2B Outbound Lead Qualification Campaigns</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Inbound Customer Support &amp; Technical Helpdesk</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Multilingual Calling (English, Hindi, Marathi squads)</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Real-time CRM Sync &amp; Sentiment Disposition</li>
-            </ul>
-          </div>
-
-          <!-- Interactive Flow Accordion -->
-          <div class="flow-accordion">
-            <button class="flow-toggle" aria-expanded="false">
-              <span class="flow-toggle-text">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span>Inspect Call Routing &amp; QA Tree</span>
-              </span>
-              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="flow-content" aria-hidden="true">
-              <div class="flow-diagram">
-                <div class="flow-step">
-                  <span class="step-num">01</span>
-                  <span class="step-title">Campaign Ingest</span>
-                  <span class="step-desc">Target List &amp; CRM</span>
-                </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step active">
-                  <span class="step-num">02</span>
-                  <span class="step-title">Nagpur Caller</span>
-                  <span class="step-desc">Scripted / Dynamic</span>
-                </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step">
-                  <span class="step-num">03</span>
-                  <span class="step-title">Whisper QA</span>
-                  <span class="step-desc">Live Supervision</span>
-                </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step">
-                  <span class="step-num">04</span>
-                  <span class="step-title">Disposition</span>
-                  <span class="step-desc">CRM Instant Sync</span>
-                </div>
-              </div>
+        <!-- Interactive Voice QA Telemetry Box -->
+        <div class="interactive-voice-box">
+          <div class="voice-box-top">
+            <span class="voice-chan">SQUAD SELECTION</span>
+            <div class="voice-lang-toggles" id="voice-lang-toggles">
+              <button class="v-lang-btn is-active" data-lang="en">EN (Neutral)</button>
+              <button class="v-lang-btn" data-lang="hi">HI (Hindi)</button>
+              <button class="v-lang-btn" data-lang="mr">MR (Regional)</button>
             </div>
           </div>
 
-          <div class="card-foot">
-            <ul class="tags">
-              <li>B2B Campaigns</li>
-              <li>Lead Generation</li>
-              <li>Multilingual</li>
-              <li>CRM Integration</li>
-            </ul>
-            <a href="#contact" class="card-action magnetic" data-service-select="Telecalling Services">
-              <span>Discuss telecalling</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+          <div class="voice-metrics-display">
+            <div class="vm-row">
+              <span class="vm-lbl">QA Scorecard Target</span>
+              <span class="vm-val" id="voice-qa-val">99.4% Verified</span>
+            </div>
+            <div class="vm-row">
+              <span class="vm-lbl">CRM Sync Latency</span>
+              <span class="vm-val" id="voice-sync-val">&lt; 1.2s Real-time</span>
+            </div>
+            <div class="vm-row">
+              <span class="vm-lbl">Dialer Mode</span>
+              <span class="vm-val" id="voice-mode-val">Inbound Helpdesk + B2B Outbound</span>
+            </div>
           </div>
+        </div>
+
+        <div class="bento-spec-list">
+          <div class="spec-row"><span class="spec-bullet">&check;</span> B2B Outbound Lead Qualification Campaigns</div>
+          <div class="spec-row"><span class="spec-bullet">&check;</span> Inbound Customer Support &amp; Helpdesk</div>
+          <div class="spec-row"><span class="spec-bullet">&check;</span> Multilingual Coverage (English, Hindi, Regional)</div>
+        </div>
+
+        <div class="bento-card-actions">
+          <a href="#contact" class="btn btn-secondary btn-sm" data-service-select="Telecalling Services">
+            <span>Book calling squad</span>
+            <span>&rarr;</span>
+          </a>
         </div>
       </article>
 
-      <!-- 3. Data Entry & Management -->
-      <article class="service-card tilt-card" data-category="data">
-        <div class="card-top">
-          <div class="card-icon data-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      <!-- ===================================================================
+           MODULE 03: Data Entry & Management
+           =================================================================== -->
+      <article class="bento-card grid-frame" data-category="data">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="card-meta-bar">
+          <div class="meta-left">
+            <span class="module-code">MOD // 03</span>
+            <span class="blueprint-tag">CLEAN DATA &amp; ETL PIPELINES</span>
           </div>
-          <span class="card-cat-badge">Accuracy &amp; Verification</span>
+          <span class="status-indicator active">DOUBLE-BLIND QA</span>
         </div>
 
-        <div class="card-body">
-          <h3 class="card-title">Data Entry &amp; Management</h3>
-          <p class="card-desc">
-            Precise, timely data services that keep your business records clean, structured, and audit-ready with multi-tier verification and 99.8% documented accuracy benchmarks.
-          </p>
+        <h3 class="bento-title">Data Mining &amp; Management</h3>
+        <p class="bento-desc">
+          Zero-defect data structuring, web scraping, and records management. Every batch passes automated checksums and dual-operator verification before delivery.
+        </p>
 
-          <div class="card-highlights">
-            <span class="hl-label">Key Capabilities</span>
-            <ul class="hl-list">
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> High-Volume Data Entry &amp; Normalization</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Document Digitization &amp; Extraction QA</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Catalog, Inventory &amp; Records Cleansing</li>
-            </ul>
+        <!-- Interactive Data Cleansing Inspector -->
+        <div class="interactive-data-box">
+          <div class="data-box-header">
+            <span class="data-title">DOUBLE-BLIND VERIFICATION PIPELINE</span>
+            <span class="data-pct">99.8% PRECISION</span>
           </div>
+          <div class="data-pipeline-visual">
+            <div class="dp-stage">
+              <span class="dp-tag">RAW INGEST</span>
+              <span class="dp-desc">Messy scrapers, PDFs, legacy logs</span>
+            </div>
+            <div class="dp-divider">&darr;</div>
+            <div class="dp-stage dp-highlight">
+              <span class="dp-tag">DOUBLE-BLIND QA</span>
+              <span class="dp-desc">Automated schema validation + 2 independent passes</span>
+            </div>
+            <div class="dp-divider">&darr;</div>
+            <div class="dp-stage">
+              <span class="dp-tag">CLEAN DATASTORE</span>
+              <span class="dp-desc">Deduplicated, audit-ready JSON/PostgreSQL</span>
+            </div>
+          </div>
+        </div>
 
-          <!-- Interactive Flow Accordion -->
-          <div class="flow-accordion">
-            <button class="flow-toggle" aria-expanded="false">
-              <span class="flow-toggle-text">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                <span>Inspect ETL Data Cleansing Flow</span>
-              </span>
-              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="flow-content" aria-hidden="true">
-              <div class="flow-diagram">
-                <div class="flow-step">
-                  <span class="step-num">01</span>
-                  <span class="step-title">Raw Intake</span>
-                  <span class="step-desc">PDFs / CSV / OCR</span>
-                </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step active">
-                  <span class="step-num">02</span>
-                  <span class="step-title">Deduplication</span>
-                  <span class="step-desc">Fuzzy Matching</span>
-                </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step">
-                  <span class="step-num">03</span>
-                  <span class="step-title">Human QA</span>
-                  <span class="step-desc">99.8% Verification</span>
-                </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step">
-                  <span class="step-num">04</span>
-                  <span class="step-title">Clean Lake</span>
-                  <span class="step-desc">Structured Output</span>
-                </div>
-              </div>
+        <div class="bento-spec-list">
+          <div class="spec-row"><span class="spec-bullet">&check;</span> High-Volume Data Entry &amp; Normalization</div>
+          <div class="spec-row"><span class="spec-bullet">&check;</span> Document Digitization &amp; Information Extraction</div>
+          <div class="spec-row"><span class="spec-bullet">&check;</span> Catalog, Inventory &amp; Records Cleansing</div>
+        </div>
+
+        <div class="bento-card-actions">
+          <a href="#contact" class="btn btn-secondary btn-sm" data-service-select="Data Entry & Management">
+            <span>Clean your data</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- ===================================================================
+           MODULE 04: Business Process & Industrial Solutions
+           =================================================================== -->
+      <article class="bento-card grid-frame" data-category="bpo">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="card-meta-bar">
+          <div class="meta-left">
+            <span class="module-code">MOD // 04</span>
+            <span class="blueprint-tag">OPERATIONAL WORKFLOWS</span>
+          </div>
+          <span class="status-indicator">SAP &bull; INDUSTRIAL</span>
+        </div>
+
+        <h3 class="bento-title">Business Process &amp; Industrial Operations</h3>
+        <p class="bento-desc">
+          Operational execution for heavy industry, logistics, and digital commerce &mdash; supply-chain execution on SAP, e-commerce catalog management, and industrial instrumentation support (STP, ETP, chemical machinery).
+        </p>
+
+        <div class="bento-spec-list">
+          <div class="spec-row"><span class="spec-bullet">&check;</span> SAP Order-to-Cash &amp; Supply Chain Processing</div>
+          <div class="spec-row"><span class="spec-bullet">&check;</span> E-Commerce Store Builds &amp; SKU Catalog Ops</div>
+          <div class="spec-row"><span class="spec-bullet">&check;</span> Industrial Water Systems (STP/ETP instrumentation)</div>
+        </div>
+
+        <div class="bento-card-actions">
+          <a href="#contact" class="btn btn-secondary btn-sm" data-service-select="Business Process & Industrial Solutions">
+            <span>Inquire for BPO</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- ===================================================================
+           MODULE 05: Healthcare Support & US Medical Billing (Wide Bento Spotlight)
+           =================================================================== -->
+      <article class="bento-card bento-wide grid-frame" data-category="healthcare">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="crosshair crosshair-bl"></div>
+        <div class="crosshair crosshair-br"></div>
+
+        <div class="card-meta-bar">
+          <div class="meta-left">
+            <span class="module-code">MOD // 05</span>
+            <span class="blueprint-tag">HEALTHCARE RCM &bull; US MEDICAL BILLING</span>
+          </div>
+          <span class="status-indicator live">HIPAA COMPLIANT</span>
+        </div>
+
+        <div class="healthcare-split">
+          <div class="hc-copy">
+            <h3 class="bento-title">US Medical Billing &amp; Revenue Cycle Support</h3>
+            <p class="bento-desc">
+              Accurate, audit-ready back-office support for US healthcare practices and billing agencies. Clean CMS-1500 &amp; UB-04 claims scrubbing, root-cause denial management, and ERA 835 payment posting with a documented 98.7% clean claim rate.
+            </p>
+
+            <div class="bento-spec-list">
+              <div class="spec-row"><span class="spec-bullet">&check;</span> CPT, ICD-10 &amp; HCPCS Coding Verification</div>
+              <div class="spec-row"><span class="spec-bullet">&check;</span> Automated Pre-Submission Claim Scrubbing</div>
+              <div class="spec-row"><span class="spec-bullet">&check;</span> Denial Management, Appeal Letters &amp; AR Reduction</div>
+              <div class="spec-row"><span class="spec-bullet">&check;</span> HIPAA Compliant Infrastructure &amp; Data Security</div>
+            </div>
+
+            <div class="bento-card-actions">
+              <a href="#contact" class="btn btn-primary btn-sm" data-service-select="Healthcare Support / US Medical Billing">
+                <span>Request RCM audit</span>
+                <span>&rarr;</span>
+              </a>
+              <span class="action-note">98.7% First-pass acceptance rate</span>
             </div>
           </div>
 
-          <div class="card-foot">
-            <ul class="tags">
-              <li>Data Entry</li>
-              <li>QA Audits</li>
-              <li>Digitization</li>
-              <li>Analytics</li>
-            </ul>
-            <a href="#contact" class="card-action magnetic" data-service-select="Data Entry & Management">
-              <span>Discuss data</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
+          <!-- Interactive Claim Scrubber Telemetry Module -->
+          <div class="hc-telemetry-console">
+            <div class="console-head">
+              <span class="c-title">EDI 837 CLAIM VERIFICATION ENGINE</span>
+              <span class="c-status">SCRUBBER READY</span>
+            </div>
 
-      <!-- 4. Business Process & Industrial Solutions -->
-      <article class="service-card tilt-card" data-category="bpo">
-        <div class="card-top">
-          <div class="card-icon bpo-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-          </div>
-          <span class="card-cat-badge">Operational Workflows</span>
-        </div>
-
-        <div class="card-body">
-          <h3 class="card-title">Business Process &amp; Industrial Solutions</h3>
-          <p class="card-desc">
-            End-to-end BPO and operational support &mdash; supply-chain workflows on SAP, e-commerce catalog management, and specialized industrial process support (STP, ETP, chemical machinery, instrumentation).
-          </p>
-
-          <div class="card-highlights">
-            <span class="hl-label">Key Capabilities</span>
-            <ul class="hl-list">
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> SAP &amp; Supply Chain Process Execution</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> E-Commerce Operations &amp; Web Store Builds</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Industrial Instrumentation &amp; Water Systems (STP/ETP)</li>
-            </ul>
-          </div>
-
-          <div class="card-foot">
-            <ul class="tags">
-              <li>BPO Operations</li>
-              <li>SAP / SCM</li>
-              <li>E-Commerce</li>
-              <li>Industrial Support</li>
-            </ul>
-            <a href="#contact" class="card-action magnetic" data-service-select="Business Process & Industrial Solutions">
-              <span>Discuss BPO</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 5. Healthcare Support & US Medical Billing (Full Width Spotlight) -->
-      <article class="service-card tilt-card" data-category="healthcare">
-        <div class="card-top">
-          <div class="card-icon health-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 9v6"/><path d="M9 12h6"/></svg>
-          </div>
-          <span class="card-cat-badge">Revenue Cycle &amp; HIPAA</span>
-        </div>
-
-        <div class="card-body">
-          <h3 class="card-title">Healthcare Support &amp; US Medical Billing</h3>
-          <p class="card-desc">
-            Accurate, compliant back-office support for healthcare practices &mdash; including US medical billing, claims preparation, denial resolution, and revenue cycle management with documented audit trails and 98.7% clean claim submission rate.
-          </p>
-
-          <div class="card-highlights">
-            <span class="hl-label">Key Capabilities</span>
-            <ul class="hl-list">
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Accurate US Medical Claims Scrubbing &amp; Submission (CMS-1500 &amp; UB-04)</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Denial Management, Root-Cause Auditing &amp; Payer Appeals</li>
-              <li><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Payment Posting, ERA 835 Reconciliation &amp; AR Days Reduction</li>
-            </ul>
-          </div>
-
-          <!-- Interactive Flow Accordion -->
-          <div class="flow-accordion">
-            <button class="flow-toggle" aria-expanded="false">
-              <span class="flow-toggle-text">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 9v6"/><path d="M9 12h6"/></svg>
-                <span>Inspect US Medical Billing &amp; EDI Claim Lifecycle</span>
-              </span>
-              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="flow-content" aria-hidden="true">
-              <div class="flow-diagram">
-                <div class="flow-step">
-                  <span class="step-num">01</span>
-                  <span class="step-title">Encounter Intake</span>
-                  <span class="step-desc">EHR / Superbill</span>
+            <div class="claim-pipeline-steps">
+              <div class="c-step done">
+                <span class="cs-num">01</span>
+                <div class="cs-info">
+                  <strong>Patient Intake &amp; Superbill</strong>
+                  <span>Demographics &amp; eligibility verified</span>
                 </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step active">
-                  <span class="step-num">02</span>
-                  <span class="step-title">Coding &amp; Scrub</span>
-                  <span class="step-desc">CPT / ICD-10 QA</span>
+                <span class="cs-check">&check;</span>
+              </div>
+              <div class="c-step done">
+                <span class="cs-num">02</span>
+                <div class="cs-info">
+                  <strong>CPT / ICD-10 Coding Audit</strong>
+                  <span>Zero unbundling &bull; NCCI edits cleared</span>
                 </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step">
-                  <span class="step-num">03</span>
-                  <span class="step-title">EDI 837 Batch</span>
-                  <span class="step-desc">Clearinghouse Send</span>
+                <span class="cs-check">&check;</span>
+              </div>
+              <div class="c-step active">
+                <span class="cs-num">03</span>
+                <div class="cs-info">
+                  <strong>Clearinghouse Batch Send (EDI 837)</strong>
+                  <span>Instant 999 acknowledgement received</span>
                 </div>
-                <div class="flow-connector"><span>&rarr;</span></div>
-                <div class="flow-step">
-                  <span class="step-num">04</span>
-                  <span class="step-title">ERA 835 Posting</span>
-                  <span class="step-desc">AR Reconciliation</span>
+                <span class="cs-tag">LIVE PASS</span>
+              </div>
+              <div class="c-step">
+                <span class="cs-num">04</span>
+                <div class="cs-info">
+                  <strong>ERA 835 Posting &amp; AR Balance</strong>
+                  <span>Auto-reconciliation to practice management</span>
                 </div>
+                <span class="cs-pending">--</span>
               </div>
             </div>
-          </div>
 
-          <div class="card-foot">
-            <ul class="tags">
-              <li>US Medical Billing</li>
-              <li>Claims Support</li>
-              <li>Revenue Cycle</li>
-              <li>Compliance QA</li>
-            </ul>
-            <a href="#contact" class="card-action magnetic" data-service-select="Healthcare Support / US Medical Billing">
-              <span>Discuss healthcare</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            <div class="console-foot">
+              <span class="cf-metric">AR DAYS REDUCTION: <strong>-22%</strong></span>
+              <span class="cf-metric">CLEAN CLAIM RATE: <strong>98.7%</strong></span>
+            </div>
           </div>
         </div>
       </article>
+
     </div>
   </div>
 </section>
 
 <script>
-  // Filter tab switching
-  const tabs = document.querySelectorAll(".filter-tab");
-  const cards = document.querySelectorAll<HTMLElement>(".service-card");
+  // Interactive Code-to-Reality Diff Toggle
+  const btnMarketing = document.getElementById("btn-marketing");
+  const btnReality = document.getElementById("btn-reality");
+  const viewMarketing = document.getElementById("view-marketing");
+  const viewReality = document.getElementById("view-reality");
 
-  tabs.forEach(tab => {
+  btnMarketing?.addEventListener("click", () => {
+    btnMarketing.classList.add("is-active");
+    btnReality?.classList.remove("is-active");
+    viewMarketing?.classList.add("is-visible");
+    viewReality?.classList.remove("is-visible");
+  });
+
+  btnReality?.addEventListener("click", () => {
+    btnReality.classList.add("is-active");
+    btnMarketing?.classList.remove("is-active");
+    viewReality?.classList.add("is-visible");
+    viewMarketing?.classList.remove("is-visible");
+  });
+
+  // Interactive Voice Squad Lang Switcher
+  const langBtns = document.querySelectorAll<HTMLButtonElement>(".v-lang-btn");
+  const voiceQaVal = document.getElementById("voice-qa-val");
+  const voiceSyncVal = document.getElementById("voice-sync-val");
+  const voiceModeVal = document.getElementById("voice-mode-val");
+
+  const langData: Record<string, { qa: string; sync: string; mode: string }> = {
+    en: { qa: "99.4% Verified", sync: "< 1.2s Real-time", mode: "Inbound Helpdesk + B2B Outbound" },
+    hi: { qa: "99.1% Verified", sync: "< 1.4s Real-time", mode: "Pan-India Hindi Inbound/Outbound" },
+    mr: { qa: "99.5% Verified", sync: "< 1.1s Real-time", mode: "Maharashtra Regional Hub" }
+  };
+
+  langBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      langBtns.forEach((b) => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+      const lang = btn.getAttribute("data-lang") || "en";
+      const data = langData[lang];
+      if (data && voiceQaVal && voiceSyncVal && voiceModeVal) {
+        voiceQaVal.textContent = data.qa;
+        voiceSyncVal.textContent = data.sync;
+        voiceModeVal.textContent = data.mode;
+      }
+    });
+  });
+
+  // Filter Tabs logic
+  const filterTabs = document.querySelectorAll<HTMLButtonElement>(".filter-tab");
+  const bentoCards = document.querySelectorAll<HTMLElement>(".bento-card");
+
+  filterTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      tabs.forEach(t => {
+      filterTabs.forEach((t) => {
         t.classList.remove("is-active");
         t.setAttribute("aria-selected", "false");
       });
@@ -403,413 +467,577 @@
       tab.setAttribute("aria-selected", "true");
 
       const filter = tab.getAttribute("data-filter") || "all";
-      cards.forEach(card => {
-        const match = filter === "all" || card.getAttribute("data-category") === filter;
-        card.style.display = match ? "flex" : "none";
-      });
-    });
-  });
-
-  // Flow Accordion Toggle
-  document.querySelectorAll(".flow-toggle").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const open = btn.getAttribute("aria-expanded") !== "true";
-      btn.setAttribute("aria-expanded", String(open));
-      btn.nextElementSibling?.classList.toggle("is-open", open);
-    });
-  });
-
-  // Wire card action to pre-select service in contact form
-  const actions = document.querySelectorAll("[data-service-select]");
-  actions.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const serviceName = btn.getAttribute("data-service-select");
-      const serviceSelect = document.querySelector('select[name="service"]') as HTMLSelectElement | null;
-      if (serviceSelect && serviceName) {
-        for (let i = 0; i < serviceSelect.options.length; i++) {
-          if (serviceSelect.options[i].text.includes(serviceName) || serviceName.includes(serviceSelect.options[i].text)) {
-            serviceSelect.selectedIndex = i;
-            break;
-          }
+      bentoCards.forEach((card) => {
+        const cat = card.getAttribute("data-category");
+        if (filter === "all" || filter === cat) {
+          card.style.display = "grid";
+        } else {
+          card.style.display = "none";
         }
-      }
+      });
     });
   });
 </script>
 
-<style is:global>
+<style>
   .services-section {
-    padding-block: clamp(64px, 10vh, 120px);
     position: relative;
-    background: var(--teal);
-  }
-  .services-container {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(32px, 5vh, 48px);
-  }
-  .services-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 24px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(244, 240, 232, 0.12);
-  }
-  .header-left {
-    max-width: 640px;
-  }
-  .services-title {
-    font: 700 clamp(2rem, 4.2vw, 3.6rem)/1.08 var(--disp);
-    letter-spacing: -0.03em;
-    color: var(--ivory);
-    margin-top: 10px;
-  }
-  .services-subtitle {
-    max-width: 48ch;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--ivory);
-    opacity: 0.8;
+    padding-block: clamp(80px, 12vh, 140px);
+    background-color: var(--bg);
+    color: var(--ink);
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.4s var(--ease), color 0.4s var(--ease);
   }
 
-  /* Filter tabs */
-  .services-filter {
+  .services-header {
+    margin-bottom: 48px;
+  }
+
+  .header-blueprint-strip {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+
+  .header-split {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: flex-end;
+    margin-bottom: 36px;
+  }
+
+  .text-cyan {
+    color: var(--accent);
+  }
+
+  /* Filter Bar */
+  .services-filter-bar {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    padding: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
   }
+
   .filter-tab {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 18px;
-    border-radius: 999px;
-    background: rgba(4, 34, 43, 0.55);
-    border: 1px solid rgba(244, 240, 232, 0.14);
-    color: var(--ivory);
-    font-size: 13.5px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.25s ease;
-  }
-  .filter-tab:hover {
-    border-color: rgba(201, 162, 126, 0.45);
-    color: var(--tan);
-  }
-  .filter-tab.is-active {
-    background: var(--tan);
-    color: var(--ink);
-    border-color: var(--tan);
-    font-weight: 600;
-    box-shadow: 0 4px 16px rgba(201, 162, 126, 0.35);
-  }
-  .tab-count {
-    font-size: 10.5px;
-    padding: 1px 6px;
-    border-radius: 999px;
-    background: rgba(244, 240, 232, 0.15);
-  }
-  .filter-tab.is-active .tab-count {
-    background: rgba(20, 32, 31, 0.2);
-    color: var(--ink);
+    padding: 8px 14px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
   }
 
-  /* Grid of services */
-  .services-grid {
+  .f-num {
+    font-size: 9px;
+    color: var(--accent);
+    opacity: 0.8;
+  }
+
+  .tab-badge {
+    font-size: 9px;
+    padding: 1px 5px;
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+  }
+
+  .filter-tab:hover,
+  .filter-tab.is-active {
+    color: var(--ink);
+    background: var(--surface-card);
+    border-color: var(--border-strong);
+  }
+
+  .filter-tab.is-active .f-num {
+    color: var(--accent);
+  }
+
+  /* Bento Grid */
+  .bento-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
-  .service-card {
-    background: rgba(4, 34, 43, 0.7);
-    border: 1px solid rgba(244, 240, 232, 0.1);
-    border-radius: 18px;
-    padding: clamp(24px, 3.2vw, 36px);
+
+  .bento-card {
+    padding: 36px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
-    backdrop-filter: blur(14px);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.25s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  .service-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle 380px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.15), transparent 70%);
-    pointer-events: none;
-    z-index: 1;
-  }
-  .service-card:hover {
-    border-color: rgba(201, 162, 126, 0.4);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
-    background: rgba(4, 34, 43, 0.88);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .service-card[data-category="healthcare"] {
+  .bento-card:hover {
+    border-color: var(--accent);
+  }
+
+  .bento-hero,
+  .bento-wide {
     grid-column: span 2;
   }
 
-  .card-top {
+  .card-meta-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
-    position: relative;
-    z-index: 2;
-  }
-  .card-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: rgba(201, 162, 126, 0.12);
-    border: 1px solid rgba(201, 162, 126, 0.28);
-    display: grid;
-    place-items: center;
-    color: var(--tan);
-  }
-  .card-cat-badge {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--tan);
-    background: rgba(201, 162, 126, 0.08);
-    padding: 4px 12px;
-    border-radius: 999px;
-    border: 1px solid rgba(201, 162, 126, 0.2);
+    margin-bottom: 20px;
+    font-family: var(--mono);
+    font-size: 10px;
   }
 
-  .card-body {
+  .meta-left {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    flex-grow: 1;
-    position: relative;
-    z-index: 2;
+    align-items: center;
+    gap: 12px;
   }
-  .card-title {
-    font: 700 clamp(1.4rem, 2.2vw, 1.85rem)/1.15 var(--disp);
-    color: var(--ivory);
+
+  .module-code {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .status-indicator {
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    color: var(--ink-muted);
+    background: var(--surface);
+  }
+
+  .status-indicator.live {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-tint);
+  }
+
+  .bento-title {
+    font-family: var(--disp);
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 12px;
     letter-spacing: -0.02em;
   }
-  .card-desc {
-    font-size: 0.98rem;
+
+  .bento-desc {
+    font-size: 14.5px;
     line-height: 1.6;
-    color: var(--ivory);
-    opacity: 0.82;
+    color: var(--ink-muted);
+    margin-bottom: 24px;
   }
 
-  .card-highlights {
-    background: rgba(6, 51, 64, 0.5);
-    border: 1px solid rgba(244, 240, 232, 0.06);
-    border-radius: 12px;
-    padding: 14px 16px;
+  .bento-spec-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 28px;
+    font-size: 13.5px;
+    color: var(--ink);
   }
-  .hl-label {
-    display: block;
-    font-size: 11px;
+
+  .spec-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .spec-bullet {
+    color: var(--accent);
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--tan);
-    margin-bottom: 8px;
   }
-  .hl-list {
+
+  .bento-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .action-note {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--ink-muted);
+  }
+
+  /* Bento Hero Split: Left Copy & Right Diff Sandbox */
+  .bento-hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .interactive-sandbox {
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sandbox-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--mono);
+  }
+
+  .sandbox-title {
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  .sandbox-toggle-group {
+    display: flex;
+    gap: 4px;
+  }
+
+  .sandbox-toggle-btn {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    padding: 3px 8px;
+    border: 1px solid var(--border);
+    color: var(--ink-muted);
+    background: var(--surface);
+  }
+
+  .sandbox-toggle-btn.is-active {
+    background: var(--accent);
+    color: var(--accent-contrast);
+    border-color: var(--accent);
+  }
+
+  .sandbox-view {
+    display: none;
+  }
+  .sandbox-view.is-visible {
+    display: block;
+  }
+
+  .line-no {
+    width: 24px;
+    opacity: 0.4;
+    user-select: none;
+  }
+
+  .sandbox-caption {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--ink-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .warn-dot {
+    width: 6px;
+    height: 6px;
+    background: #FF3B00;
+    border-radius: 50%;
+  }
+
+  .cyan-dot {
+    width: 6px;
+    height: 6px;
+    background: #00E5FF;
+    border-radius: 50%;
+  }
+
+  .architecture-flow-stepper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .flow-pill {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    padding: 4px 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+
+  .flow-pill.active {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .fp-n {
+    opacity: 0.6;
+    margin-right: 3px;
+  }
+
+  .flow-arrow {
+    color: var(--border-strong);
+    font-size: 10px;
+  }
+
+  /* Interactive Voice Box */
+  .interactive-voice-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .voice-box-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+  }
+
+  .voice-chan {
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .voice-lang-toggles {
+    display: flex;
+    gap: 4px;
+  }
+
+  .v-lang-btn {
+    font-family: var(--mono);
+    font-size: 9px;
+    padding: 3px 6px;
+    border: 1px solid var(--border);
+    color: var(--ink-muted);
+    background: var(--surface-card);
+  }
+
+  .v-lang-btn.is-active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-tint);
+  }
+
+  .voice-metrics-display {
     display: flex;
     flex-direction: column;
     gap: 6px;
-  }
-  .hl-list li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: var(--ivory);
-    opacity: 0.9;
-  }
-  .check {
-    color: var(--tan);
-    flex-shrink: 0;
-  }
-
-  /* Interactive Flow Accordion */
-  .flow-accordion {
-    background: rgba(2, 22, 28, 0.55);
-    border: 1px solid rgba(201, 162, 126, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .flow-toggle {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 14px;
-    background: transparent;
-    border: none;
-    color: var(--tan);
-    font-family: monospace;
+    font-family: var(--mono);
     font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  .flow-toggle:hover {
-    background: rgba(201, 162, 126, 0.08);
-  }
-  .flow-toggle-text {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .flow-toggle .chevron {
-    transition: transform 0.25s ease;
-  }
-  .flow-toggle[aria-expanded="true"] .chevron {
-    transform: rotate(180deg);
-  }
-  .flow-content {
-    display: none;
-    padding: 14px;
-    border-top: 1px solid rgba(244, 240, 232, 0.08);
-  }
-  .flow-content.is-open {
-    display: block;
-    animation: flowOpen 0.25s ease-out;
-  }
-  @keyframes flowOpen {
-    from { opacity: 0; transform: translateY(-4px); }
-    to { opacity: 1; transform: translateY(0); }
   }
 
-  /* Flow Diagram */
-  .flow-diagram {
+  .vm-row {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 8px;
-    overflow-x: auto;
-    padding-block: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
   }
-  .flow-step {
+
+  .vm-lbl {
+    color: var(--ink-muted);
+  }
+
+  .vm-val {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* Interactive Data Box */
+  .interactive-data-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .data-box-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+
+  .data-title {
+    color: var(--ink-muted);
+  }
+
+  .data-pct {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .data-pipeline-visual {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    padding: 8px 10px;
-    background: rgba(6, 51, 64, 0.6);
-    border: 1px solid rgba(244, 240, 232, 0.1);
-    border-radius: 8px;
-    flex: 1;
-    min-width: 90px;
+    gap: 4px;
     text-align: center;
   }
-  .flow-step.active {
-    border-color: var(--tan);
-    background: rgba(201, 162, 126, 0.12);
+
+  .dp-stage {
+    padding: 8px;
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    font-family: var(--mono);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
   }
-  .step-num {
-    font-family: monospace;
-    font-size: 9px;
-    color: var(--tan);
-    font-weight: bold;
+
+  .dp-stage.dp-highlight {
+    border-color: var(--accent);
+    background: var(--accent-tint);
   }
-  .step-title {
-    font-size: 11px;
+
+  .dp-tag {
+    font-size: 10px;
     font-weight: 700;
-    color: var(--ivory);
-  }
-  .step-desc {
-    font-size: 9px;
-    color: var(--slate);
-  }
-  .flow-connector {
-    color: var(--tan);
-    font-weight: bold;
-    opacity: 0.6;
-    font-size: 13px;
+    color: var(--accent);
   }
 
-  .card-foot {
+  .dp-desc {
+    font-size: 9.5px;
+    color: var(--ink-muted);
+  }
+
+  .dp-divider {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--border-strong);
+  }
+
+  /* Healthcare Wide Bento */
+  .healthcare-split {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 36px;
+  }
+
+  .hc-telemetry-console {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 16px;
-    padding-top: 16px;
-    border-top: 1px solid rgba(244, 240, 232, 0.08);
-    margin-top: auto;
-    position: relative;
-    z-index: 2;
-  }
-  .service-card .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .service-card .tags li {
-    padding: 4px 10px;
-    background: rgba(244, 240, 232, 0.06);
-    border: 1px solid rgba(244, 240, 232, 0.12);
-    border-radius: 999px;
-    font-size: 11.5px;
-    color: var(--ivory);
-    opacity: 0.8;
-  }
-  .card-action {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13.5px;
-    font-weight: 600;
-    color: var(--tan);
-    text-decoration: none;
-    transition: gap 0.2s ease, color 0.2s ease;
-  }
-  .card-action:hover {
-    gap: 10px;
-    color: #e5c7a9;
   }
 
-  @media (max-width: 960px) {
-    .services-grid {
+  .console-head {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .c-title {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .c-status {
+    color: var(--ink-muted);
+  }
+
+  .claim-pipeline-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 16px 0;
+  }
+
+  .c-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+
+  .c-step.done {
+    border-color: rgba(0, 200, 83, 0.3);
+  }
+
+  .c-step.active {
+    border-color: var(--accent);
+    background: var(--accent-tint);
+  }
+
+  .cs-num {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .cs-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cs-info strong {
+    color: var(--ink);
+    font-size: 11px;
+  }
+
+  .cs-info span {
+    color: var(--ink-muted);
+    font-size: 9.5px;
+  }
+
+  .cs-check {
+    color: #00873D;
+    font-weight: 700;
+  }
+
+  .cs-tag {
+    font-size: 9px;
+    padding: 2px 5px;
+    background: var(--accent);
+    color: var(--accent-contrast);
+    font-weight: 700;
+  }
+
+  .console-foot {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--ink-muted);
+  }
+
+  .console-foot strong {
+    color: var(--accent);
+  }
+
+  @media (max-width: 1024px) {
+    .bento-grid {
       grid-template-columns: 1fr;
     }
-    .service-card[data-category="healthcare"] {
+    .bento-hero,
+    .bento-wide {
       grid-column: span 1;
     }
-    .services-header {
-      flex-direction: column;
-      align-items: flex-start;
+    .bento-hero-split,
+    .healthcare-split {
+      grid-template-columns: 1fr;
     }
-    .flow-diagram {
-      flex-direction: column;
-      align-items: stretch;
-    }
-    .flow-connector {
-      text-align: center;
-      transform: rotate(90deg);
-      margin-block: 2px;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .card-top {
-      flex-direction: row;
-      align-items: center;
-    }
-    .card-foot {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .card-action {
-      margin-top: 6px;
+    .header-split {
+      grid-template-columns: 1fr;
     }
   }
 </style>

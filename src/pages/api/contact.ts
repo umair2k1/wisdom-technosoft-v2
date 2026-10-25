@@ -31,9 +31,18 @@ export const POST: APIRoute = async ({ request, locals }) => {
       return Response.json({ success: false, message: 'Please provide a message (5-3000 characters).' }, { status: 400 });
     }
 
-    const env = (locals as Record<string, any>)?.runtime?.env || process.env;
-    const destinationEmail = env?.DESTINATION_EMAIL || 'wisdomtechnosoft04@gmail.com';
-    const formServiceKey = env?.FORM_SERVICE_KEY;
+    interface CloudflareRuntime {
+      runtime?: {
+        env?: {
+          DESTINATION_EMAIL?: string;
+          FORM_SERVICE_KEY?: string;
+        };
+      };
+    }
+
+    const cloudflareLocals: CloudflareRuntime = locals;
+    const destinationEmail = cloudflareLocals.runtime?.env?.DESTINATION_EMAIL || 'wisdomtechnosoft04@gmail.com';
+    const formServiceKey = cloudflareLocals.runtime?.env?.FORM_SERVICE_KEY;
 
     // 3. Forward message if external service key is configured
     if (formServiceKey) {

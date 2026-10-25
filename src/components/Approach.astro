@@ -1,313 +1,455 @@
 ---
+// Wisdom Technosoft — Approach Component
+// GSAP Pinned Horizontal Engineering Pipeline • Connecting Bus Line & SVG Payload Packet
 ---
 
-<section class="s approach" id="approach" style="--bg:var(--bone);--fg:var(--ink)">
+<section class="approach-section s" id="approach" data-theme-trigger="blueprint">
   <div class="w approach-container">
+    
+    <!-- Blueprint Header -->
     <div class="approach-header">
-      <div class="header-main">
-        <p class="eyebrow" data-scramble="How We Deliver • Operating Disciplines">How We Deliver &bull; Operating Disciplines</p>
-        <h2 class="approach-title" data-scramble="Care in the details. Certainty in the outcomes.">Care in the details. Certainty in the outcomes.</h2>
-      </div>
-      <p class="approach-aside">
-        Four guiding principles govern every engagement &mdash; from the initial discovery call to 24/7 production maintenance and scale.
-      </p>
-    </div>
-
-    <div class="approach-grid">
-      <!-- 01 Quality -->
-      <div class="approach-card tilt-card">
-        <div class="laser-border" aria-hidden="true"></div>
-        <div class="card-num-bar">
-          <span class="card-num" data-scramble="01">01</span>
-          <span class="card-tag">Standard</span>
-        </div>
-        <div class="card-content">
-          <h3 class="card-heading">Uncompromising Quality</h3>
-          <p class="card-text">
-            We sweat the edge cases so the final product feels effortless. Software goes through multi-tier automated test suites, and data tasks pass double-blind verification.
-          </p>
-          <div class="approach-metric-chip">
-            <span class="chip-dot"></span>
-            <span>99.8% Verified Precision Target</span>
-          </div>
-          <ul class="card-points">
-            <li>Strict code review &amp; lint standards</li>
-            <li>Multi-tier double-blind data verification</li>
-            <li>Zero-regression release cadence</li>
-          </ul>
-        </div>
+      <div class="eyebrow-row">
+        <span class="eyebrow">OPERATING DISCIPLINES &bull; DELIVERY LIFECYCLE</span>
+        <span class="blueprint-tag active"><span class="tag-dot"></span> PIPELINE BUS // ACTIVE</span>
       </div>
 
-      <!-- 02 Timelines -->
-      <div class="approach-card tilt-card">
-        <div class="laser-border" aria-hidden="true"></div>
-        <div class="card-num-bar">
-          <span class="card-num" data-scramble="02">02</span>
-          <span class="card-tag">Execution</span>
-        </div>
-        <div class="card-content">
-          <h3 class="card-heading">Committed Timelines</h3>
-          <p class="card-text">
-            Promises kept. Deadlines respected. Clear milestones and transparent sprint progress mean you never have to chase updates or wonder about launch status.
+      <div class="header-split">
+        <h2 class="sec-title">
+          Care in the details. <br />
+          <span class="text-cyan">Certainty in outcomes.</span>
+        </h2>
+        <div class="header-meta-box">
+          <p class="sec-subtitle">
+            Four guiding disciplines govern every engagement &mdash; from initial architectural discovery to 24/7/365 production maintenance and scaling.
           </p>
-          <div class="approach-metric-chip">
-            <span class="chip-dot"></span>
-            <span>100% On-Time Milestone Adherence</span>
+          <div class="pipeline-progress-badge">
+            <span class="badge-dot"></span>
+            <span class="pipeline-status-text" id="pipeline-status-text">STAGE 01 // DISCOVERY &amp; CONSTRAINTS</span>
           </div>
-          <ul class="card-points">
-            <li>Predictable milestone planning</li>
-            <li>Weekly status cadences &amp; live dashboards</li>
-            <li>Strict contractual SLA commitments</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 03 Innovation -->
-      <div class="approach-card tilt-card">
-        <div class="laser-border" aria-hidden="true"></div>
-        <div class="card-num-bar">
-          <span class="card-num" data-scramble="03">03</span>
-          <span class="card-tag">Tooling</span>
-        </div>
-        <div class="card-content">
-          <h3 class="card-heading">Modern Innovation</h3>
-          <p class="card-text">
-            Current technology, considered choices, and automation pipelines. We adopt modern architectures and workflow scripts to keep your operations agile.
-          </p>
-          <div class="approach-metric-chip">
-            <span class="chip-dot"></span>
-            <span>Cloud-Native &amp; Automation First</span>
-          </div>
-          <ul class="card-points">
-            <li>Modern cloud-native edge stacks</li>
-            <li>Automated data pipelines &amp; ETL scripts</li>
-            <li>Continuous workflow tuning &amp; tooling</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 04 Client satisfaction -->
-      <div class="approach-card tilt-card">
-        <div class="laser-border" aria-hidden="true"></div>
-        <div class="card-num-bar">
-          <span class="card-num" data-scramble="04">04</span>
-          <span class="card-tag">Partnership</span>
-        </div>
-        <div class="card-content">
-          <h3 class="card-heading">Client Partnership</h3>
-          <p class="card-text">
-            Our success is entirely measured by yours. You work with a dedicated, communicative team that acts as an integrated extension of your company.
-          </p>
-          <div class="approach-metric-chip">
-            <span class="chip-dot"></span>
-            <span>Direct Principal &amp; Lead Access</span>
-          </div>
-          <ul class="card-points">
-            <li>Dedicated account ownership squad</li>
-            <li>Direct executive &amp; technical access</li>
-            <li>Multi-year scalability focus</li>
-          </ul>
         </div>
       </div>
     </div>
+
+    <!-- Pinned Horizontal Scroll Stage Wrapper -->
+    <div class="approach-stage-pin" id="approach-stage-pin">
+      
+      <!-- SVG Data Bus Line & Travelling Payload Packet -->
+      <div class="bus-line-wrapper" aria-hidden="true">
+        <svg class="bus-svg" id="bus-svg" viewBox="0 0 1600 36" preserveAspectRatio="none">
+          <!-- Guide hairlines -->
+          <line x1="0" y1="18" x2="1600" y2="18" class="bus-track-line" />
+          <line x1="0" y1="18" x2="0" y2="18" class="bus-fill-line" id="bus-fill-line" />
+          
+          <!-- Nodes along the line -->
+          <circle cx="160" cy="18" r="6" class="bus-node-circle active" id="node-1" />
+          <circle cx="560" cy="18" r="6" class="bus-node-circle" id="node-2" />
+          <circle cx="960" cy="18" r="6" class="bus-node-circle" id="node-3" />
+          <circle cx="1360" cy="18" r="6" class="bus-node-circle" id="node-4" />
+
+          <!-- Dynamic Travelling Payload Packet -->
+          <g id="payload-packet" transform="translate(160, 18)">
+            <rect x="-14" y="-12" width="28" height="24" class="packet-box" />
+            <circle cx="0" cy="0" r="4" class="packet-core" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Horizontal Sliding Track -->
+      <div class="approach-track-wrapper">
+        <div class="approach-horizontal-track" id="approach-horizontal-track">
+          
+          <!-- STAGE 01 -->
+          <div class="stage-card grid-frame" data-stage="1">
+            <div class="crosshair crosshair-tl"></div>
+            <div class="crosshair crosshair-tr"></div>
+            <div class="crosshair crosshair-bl"></div>
+            <div class="crosshair crosshair-br"></div>
+
+            <div class="stage-top">
+              <span class="stage-code">STAGE // 01</span>
+              <span class="blueprint-tag">STANDARD</span>
+            </div>
+
+            <h3 class="stage-title">Uncompromising Quality</h3>
+            <p class="stage-desc">
+              We sweat the edge cases so the final product feels effortless. Software passes multi-tier automated test suites, and data operations undergo double-blind verification before release.
+            </p>
+
+            <div class="stage-metric-box">
+              <span class="sm-value">99.8%</span>
+              <span class="sm-label">VERIFIED PRECISION TARGET</span>
+            </div>
+
+            <ul class="stage-checklist">
+              <li><span class="check-icon">&check;</span> Strict code review, linting &amp; type safety</li>
+              <li><span class="check-icon">&check;</span> Multi-tier double-blind data verification</li>
+              <li><span class="check-icon">&check;</span> Zero-regression deployment cadences</li>
+            </ul>
+
+            <div class="stage-foot">
+              <span class="foot-status active">LIVE RIGOR</span>
+              <span class="foot-time">SPRINT CYCLE 01</span>
+            </div>
+          </div>
+
+          <!-- STAGE 02 -->
+          <div class="stage-card grid-frame" data-stage="2">
+            <div class="crosshair crosshair-tl"></div>
+            <div class="crosshair crosshair-tr"></div>
+            <div class="crosshair crosshair-bl"></div>
+            <div class="crosshair crosshair-br"></div>
+
+            <div class="stage-top">
+              <span class="stage-code">STAGE // 02</span>
+              <span class="blueprint-tag">EXECUTION</span>
+            </div>
+
+            <h3 class="stage-title">Committed Timelines</h3>
+            <p class="stage-desc">
+              Promises kept. Deadlines respected. Clear milestones and transparent sprint progress mean you never have to chase updates or wonder about launch status.
+            </p>
+
+            <div class="stage-metric-box">
+              <span class="sm-value">100%</span>
+              <span class="sm-label">ON-TIME MILESTONE ADHERENCE</span>
+            </div>
+
+            <ul class="stage-checklist">
+              <li><span class="check-icon">&check;</span> Predictable milestone &amp; sprint planning</li>
+              <li><span class="check-icon">&check;</span> Weekly status cadences &amp; live dashboards</li>
+              <li><span class="check-icon">&check;</span> Strict contractual SLA commitments</li>
+            </ul>
+
+            <div class="stage-foot">
+              <span class="foot-status">SCHEDULE LOCKED</span>
+              <span class="foot-time">SPRINT CYCLE 02</span>
+            </div>
+          </div>
+
+          <!-- STAGE 03 -->
+          <div class="stage-card grid-frame" data-stage="3">
+            <div class="crosshair crosshair-tl"></div>
+            <div class="crosshair crosshair-tr"></div>
+            <div class="crosshair crosshair-bl"></div>
+            <div class="crosshair crosshair-br"></div>
+
+            <div class="stage-top">
+              <span class="stage-code">STAGE // 03</span>
+              <span class="blueprint-tag">TOOLING</span>
+            </div>
+
+            <h3 class="stage-title">Modern Innovation</h3>
+            <p class="stage-desc">
+              Current technology, considered choices, and automated pipelines. We adopt modern architectures and workflow scripts to keep your operations agile and maintainable.
+            </p>
+
+            <div class="stage-metric-box">
+              <span class="sm-value">EDGE &bull; CI/CD</span>
+              <span class="sm-label">CLOUD-NATIVE &amp; AUTOMATION FIRST</span>
+            </div>
+
+            <ul class="stage-checklist">
+              <li><span class="check-icon">&check;</span> Modern cloud-native edge stacks (Astro / Cloudflare)</li>
+              <li><span class="check-icon">&check;</span> Automated data pipelines &amp; ETL scripts</li>
+              <li><span class="check-icon">&check;</span> Continuous workflow tuning &amp; tooling</li>
+            </ul>
+
+            <div class="stage-foot">
+              <span class="foot-status">AUTOMATED</span>
+              <span class="foot-time">SPRINT CYCLE 03</span>
+            </div>
+          </div>
+
+          <!-- STAGE 04 -->
+          <div class="stage-card grid-frame" data-stage="4">
+            <div class="crosshair crosshair-tl"></div>
+            <div class="crosshair crosshair-tr"></div>
+            <div class="crosshair crosshair-bl"></div>
+            <div class="crosshair crosshair-br"></div>
+
+            <div class="stage-top">
+              <span class="stage-code">STAGE // 04</span>
+              <span class="blueprint-tag">PARTNERSHIP</span>
+            </div>
+
+            <h3 class="stage-title">Client Partnership</h3>
+            <p class="stage-desc">
+              Our success is entirely measured by yours. You work with a dedicated, communicative team that acts as an integrated extension of your company.
+            </p>
+
+            <div class="stage-metric-box">
+              <span class="sm-value">24/7/365</span>
+              <span class="sm-label">DIRECT PRINCIPAL &amp; LEAD ACCESS</span>
+            </div>
+
+            <ul class="stage-checklist">
+              <li><span class="check-icon">&check;</span> Direct access to principals &amp; tech leads</li>
+              <li><span class="check-icon">&check;</span> Collaborative communication in Slack/Teams/WhatsApp</li>
+              <li><span class="check-icon">&check;</span> Long-term operational continuity &amp; scaling</li>
+            </ul>
+
+            <div class="stage-foot">
+              <span class="foot-status">SCALE READY</span>
+              <span class="foot-time">PRODUCTION CONTINUOUS</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
-<style is:global>
-  .approach {
-    padding-block: clamp(64px, 10vh, 120px);
-    background: var(--bone);
-    color: var(--ink);
+<style>
+  .approach-section {
     position: relative;
-  }
-  .approach-container {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(32px, 5vh, 56px);
-  }
-  .approach-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 24px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(20, 32, 31, 0.15);
-  }
-  .header-main {
-    max-width: 760px;
-  }
-  .approach-title {
-    font: 800 clamp(2rem, 4.2vw, 3.6rem)/1.05 var(--disp);
-    letter-spacing: -0.03em;
+    padding-block: clamp(80px, 12vh, 140px);
+    background-color: var(--bg);
     color: var(--ink);
-    margin-top: 8px;
-    contain: layout style;
-  }
-  .approach-aside {
-    max-width: 44ch;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--ink);
-    opacity: 0.78;
-  }
-
-  .approach-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-  .approach-card {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    background: var(--teal);
-    color: var(--ivory);
-    padding: clamp(24px, 3vw, 32px);
-    border-radius: 18px;
-    border: 1px solid rgba(244, 240, 232, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    position: relative;
+    border-bottom: 1px solid var(--border);
     overflow: hidden;
   }
-  .approach-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle 280px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.18), transparent 70%);
-    pointer-events: none;
-    z-index: 1;
+
+  .approach-header {
+    margin-bottom: 48px;
   }
 
-  /* Laser Border Tracing Effect on Hover */
-  .laser-border {
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1.5px;
-    background: linear-gradient(90deg, transparent 0%, var(--tan) 50%, transparent 100%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 2;
-  }
-  .approach-card:hover .laser-border {
-    opacity: 1;
-    animation: laserSpin 3s linear infinite;
-  }
-  @keyframes laserSpin {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
+  .eyebrow-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
   }
 
-  .approach-card:hover {
-    border-color: rgba(201, 162, 126, 0.4);
-    box-shadow: 0 16px 36px rgba(4, 34, 43, 0.25);
+  .header-split {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: flex-end;
   }
-  .card-num-bar {
+
+  .text-cyan {
+    color: var(--accent);
+  }
+
+  .pipeline-progress-badge {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+  }
+
+  /* Pinned Horizontal Stage */
+  .approach-stage-pin {
+    position: relative;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  /* Connecting Bus Line */
+  .bus-line-wrapper {
+    width: 100%;
+    height: 36px;
+    margin-bottom: 24px;
+    overflow: visible;
+  }
+
+  .bus-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .bus-track-line {
+    stroke: var(--border-strong);
+    stroke-width: 2;
+    stroke-dasharray: 4 4;
+  }
+
+  .bus-fill-line {
+    stroke: var(--accent);
+    stroke-width: 2.5;
+  }
+
+  .bus-node-circle {
+    fill: var(--surface);
+    stroke: var(--border-strong);
+    stroke-width: 2;
+    transition: all 0.3s ease;
+  }
+
+  .bus-node-circle.active {
+    fill: var(--accent);
+    stroke: var(--accent);
+    filter: drop-shadow(0 0 6px var(--accent));
+  }
+
+  .packet-box {
+    fill: var(--surface-card);
+    stroke: var(--accent);
+    stroke-width: 1.5;
+  }
+
+  .packet-core {
+    fill: var(--accent);
+  }
+
+  /* Horizontal Track */
+  .approach-track-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .approach-horizontal-track {
+    display: flex;
+    gap: 28px;
+    width: max-content;
+    will-change: transform;
+  }
+
+  .stage-card {
+    width: clamp(340px, 28vw, 420px);
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    transition: border-color 0.3s ease;
+  }
+
+  .stage-card:hover {
+    border-color: var(--accent);
+  }
+
+  .stage-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 16px;
-    border-bottom: 1px solid rgba(244, 240, 232, 0.1);
-    position: relative;
-    z-index: 2;
-  }
-  .card-num {
-    font: 800 24px/1 var(--disp);
-    color: var(--tan);
-    letter-spacing: -0.02em;
-  }
-  .card-tag {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 3px 10px;
-    border-radius: 999px;
-    background: rgba(201, 162, 126, 0.14);
-    color: var(--tan);
-  }
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    flex-grow: 1;
-    position: relative;
-    z-index: 2;
-  }
-  .card-heading {
-    font: 700 clamp(1.3rem, 1.8vw, 1.6rem)/1.15 var(--disp);
-    color: var(--ivory);
-    letter-spacing: -0.02em;
-  }
-  .card-text {
-    font-size: 0.95rem;
-    line-height: 1.55;
-    color: var(--ivory);
-    opacity: 0.82;
-  }
-
-  .approach-metric-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 5px 10px;
-    border-radius: 6px;
-    background: rgba(4, 34, 43, 0.6);
-    border: 1px solid rgba(201, 162, 126, 0.25);
-    font-family: monospace;
+    margin-bottom: 20px;
+    font-family: var(--mono);
     font-size: 10.5px;
-    color: var(--tan);
-    margin-top: 4px;
-    width: fit-content;
-  }
-  .chip-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: #4ade80;
-    box-shadow: 0 0 6px #4ade80;
   }
 
-  .card-points {
+  .stage-code {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .stage-title {
+    font-family: var(--disp);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .stage-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    margin-bottom: 24px;
+  }
+
+  .stage-metric-box {
+    padding: 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    margin-bottom: 24px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    margin-top: 8px;
-    padding-top: 14px;
-    border-top: 1px dashed rgba(244, 240, 232, 0.12);
+    gap: 4px;
   }
-  .card-points li {
-    font-size: 12.5px;
-    color: var(--tan);
-    font-weight: 500;
+
+  .sm-value {
+    font-family: var(--disp);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+  }
+
+  .sm-label {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  .stage-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+
+  .stage-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .check-icon {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .stage-foot {
     display: flex;
     align-items: center;
-    gap: 6px;
-  }
-  .card-points li::before {
-    content: "✓";
-    font-weight: 700;
-    color: var(--tan);
-  }
-
-  @media (max-width: 1100px) {
-    .approach-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-muted);
   }
 
-  @media (max-width: 640px) {
-    .approach-grid {
+  .foot-status {
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .foot-status.active {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  @media (max-width: 900px) {
+    .header-split {
       grid-template-columns: 1fr;
     }
-    .approach-header {
+    .bus-line-wrapper {
+      display: none;
+    }
+    .approach-track-wrapper {
+      overflow: visible;
+    }
+    .approach-horizontal-track {
       flex-direction: column;
-      align-items: flex-start;
+      width: 100%;
+    }
+    .stage-card {
+      width: 100%;
     }
   }
 </style>

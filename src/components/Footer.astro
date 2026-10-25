@@ -1,52 +1,62 @@
 ---
+// Wisdom Technosoft — Footer Component
+// Swiss Grid Architectural Blueprint • Real Telemetry Readout • Direct Channels
 ---
 
-<footer class="site-footer" style="--fg:var(--ivory)">
+<footer class="site-footer s" id="footer">
   <div class="w footer-container">
-    <div class="footer-top">
-      <!-- Brand column -->
-      <div class="footer-brand">
+    
+    <div class="footer-top grid-frame">
+      <div class="crosshair crosshair-tl"></div>
+      <div class="crosshair crosshair-tr"></div>
+      <div class="crosshair crosshair-bl"></div>
+      <div class="crosshair crosshair-br"></div>
+
+      <!-- Brand Column -->
+      <div class="footer-brand-col">
         <a class="footer-logo-link" href="#top" aria-label="Wisdom Technosoft home">
-          <img src="/assets/logo-mark-light.png" alt="Wisdom Technosoft" width="38" height="31">
+          <img src="/assets/logo-mark.png" alt="Wisdom Technosoft" width="34" height="28" class="footer-logo footer-logo-dark" />
+          <img src="/assets/logo-mark-light.png" alt="Wisdom Technosoft" width="34" height="28" class="footer-logo footer-logo-light" />
           <span class="footer-brand-title">Wisdom Technosoft</span>
         </a>
         <p class="footer-bio">
-          Nagpur-based software development studio and business process outsourcing partner &mdash; delivering custom code, high-touch telecalling, clean data management, and US medical billing with clarity, care, and consistency.
+          Nagpur-based software development studio and business process outsourcing partner &mdash; delivering custom code, high-touch telecalling squads, clean data ETL pipelines, and US medical billing with clarity, care, and consistency.
         </p>
-        <div class="footer-location">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Nagpur &bull; Maharashtra &bull; India</span>
+        <div class="footer-coord">
+          <span class="coord-dot"></span>
+          <span>NAGPUR HQ // 21.1458° N, 79.0882° E // MAHARASHTRA, INDIA</span>
         </div>
       </div>
 
-      <!-- Links: Solutions -->
-      <div class="footer-col">
-        <h4 class="col-title">Solutions</h4>
+      <!-- Column 1: Capabilities -->
+      <div class="footer-nav-col">
+        <h4 class="col-title">Capabilities</h4>
         <ul class="footer-links">
-          <li><a href="#services">Software Development</a></li>
-          <li><a href="#services">Telecalling Services</a></li>
-          <li><a href="#services">Data Entry &amp; QA</a></li>
-          <li><a href="#services">Business Process Solutions</a></li>
+          <li><a href="#services">Software Engineering</a></li>
+          <li><a href="#services">Voice &amp; Telecalling</a></li>
+          <li><a href="#services">Data Mining &amp; QA</a></li>
+          <li><a href="#services">Industrial &amp; BPO</a></li>
           <li><a href="#services">US Medical Billing</a></li>
         </ul>
       </div>
 
-      <!-- Links: Company -->
-      <div class="footer-col">
-        <h4 class="col-title">Navigation</h4>
+      <!-- Column 2: Navigation -->
+      <div class="footer-nav-col">
+        <h4 class="col-title">Index</h4>
         <ul class="footer-links">
-          <li><a href="#services">Capabilities</a></li>
-          <li><a href="#approach">Delivery Principles</a></li>
-          <li><a href="#vision">Vision &amp; Values</a></li>
-          <li><a href="#team">Leadership Team</a></li>
-          <li><a href="#contact">Start a Project</a></li>
+          <li><a href="#top">00 &bull; Welcome</a></li>
+          <li><a href="#services">01 &bull; Capabilities</a></li>
+          <li><a href="#approach">02 &bull; Disciplines</a></li>
+          <li><a href="#vision">03 &bull; Vision &amp; Ethos</a></li>
+          <li><a href="#team">04 &bull; Leadership</a></li>
+          <li><a href="#contact">05 &bull; Contact</a></li>
         </ul>
       </div>
 
-      <!-- Contact column -->
-      <div class="footer-col">
+      <!-- Column 3: Direct Inquiries -->
+      <div class="footer-nav-col">
         <h4 class="col-title">Direct Inquiries</h4>
-        <div class="footer-contact-items">
+        <div class="footer-contact-stack">
           <div class="fc-item">
             <span class="fc-lbl">Phone</span>
             <a href="tel:+917447331127" class="fc-val">+91 74473 31127</a>
@@ -57,180 +67,232 @@
           </div>
           <div class="fc-item">
             <span class="fc-lbl">WhatsApp</span>
-            <a href="https://wa.me/917447331127" target="_blank" rel="noopener" class="fc-val">Instant Chat</a>
+            <a href="https://wa.me/917447331127" target="_blank" rel="noopener" class="fc-val">Instant Chat &rarr;</a>
           </div>
         </div>
       </div>
+
     </div>
 
-    <div class="footer-bottom">
-      <div class="footer-telemetry">
-        <span class="telemetry-pulse"></span>
-        <span>Nagpur Hub Active &bull; <strong class="live-clock">--:--:-- IST</strong> &bull; Latency: <strong class="live-latency">18ms</strong></span>
+    <!-- Bottom Telemetry & Copyright Strip -->
+    <div class="footer-bottom-strip">
+      <div class="telemetry-readout">
+        <span class="t-pulse"></span>
+        <span>0% FAKE TELEMETRY // DOM PAINT: <strong class="real-paint-stat">--ms</strong> // <strong class="real-fps-stat">60 FPS</strong> // NAGPUR CORE // <strong class="live-clock">--:--:-- IST</strong></span>
       </div>
-      <p class="copyright">&copy; 2026 Wisdom Technosoft. All rights reserved.</p>
-      <div class="footer-meta">
-        <a href="/privacy" class="foot-meta-link">Privacy Notice</a>
-        <span class="meta-sep">&middot;</span>
-        <a href="#top" class="foot-meta-link back-to-top magnetic">
-          <span>Back to top</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
-        </a>
+
+      <div class="footer-bottom-right">
+        <span class="copyright">&copy; 2026 Wisdom Technosoft. All rights reserved.</span>
+        <a href="/privacy" class="foot-link">Privacy Policy</a>
+        <a href="#top" class="foot-link back-to-top">Back to top &uarr;</a>
       </div>
     </div>
+
   </div>
 </footer>
 
-<style is:global>
+<style>
   .site-footer {
     position: relative;
-    z-index: 10;
-    background: #02161c;
-    color: var(--ivory);
-    border-top: 1px solid rgba(244, 240, 232, 0.08);
-    padding-top: clamp(48px, 8vh, 80px);
-    padding-bottom: clamp(24px, 4vh, 40px);
+    padding-top: clamp(60px, 10vh, 100px);
+    padding-bottom: 40px;
+    background-color: var(--bg);
+    color: var(--ink);
   }
+
   .footer-container {
     display: flex;
     flex-direction: column;
-    gap: clamp(40px, 6vh, 60px);
+    gap: 32px;
   }
+
   .footer-top {
+    padding: 48px;
     display: grid;
-    grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
-    gap: clamp(24px, 4vw, 48px);
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 40px;
   }
-  .footer-brand {
+
+  .footer-brand-col {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 420px;
+    max-width: 440px;
   }
+
   .footer-logo-link {
     display: flex;
     align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    color: var(--ivory);
+    gap: 10px;
   }
+
+  .footer-logo {
+    width: 32px;
+    height: auto;
+  }
+
+  .footer-logo-light { display: none; }
+  .footer-logo-dark { display: block; }
+  [data-theme="blueprint"] .footer-logo-light,
+  .theme-blueprint .footer-logo-light { display: block; }
+  [data-theme="blueprint"] .footer-logo-dark,
+  .theme-blueprint .footer-logo-dark { display: none; }
+
   .footer-brand-title {
-    font: 700 18px var(--disp);
+    font-family: var(--disp);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
     letter-spacing: -0.02em;
   }
+
   .footer-bio {
-    font-size: 0.92rem;
+    font-size: 13.5px;
     line-height: 1.6;
-    color: var(--ivory);
-    opacity: 0.75;
+    color: var(--ink-muted);
   }
-  .footer-location {
+
+  .footer-coord {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 12.5px;
-    color: var(--tan);
-    font-weight: 500;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  .coord-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
   }
 
   .col-title {
-    font: 700 13px/1.2 var(--disp);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--tan);
-    margin-bottom: 16px;
+    color: var(--accent);
+    margin-bottom: 20px;
   }
+
   .footer-links {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+
   .footer-links a {
     font-size: 13.5px;
-    color: var(--ivory);
-    opacity: 0.75;
-    text-decoration: none;
-    transition: opacity 0.2s ease, color 0.2s ease;
-  }
-  .footer-links a:hover {
-    opacity: 1;
-    color: var(--tan);
+    color: var(--ink-muted);
+    transition: color 0.2s ease;
   }
 
-  .footer-contact-items {
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+
+  .footer-contact-stack {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
+    font-family: var(--mono);
   }
+
   .fc-item {
     display: flex;
     flex-direction: column;
-    gap: 3px;
-  }
-  .fc-lbl {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--ivory);
-    opacity: 0.5;
-  }
-  .fc-val {
-    font-size: 13.5px;
-    color: var(--ivory);
-    opacity: 0.85;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  .fc-val:hover {
-    color: var(--tan);
+    gap: 2px;
   }
 
-  .footer-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(244, 240, 232, 0.08);
+  .fc-lbl {
+    font-size: 9.5px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+  }
+
+  .fc-val {
     font-size: 13px;
-    opacity: 0.8;
-  }
-  .footer-meta {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .foot-meta-link {
-    color: var(--ivory);
-    text-decoration: none;
+    color: var(--ink);
+    font-weight: 600;
     transition: color 0.2s ease;
   }
-  .foot-meta-link:hover {
-    color: var(--tan);
+
+  .fc-val:hover {
+    color: var(--accent);
   }
-  .back-to-top {
-    display: inline-flex;
+
+  /* Bottom Telemetry Strip */
+  .footer-bottom-strip {
+    display: flex;
     align-items: center;
-    gap: 6px;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 10.5px;
   }
-  .meta-sep {
-    opacity: 0.4;
+
+  .telemetry-readout {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink-muted);
+  }
+
+  .telemetry-readout strong {
+    color: var(--ink);
+  }
+
+  .t-pulse {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .footer-bottom-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .copyright {
+    color: var(--ink-muted);
+  }
+
+  .foot-link {
+    color: var(--ink-muted);
+    transition: color 0.2s ease;
+  }
+
+  .foot-link:hover {
+    color: var(--accent);
   }
 
   @media (max-width: 1024px) {
     .footer-top {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 760px) {
     .footer-top {
       grid-template-columns: 1fr;
+      padding: 24px;
     }
-    .footer-bottom {
+    .footer-bottom-strip {
       flex-direction: column;
       align-items: flex-start;
+      gap: 12px;
+    }
+    .footer-bottom-right {
+      flex-wrap: wrap;
+      gap: 12px;
     }
   }
 </style>

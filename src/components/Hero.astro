@@ -1,538 +1,651 @@
 ---
+// Wisdom Technosoft — Hero Component
+// Multi-Layer X-Ray Blueprint Scrub • Architectural Reticle • Hero-to-Nav Logo Docking
 ---
 
-<section class="s hero" id="top" style="--bg:var(--deep);--fg:var(--ivory)">
-  <div class="hero-bg-glow" aria-hidden="true"></div>
-  
-  <div class="w hero-content">
-    <!-- Top badge with live location coordinates & status -->
-    <div class="hero-badge-row">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span class="badge-text" data-scramble="Engineering • Voice • Data • Healthcare BPO">Engineering &bull; Voice &bull; Data &bull; Healthcare BPO</span>
+<section class="hero-section s" id="top">
+  <!-- Crosshairs on container bounds -->
+  <div class="hero-wrapper w">
+    
+    <!-- Top Blueprint Header Strip -->
+    <div class="hero-spec-strip">
+      <div class="spec-left">
+        <span class="blueprint-tag active"><span class="tag-dot"></span> NAGPUR OPERATIONAL CORE</span>
+        <span class="spec-coord">COORD // 21.1458° N, 79.0882° E</span>
       </div>
-      <div class="hero-coords" aria-hidden="true">
-        <span>NAGPUR HQ // 21.1458° N, 79.0882° E</span>
+      <div class="spec-right">
+        <span class="spec-telemetry">
+          REAL METRIC // PAINT: <strong class="real-paint-stat">--ms</strong> &bull; <strong class="real-fps-stat">60 FPS</strong>
+        </span>
       </div>
     </div>
 
-    <!-- Main Grid: Left copy & Right Live Operations Console -->
-    <div class="hero-grid">
-      <!-- Left Column: Kinetic Titles & CTAs -->
-      <div class="hero-main-col">
-        <h1 class="hero-title">
-          <span class="hl-line" data-scramble="Software.">Software.</span>
-          <span class="hl-line hl-accent" data-scramble="Conversations.">Conversations.</span>
-          <span class="hl-line" data-scramble="Clean data.">Clean data.</span>
-        </h1>
+    <!-- Main Pin / Scrub Viewport -->
+    <div class="hero-stage" id="hero-stage">
+      
+      <!-- LAYER 1: Editorial Surface ("What We Build") -->
+      <div class="hero-layer hero-layer-surface" id="hero-layer-surface">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Architectural Editorial Headlines -->
+          <div class="hero-main-col">
+            <div class="hero-eyebrow-box">
+              <span class="eyebrow">EDITORIAL SYSTEMS &bull; BPO SCALE</span>
+              <span class="eyebrow-pill">NO VIBE-CODING</span>
+            </div>
 
-        <p class="hero-desc">
-          A premier Nagpur studio delivering custom software engineering, high-touch telecalling, meticulous data management, and mission-critical back-office operations &mdash; one unified team, one uncompromising standard.
-        </p>
+            <h1 class="hero-title">
+              <span class="title-line">We write code that</span>
+              <span class="title-line title-highlight">survives Monday mornings.</span>
+              <span class="title-line title-muted">Software. Voice. Clean data.</span>
+            </h1>
 
-        <div class="hero-actions">
-          <a class="btn btn-hero-primary magnetic" href="#contact">
-            <span>Start a project</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a class="btn btn-hero-secondary magnetic" href="#services">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            <span>Explore Capabilities</span>
-          </a>
-        </div>
-      </div>
+            <p class="hero-lead">
+              A premier Nagpur studio delivering custom software engineering, high-touch telecalling squads, meticulous data management, and mission-critical back-office operations &mdash; one unified team, one uncompromising standard.
+            </p>
 
-      <!-- Right Column: Operations Overview Card -->
-      <div class="hero-hud-col">
-        <div class="operations-hud tilt-card">
-          <div class="hud-header">
-            <div class="hud-status">
-              <span class="hud-dot"></span>
-              <span class="hud-tag">OPERATIONAL EXCELLENCE // NAGPUR CORE</span>
-            </div>
-            <div class="hud-telemetry-badge">
-              <span class="live-clock">--:--:-- IST</span>
-            </div>
-          </div>
-
-          <div class="operations-list">
-            <div class="op-item">
-              <span class="op-num">01</span>
-              <div class="op-content">
-                <span class="op-title">Custom Software Engineering</span>
-                <span class="op-desc">Cloud-native architectures, web platforms &amp; workflow automation scripts</span>
-              </div>
-            </div>
-            <div class="op-item">
-              <span class="op-num">02</span>
-              <div class="op-content">
-                <span class="op-title">Voice &amp; Telecalling Operations</span>
-                <span class="op-desc">Tri-lingual inbound &amp; outbound squads in English, Hindi &amp; regional languages</span>
-              </div>
-            </div>
-            <div class="op-item">
-              <span class="op-num">03</span>
-              <div class="op-content">
-                <span class="op-title">Clean Data Mining &amp; QA</span>
-                <span class="op-desc">Double-blind verification, fuzzy deduplication &amp; structured ETL pipelines</span>
-              </div>
-            </div>
-            <div class="op-item">
-              <span class="op-num">04</span>
-              <div class="op-content">
-                <span class="op-title">Healthcare Support &amp; Medical Billing</span>
-                <span class="op-desc">US medical billing, CPT/ICD coding, clean claims &amp; HIPAA-compliant QA</span>
+            <div class="hero-actions-row">
+              <a class="btn btn-primary" href="#contact">
+                <span>Start a project</span>
+                <span>&rarr;</span>
+              </a>
+              <a class="btn btn-secondary" href="#services">
+                <span>Inspect Capabilities</span>
+                <span>// 05</span>
+              </a>
+              <div class="hero-honest-badge">
+                <span class="badge-icon">&check;</span>
+                <span>Zero fake metrics. 100% human rigor.</span>
               </div>
             </div>
           </div>
 
-          <div class="hud-foot">
-            <span class="hud-foot-stat">UPTIME: <strong>99.8% SLA</strong></span>
-            <span class="hud-foot-stat">SHIFT: <strong>24/7/365 READY</strong></span>
-            <span class="hud-foot-badge">NAGPUR OPERATIONS HUB</span>
+          <!-- Right Column: Precision Reticle & Logo Focal Piece -->
+          <div class="hero-focal-col">
+            <div class="hero-reticle-wrap" id="hero-reticle-wrap">
+              <!-- SVG Architectural Drafting Reticle -->
+              <svg class="reticle-svg" viewBox="0 0 340 340" aria-hidden="true">
+                <circle cx="170" cy="170" r="160" class="r-outer-ring" stroke-dasharray="4 6" />
+                <circle cx="170" cy="170" r="130" class="r-mid-ring" />
+                <circle cx="170" cy="170" r="90" class="r-inner-ring" stroke-dasharray="2 4" />
+                
+                <!-- Coordinate crosshairs -->
+                <line x1="10" y1="170" x2="330" y2="170" class="r-axis" />
+                <line x1="170" y1="10" x2="170" y2="330" class="r-axis" />
+                
+                <!-- Caliper ticks -->
+                <line x1="170" y1="10" x2="170" y2="24" class="r-tick" />
+                <line x1="170" y1="316" x2="170" y2="330" class="r-tick" />
+                <line x1="10" y1="170" x2="24" y2="170" class="r-tick" />
+                <line x1="316" y1="170" x2="330" y2="170" class="r-tick" />
+
+                <!-- Corner framing calipers -->
+                <path d="M 30,50 L 30,30 L 50,30" class="r-bracket" />
+                <path d="M 310,50 L 310,30 L 290,30" class="r-bracket" />
+                <path d="M 30,290 L 30,310 L 50,310" class="r-bracket" />
+                <path d="M 310,290 L 310,310 L 290,310" class="r-bracket" />
+
+                <!-- Technical Labels -->
+                <text x="180" y="28" class="r-text">RAD // 130MM</text>
+                <text x="180" y="325" class="r-text">SYSTEM // MK-IV</text>
+                <text x="18" y="162" class="r-text">AXIS-X</text>
+                <text x="282" y="162" class="r-text">AXIS-Y</text>
+              </svg>
+
+              <!-- Focal Logo Piece (Target for GSAP Scroll Docking to Nav) -->
+              <div class="hero-logo-anchor" id="hero-logo-anchor">
+                <img src="/assets/logo-ghost.png" alt="" class="hero-ghost-watermark" aria-hidden="true" />
+                <img src="/assets/logo-mark.png" alt="Wisdom Technosoft Logo" class="hero-dock-mark" id="hero-dock-mark" width="110" height="90" />
+                <div class="logo-status-tag">CORE OPERATIONAL HUB</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- LAYER 2: "Under the Hood" Engineering Schematic (Revealed on X-Ray Scrub) -->
+      <div class="hero-layer hero-layer-blueprint" id="hero-layer-blueprint">
+        <div class="blueprint-xray-content">
+          <div class="xray-header">
+            <span class="xray-tag">&Delta; UNDER THE HOOD // ARCHITECTURAL SCHEMATIC</span>
+            <span class="xray-sub">PEELING BACK MARKETING TO REVEAL REAL RUNTIME GUARANTEES</span>
+          </div>
+
+          <div class="xray-schematic-grid">
+            <div class="xray-card">
+              <span class="xray-node-id">NODE // 01</span>
+              <h4>0% Hallucinated Microservices</h4>
+              <p>Boring, battle-tested software architecture. High-performance Astro SSR, strict TypeScript types, PostgreSQL with connection pooling, and zero superfluous dependencies.</p>
+              <div class="xray-badge-row">
+                <span class="mono-chip">P99 &lt; 40MS</span>
+                <span class="mono-chip">ZERO DOWNTIME DEPLOYS</span>
+              </div>
+            </div>
+
+            <div class="xray-card">
+              <span class="xray-node-id">NODE // 02</span>
+              <h4>Double-Blind Data Pipeline</h4>
+              <p>Every data mining and catalog batch passes automated schema sanitization, regex checksums, and two independent human verification passes before client delivery.</p>
+              <div class="xray-badge-row">
+                <span class="mono-chip">99.8% VERIFIED QA</span>
+                <span class="mono-chip">FUZZY DEDUPING</span>
+              </div>
+            </div>
+
+            <div class="xray-card">
+              <span class="xray-node-id">NODE // 03</span>
+              <h4>Human Telecalling Squads</h4>
+              <p>No robotic auto-dialer hallucination. Tri-lingual squads with domain training in client workflows, objection handling, and strict call quality scoring.</p>
+              <div class="xray-badge-row">
+                <span class="mono-chip">3 LANGUAGES</span>
+                <span class="mono-chip">REAL-TIME CALL QA</span>
+              </div>
+            </div>
+
+            <div class="xray-card">
+              <span class="xray-node-id">NODE // 04</span>
+              <h4>HIPAA &amp; Clean Claims RCM</h4>
+              <p>End-to-end US medical billing support. CPT/ICD-10 certified scrubbers ensuring clean first-pass submission rates that outperform industry medians.</p>
+              <div class="xray-badge-row">
+                <span class="mono-chip">98.7% CLEAN CLAIMS</span>
+                <span class="mono-chip">HIPAA ENFORCED</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="xray-footer">
+            <span class="xray-quote">&ldquo;Good engineering is quiet. It doesn't break at 3 AM.&rdquo;</span>
+            <span class="xray-stamp">VERIFIED BY WISDOM TECHNOSOFT ENG SQUAD</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- 4 High-Precision 3D Metric Cards -->
-    <div class="hero-metrics">
-      <div class="metric-card tilt-card">
-        <div class="metric-header">
-          <span class="metric-num" data-scramble="99.8%">99.8%</span>
-          <span class="metric-badge">Verified</span>
+    <!-- 4 Precision Metric Cards in Swiss Hairline Grid -->
+    <div class="hero-metrics-grid">
+      <div class="metric-block grid-frame">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="metric-top">
+          <span class="metric-value">99.8%</span>
+          <span class="metric-pill">VERIFIED</span>
         </div>
-        <span class="metric-lbl">Data accuracy &amp; QA precision across all pipelines</span>
-        <div class="metric-bar-wrap"><div class="metric-bar-fill" style="width: 99.8%"></div></div>
+        <h3 class="metric-title">Data Accuracy &amp; QA Precision</h3>
+        <p class="metric-desc">Multi-tier double-blind verification across every data ETL pipeline.</p>
       </div>
 
-      <div class="metric-card tilt-card">
-        <div class="metric-header">
-          <span class="metric-num" data-scramble="24/7/365">24/7/365</span>
-          <span class="metric-badge">Ready</span>
+      <div class="metric-block grid-frame">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="metric-top">
+          <span class="metric-value">24/7/365</span>
+          <span class="metric-pill">CONTINUOUS</span>
         </div>
-        <span class="metric-lbl">Continuous shift coverage across US &amp; Indian timezones</span>
-        <div class="metric-bar-wrap"><div class="metric-bar-fill" style="width: 100%"></div></div>
+        <h3 class="metric-title">Active Shift Coverage</h3>
+        <p class="metric-desc">Unbroken operational support spanning US, UK, and Indian business hours.</p>
       </div>
 
-      <div class="metric-card tilt-card">
-        <div class="metric-header">
-          <span class="metric-num" data-scramble="Tri-Lingual">Tri-Lingual</span>
-          <span class="metric-badge">Voice</span>
+      <div class="metric-block grid-frame">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="metric-top">
+          <span class="metric-value">Tri-Lingual</span>
+          <span class="metric-pill">VOICE</span>
         </div>
-        <span class="metric-lbl">Neutral English, Hindi &amp; regional voice proficiency</span>
-        <div class="metric-bar-wrap"><div class="metric-bar-fill" style="width: 95%"></div></div>
+        <h3 class="metric-title">English, Hindi &amp; Regional</h3>
+        <p class="metric-desc">Neutral accent, culturally aligned voice squads for inbound and outbound calls.</p>
       </div>
 
-      <div class="metric-card tilt-card">
-        <div class="metric-header">
-          <span class="metric-num" data-scramble="Nagpur Hub">Nagpur Hub</span>
-          <span class="metric-badge">Optimal ROI</span>
+      <div class="metric-block grid-frame">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="metric-top">
+          <span class="metric-value">100%</span>
+          <span class="metric-pill">CONTRACTUAL</span>
         </div>
-        <span class="metric-lbl">65&ndash;75% cost advantage over onshore US/EU models</span>
-        <div class="metric-bar-wrap"><div class="metric-bar-fill" style="width: 92%"></div></div>
+        <h3 class="metric-title">Milestone SLA Adherence</h3>
+        <p class="metric-desc">Predictable sprint cadences, transparent dashboards, zero mystery delays.</p>
       </div>
     </div>
+
   </div>
 </section>
 
-
-<style is:global>
-  .hero {
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+<style>
+  .hero-section {
     position: relative;
-    padding-top: calc(var(--nav) + 24px);
-    padding-bottom: clamp(40px, 6vh, 80px);
-    overflow: hidden;
-  }
-  .hero-bg-glow {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background:
-      radial-gradient(ellipse 65% 50% at 75% 25%, rgba(201, 162, 126, 0.12), transparent 70%),
-      radial-gradient(ellipse 60% 60% at 15% 75%, rgba(6, 51, 64, 0.8), transparent 75%);
-  }
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(20px, 3vh, 36px);
+    padding-top: calc(var(--nav-h, 70px) + 24px);
+    padding-bottom: 72px;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--border);
   }
 
-  .hero-badge-row {
+  .hero-spec-strip {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 6px 16px;
-    border-radius: 999px;
-    background: rgba(244, 240, 232, 0.05);
-    border: 1px solid rgba(201, 162, 126, 0.28);
-    color: var(--tan);
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    width: fit-content;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  }
-  .badge-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--tan);
-    box-shadow: 0 0 10px var(--tan);
-    animation: badgePulse 2s infinite ease-in-out;
-  }
-  .hero-coords {
-    font-family: monospace;
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-family: var(--mono);
     font-size: 11px;
-    color: var(--slate);
-    letter-spacing: 0.1em;
-    opacity: 0.85;
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
   }
 
-  /* Grid Layout: Left Content & Right HUD */
+  .spec-left, .spec-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .spec-coord {
+    color: var(--ink-muted);
+  }
+
+  .spec-telemetry {
+    color: var(--ink-muted);
+  }
+  .spec-telemetry strong {
+    color: var(--ink);
+  }
+
+  /* Pin / Scrub Stage */
+  .hero-stage {
+    position: relative;
+    border: 1px solid var(--border-strong);
+    background: var(--surface-card);
+    min-height: 520px;
+    overflow: hidden;
+  }
+
+  .hero-layer {
+    width: 100%;
+    height: 100%;
+    padding: 48px;
+  }
+
+  /* Layer 1: Surface */
+  .hero-layer-surface {
+    position: relative;
+    z-index: 2;
+    background: var(--surface-card);
+  }
+
   .hero-grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.95fr;
-    gap: clamp(28px, 4vw, 56px);
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 48px;
     align-items: center;
   }
-  .hero-main-col {
+
+  .hero-eyebrow-box {
     display: flex;
-    flex-direction: column;
-    gap: clamp(18px, 2.8vh, 28px);
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .eyebrow-pill {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border: 1px solid var(--border-strong);
+    color: var(--ink-muted);
   }
 
   .hero-title {
-    font: 800 clamp(2.8rem, 6.2vw, 5.8rem)/0.96 var(--disp);
+    font-family: var(--disp);
+    font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.05;
     letter-spacing: -0.04em;
-    margin: 0;
+    color: var(--ink);
+    margin-bottom: 24px;
   }
-  .hl-line {
+
+  .title-line {
     display: block;
-    color: var(--ivory);
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  .hl-line:hover {
-    transform: translateX(8px);
-  }
-  .hl-line.hl-accent {
-    color: var(--tan);
-    padding-left: clamp(0px, 2.5vw, 36px);
   }
 
-  .hero-desc {
-    max-width: 52ch;
-    font-size: clamp(1.02rem, 1.25vw, 1.16rem);
-    line-height: 1.65;
-    color: var(--ivory);
-    opacity: 0.85;
+  .title-highlight {
+    color: var(--accent);
+    position: relative;
   }
 
-  .hero-actions {
+  .title-muted {
+    color: var(--ink-muted);
+    font-weight: 600;
+    font-size: 0.8em;
+    margin-top: 4px;
+  }
+
+  .hero-lead {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 58ch;
+    margin-bottom: 36px;
+  }
+
+  .hero-actions-row {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 16px;
-    flex-wrap: wrap;
-    padding-top: 4px;
-  }
-  .btn-hero-primary {
-    gap: 10px;
-    background: linear-gradient(135deg, var(--tan) 0%, #D9B48F 100%);
-    color: var(--ink);
-    padding: 14px 28px;
-    font-size: 15px;
-    font-weight: 600;
-    box-shadow: 0 4px 24px rgba(201, 162, 126, 0.32);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  .btn-hero-primary svg {
-    transition: transform 0.25s ease;
-  }
-  .btn-hero-primary:hover svg {
-    transform: translateX(4px);
   }
 
-  .btn-hero-secondary {
+  .hero-honest-badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(6, 51, 64, 0.6);
-    color: var(--ivory);
-    border: 1px solid rgba(244, 240, 232, 0.2);
-    padding: 14px 24px;
-    font-size: 14.5px;
-    font-weight: 500;
-    border-radius: 999px;
-    backdrop-filter: blur(8px);
-    transition: all 0.25s ease;
-    text-decoration: none;
-  }
-  .btn-hero-secondary:hover {
-    background: rgba(201, 162, 126, 0.12);
-    border-color: var(--tan);
-    color: var(--tan);
-    transform: translateY(-2px);
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-muted);
   }
 
-  /* Operations HUD Right Column */
-  .hero-hud-col {
-    position: relative;
-    width: 100%;
+  .badge-icon {
+    color: var(--accent);
+    font-weight: 700;
   }
-  .operations-hud {
-    background: rgba(4, 34, 43, 0.88);
-    border: 1px solid rgba(201, 162, 126, 0.25);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow:
-      0 12px 40px rgba(0, 0, 0, 0.45),
-      inset 0 0 20px rgba(6, 51, 64, 0.6);
-    backdrop-filter: blur(16px);
+
+  /* Reticle & Focal Logo Piece */
+  .hero-focal-col {
     display: flex;
-    flex-direction: column;
-    position: relative;
+    align-items: center;
+    justify-content: center;
   }
-  .operations-hud::before {
-    content: "";
+
+  .hero-reticle-wrap {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reticle-svg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle 350px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.14), transparent 70%);
+    width: 100%;
+    height: 100%;
     pointer-events: none;
-    z-index: 1;
   }
 
-  .hud-header {
+  .r-outer-ring,
+  .r-mid-ring,
+  .r-inner-ring {
+    fill: none;
+    stroke: var(--border-strong);
+    stroke-width: 1;
+  }
+
+  .r-axis {
+    stroke: var(--grid-strong);
+    stroke-width: 1;
+  }
+
+  .r-tick {
+    stroke: var(--accent);
+    stroke-width: 1.5;
+  }
+
+  .r-bracket {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 1.5;
+    opacity: 0.7;
+  }
+
+  .r-text {
+    font-family: var(--mono);
+    font-size: 8px;
+    fill: var(--ink-muted);
+    letter-spacing: 0.08em;
+  }
+
+  .hero-logo-anchor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  }
+
+  .hero-ghost-watermark {
+    position: absolute;
+    width: 220px;
+    height: auto;
+    opacity: 0.08;
+    pointer-events: none;
+    transform: rotate(-12deg);
+  }
+
+  .hero-dock-mark {
+    position: relative;
+    width: 96px;
+    height: auto;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.08));
+    will-change: transform, opacity;
+  }
+
+  .logo-status-tag {
+    margin-top: 10px;
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    padding: 2px 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  /* LAYER 2: Blueprint Schematic X-Ray */
+  .hero-layer-blueprint {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background-color: #0A0D14;
+    color: #F4F1EA;
+    background-image: 
+      linear-gradient(rgba(0, 229, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 229, 255, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+    /* GSAP scrubs this clip-path to peel back the layer */
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    will-change: clip-path;
+  }
+
+  .blueprint-xray-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .xray-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 18px;
-    background: rgba(6, 51, 64, 0.6);
-    border-bottom: 1px solid rgba(244, 240, 232, 0.08);
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+    font-family: var(--mono);
   }
-  .hud-status {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .hud-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #4ade80;
-    box-shadow: 0 0 8px #4ade80;
-    animation: telePulse 1.8s infinite;
-  }
-  .hud-tag {
-    font-family: monospace;
-    font-size: 11.5px;
+
+  .xray-tag {
+    color: #00E5FF;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.08em;
-    color: var(--tan);
-  }
-  .hud-telemetry-badge {
-    font-family: monospace;
-    font-size: 11px;
-    color: var(--ivory);
-    opacity: 0.8;
   }
 
-  .operations-list {
+  .xray-sub {
+    font-size: 10.5px;
+    color: #8E9BAE;
+  }
+
+  .xray-schematic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .xray-card {
+    border: 1px solid rgba(0, 229, 255, 0.18);
+    background: rgba(16, 21, 32, 0.85);
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    padding: 16px 18px;
-    gap: 10px;
+    justify-content: space-between;
   }
-  .op-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 10px 12px;
-    border-radius: 8px;
-    background: rgba(6, 51, 64, 0.4);
-    border: 1px solid rgba(244, 240, 232, 0.06);
-    transition: background 0.2s ease, border-color 0.2s ease;
+
+  .xray-node-id {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: #00E5FF;
+    margin-bottom: 8px;
+    letter-spacing: 0.06em;
   }
-  .op-item:hover {
-    background: rgba(201, 162, 126, 0.08);
-    border-color: rgba(201, 162, 126, 0.25);
-  }
-  .op-num {
-    font-family: monospace;
-    font-size: 11px;
+
+  .xray-card h4 {
+    font-family: var(--disp);
+    font-size: 16px;
     font-weight: 700;
-    color: var(--tan);
-    background: rgba(201, 162, 126, 0.12);
-    padding: 3px 6px;
-    border-radius: 4px;
-    line-height: 1;
-    margin-top: 2px;
-    flex-shrink: 0;
-  }
-  .op-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .op-title {
-    font-family: var(--body);
-    font-size: 13.5px;
-    font-weight: 600;
-    color: var(--ivory);
-  }
-  .op-desc {
-    font-size: 11.5px;
-    line-height: 1.45;
-    color: var(--ivory);
-    opacity: 0.72;
+    color: #F4F1EA;
+    margin-bottom: 10px;
   }
 
-  /* HUD Footer */
-  .hud-foot {
+  .xray-card p {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #A5B2C5;
+    margin-bottom: 16px;
+  }
+
+  .xray-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .mono-chip {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: #00E5FF;
+    background: rgba(0, 229, 255, 0.08);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    padding: 2px 6px;
+  }
+
+  .xray-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 18px;
-    background: rgba(6, 51, 64, 0.5);
-    border-top: 1px solid rgba(244, 240, 232, 0.08);
-    font-family: monospace;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0, 229, 255, 0.2);
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+
+  .xray-quote {
+    color: #00E5FF;
+    font-style: italic;
+  }
+
+  .xray-stamp {
+    color: #8E9BAE;
     font-size: 10px;
-    color: var(--ivory);
-    opacity: 0.8;
   }
-  .hud-foot-badge {
-    color: var(--tan);
-    font-weight: 600;
-  }
-  /* Metric cards */
-  .hero-metrics {
+
+  /* 4 Bottom Metric Blocks */
+  .hero-metrics-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    margin-top: clamp(8px, 1.5vh, 20px);
+    margin-top: 24px;
   }
-  .metric-card {
-    background: rgba(6, 51, 64, 0.45);
-    border: 1px solid rgba(244, 240, 232, 0.08);
-    border-radius: 14px;
-    padding: 18px 20px;
-    backdrop-filter: blur(12px);
-    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+
+  .metric-block {
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    position: relative;
-    overflow: hidden;
   }
-  .metric-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle 240px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.16), transparent 70%);
-    pointer-events: none;
-  }
-  .metric-card:hover {
-    border-color: rgba(201, 162, 126, 0.4);
-    background: rgba(6, 51, 64, 0.7);
-  }
-  .metric-header {
+
+  .metric-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
-  }
-  .metric-num {
-    font: 700 clamp(1.4rem, 2vw, 1.85rem)/1.1 var(--disp);
-    color: var(--ivory);
-    letter-spacing: -0.02em;
-  }
-  .metric-badge {
-    font-size: 9.5px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    padding: 3px 8px;
-    border-radius: 999px;
-    background: rgba(201, 162, 126, 0.15);
-    color: var(--tan);
-  }
-  .metric-lbl {
-    font-size: 12.5px;
-    line-height: 1.4;
-    color: var(--ivory);
-    opacity: 0.7;
-    display: block;
-  }
-  .metric-bar-wrap {
-    height: 3px;
-    background: rgba(244, 240, 232, 0.08);
-    border-radius: 2px;
-    overflow: hidden;
-    margin-top: 4px;
-  }
-  .metric-bar-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--tan) 0%, #D9B48F 100%);
-    border-radius: 2px;
+    margin-bottom: 14px;
   }
 
-  @media (max-width: 1100px) {
+  .metric-value {
+    font-family: var(--disp);
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .metric-pill {
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--ink-muted);
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    background: var(--surface);
+  }
+
+  .metric-title {
+    font-family: var(--disp);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .metric-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink-muted);
+  }
+
+  @media (max-width: 1024px) {
     .hero-grid {
       grid-template-columns: 1fr;
-      gap: 36px;
     }
-    .hero-metrics {
+    .hero-focal-col {
+      display: none;
+    }
+    .xray-schematic-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-metrics-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 640px) {
-    .hero {
-      padding-top: calc(var(--nav) + 16px);
-      padding-bottom: 40px;
+  @media (max-width: 680px) {
+    .hero-layer {
+      padding: 24px;
     }
-    .hero-badge-row {
+    .hero-spec-strip {
       flex-direction: column;
       align-items: flex-start;
-      gap: 8px;
+      gap: 6px;
     }
-    .hero-title {
-      font-size: clamp(2.4rem, 10vw, 3.4rem);
-    }
-    .hl-line.hl-accent {
-      padding-left: 0;
-    }
-    .hero-actions {
-      flex-direction: column;
-      align-items: stretch;
-    }
-    .hero-actions .btn {
-      width: 100%;
-      justify-content: center;
-    }
-    .hero-metrics {
+    .xray-schematic-grid {
       grid-template-columns: 1fr;
-      gap: 12px;
     }
-    .hud-tabs {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .hud-tab {
-      border-bottom: 1px solid rgba(244, 240, 232, 0.06);
+    .hero-metrics-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>

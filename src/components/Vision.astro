@@ -1,377 +1,530 @@
 ---
+// Wisdom Technosoft — Vision & Values Component
+// CSS Scroll-Driven Logo Ghost Aperture • View-Timeline Editorial Ink-Reveal • Swiss Grid
 ---
 
-<section class="s vision-section" id="vision" style="--bg:var(--deep);--fg:var(--ivory)">
+<section class="vision-section s" id="vision">
+  <!-- Scroll-Driven Architectural Logo Ghost Aperture -->
+  <div class="vision-ghost-aperture" aria-hidden="true">
+    <img src="/assets/logo-ghost.png" alt="" class="ghost-aperture-img" />
+  </div>
+
   <div class="w vision-container">
-    <div class="vision-top">
-      <p class="eyebrow" data-scramble="Vision & Values • Purpose & Direction">Vision &amp; Values &bull; Purpose &amp; Direction</p>
-      <h2 class="vision-headline" data-scramble="Built on trust. Driven by precision.">Built on trust. Driven by precision.</h2>
+    <!-- Header with Architectural Eyebrow -->
+    <div class="vision-header">
+      <div class="eyebrow-row">
+        <span class="eyebrow">VISION &bull; PURPOSE &bull; ETHOS</span>
+        <span class="blueprint-tag">DISCIPLINE OVER HYPE</span>
+      </div>
+      <h2 class="sec-title">
+        Built on trust. <br />
+        <span class="sec-title-accent">Driven by precision.</span>
+      </h2>
+      <p class="sec-subtitle">
+        We reject temporary trends in favor of sustainable software architecture, empathetic voice conversations, and mathematically verifiable data pipelines.
+      </p>
     </div>
 
-    <div class="vision-main-layout">
-      <!-- Left: Interactive 3D Reactor & Crest Emblem -->
-      <div class="vision-emblem-card tilt-card">
-        <div class="emblem-wrapper">
-          <div class="emblem-ambient-glow" aria-hidden="true"></div>
-          <svg class="vision-ring" viewBox="0 0 400 400" aria-hidden="true">
+    <!-- Main Architectural Grid -->
+    <div class="vision-main-grid">
+      
+      <!-- Left: Architectural Seal / Emblem Card -->
+      <div class="vision-emblem-card grid-frame">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="crosshair crosshair-bl"></div>
+        <div class="crosshair crosshair-br"></div>
+
+        <div class="emblem-reticle-box">
+          <svg class="emblem-rotate-ring" viewBox="0 0 320 320" aria-hidden="true">
             <defs>
-              <path id="vrp" d="M200 200m-160 0a160 160 0 1 1 320 0a160 160 0 1 1-320 0"/>
+              <path id="ringPath" d="M160 160m-120 0a120 120 0 1 1 240 0a120 120 0 1 1-240 0" />
             </defs>
-            <text>
-              <textPath href="#vrp">CLARITY &bull; CARE &bull; CONSISTENCY &bull; CLARITY &bull; CARE &bull; CONSISTENCY &bull;&#160;</textPath>
+            <circle cx="160" cy="160" r="145" class="ring-guide" />
+            <circle cx="160" cy="160" r="95" class="ring-guide-inner" />
+            <text class="ring-text">
+              <textPath href="#ringPath">
+                CLARITY IN ARCHITECTURE &bull; CARE IN VOICE &bull; CONSISTENCY IN DATA &bull;&#160;
+              </textPath>
             </text>
           </svg>
-          <div class="emblem-center">
-            <img src="/assets/logo-mark-light.png" alt="Wisdom Technosoft Crest" width="68" height="56" class="emblem-logo">
-            <span class="emblem-year">Est. Nagpur &bull; Global Operations</span>
+
+          <div class="emblem-core">
+            <img src="/assets/logo-mark.png" alt="Wisdom Technosoft Seal" class="emblem-mark emblem-dark" width="60" height="50" />
+            <img src="/assets/logo-mark-light.png" alt="Wisdom Technosoft Seal" class="emblem-mark emblem-light" width="60" height="50" />
+            <span class="emblem-loc">EST. NAGPUR</span>
           </div>
         </div>
-        <div class="emblem-telemetry">
-          <span class="telemetry-chip">99.8% PRECISION</span>
-          <span class="telemetry-chip">24/7 COVERAGE</span>
+
+        <div class="emblem-stats-bar">
+          <div class="e-stat">
+            <span class="e-val">99.8%</span>
+            <span class="e-lbl">VERIFIED SLA</span>
+          </div>
+          <div class="e-sep"></div>
+          <div class="e-stat">
+            <span class="e-val">24/7/365</span>
+            <span class="e-lbl">SHIFT COVERAGE</span>
+          </div>
         </div>
-        <p class="emblem-quote">&ldquo;Simplifying complexity through disciplined execution.&rdquo;</p>
+
+        <p class="emblem-axiom">
+          &ldquo;Simplifying complexity through disciplined engineering execution.&rdquo;
+        </p>
       </div>
 
-      <!-- Right: Vision and Mission statements -->
-      <div class="vision-statements">
-        <div class="statement-card vision-card tilt-card">
-          <div class="card-tag-pill">Our Vision</div>
-          <h3 class="statement-title">
-            To stand among the top business process outsourcing and software development providers globally &mdash; renowned for clarity, care, and consistency.
+      <!-- Right: Manifesto Statements with Progressive Ink-Reveal -->
+      <div class="vision-manifesto-col">
+        
+        <!-- Primary Vision Card -->
+        <div class="manifesto-card grid-frame">
+          <div class="crosshair crosshair-tl"></div>
+          <div class="crosshair crosshair-tr"></div>
+          <div class="manifesto-badge-row">
+            <span class="blueprint-tag active"><span class="tag-dot"></span> OUR VISION</span>
+            <span class="mono-meta">GLOBAL SCALE // HIGH RIGOR</span>
+          </div>
+
+          <h3 class="manifesto-title">
+            <span class="ink-reveal-track">
+              To stand among the top business process outsourcing and software development providers globally &mdash; renowned for clarity, care, and consistency.
+            </span>
           </h3>
-          <p class="statement-desc">
-            We envision a standard of service where technical capability and human dedication merge seamlessly to deliver measurable business advantage for every client we serve.
+
+          <p class="manifesto-body">
+            We envision a standard of service where technical depth and human dedication merge seamlessly. Whether deploying zero-downtime web applications or managing high-volume medical claims, our engineers and specialists take direct ownership of measurable business outcomes.
           </p>
-          <div class="statement-stats-row">
-            <div class="s-stat"><span class="s-stat-num" data-scramble="100%">100%</span><span class="s-stat-lbl">Milestone Reliability</span></div>
-            <div class="s-stat"><span class="s-stat-num" data-scramble="98.7%">98.7%</span><span class="s-stat-lbl">Clean Claims Rate</span></div>
+
+          <div class="manifesto-metrics-row">
+            <div class="m-metric">
+              <span class="m-num">100%</span>
+              <span class="m-txt">Milestone Reliability Target</span>
+            </div>
+            <div class="m-metric">
+              <span class="m-num">98.7%</span>
+              <span class="m-txt">First-Pass Clean Claims Rate</span>
+            </div>
           </div>
         </div>
 
-        <div class="statement-card mission-card tilt-card">
-          <div class="card-tag-pill">Our Mission</div>
-          <p class="mission-text">
-            In an industry where simplifying data and scaling operations are key to modern enterprise success, we provide resourceful software, high-touch voice solutions, and error-free data management &mdash; helping client businesses flourish, because their enduring success boosts our own.
+        <!-- Mission Card -->
+        <div class="mission-card grid-frame">
+          <div class="crosshair crosshair-bl"></div>
+          <div class="crosshair crosshair-br"></div>
+          <div class="manifesto-badge-row">
+            <span class="blueprint-tag">OUR MISSION</span>
+            <span class="mono-meta">OPERATIONAL SYMBIOSIS</span>
+          </div>
+
+          <p class="mission-prose">
+            <span class="ink-reveal-track">
+              In an industry where simplifying data and scaling operations are key to modern enterprise success, we provide resourceful software, high-touch voice solutions, and error-free data management &mdash; helping client businesses flourish, because their enduring success boosts our own.
+            </span>
           </p>
         </div>
+
       </div>
+
     </div>
 
-    <!-- 3 Core Pillars -->
-    <div class="values-grid">
-      <div class="value-item tilt-card">
-        <div class="value-header">
-          <span class="value-dot"></span>
-          <h4 data-scramble="Clarity">Clarity</h4>
+    <!-- 3 Core Pillars: Swiss-Grid Trivariate -->
+    <div class="values-triad">
+      
+      <!-- Pillar 1: Clarity -->
+      <div class="value-card grid-frame scroll-3d-card">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="value-top">
+          <span class="value-num">01 // VALUE</span>
+          <span class="value-status">ENFORCED</span>
         </div>
-        <p>Transparent communication, predictable milestones, documented metrics, and zero ambiguity in deliverables.</p>
-        <span class="value-subtag">Predictable Sprints &bull; Documented SOPs</span>
-      </div>
-      <div class="value-item tilt-card">
-        <div class="value-header">
-          <span class="value-dot"></span>
-          <h4 data-scramble="Care">Care</h4>
+        <h4 class="value-name">Clarity</h4>
+        <p class="value-desc">
+          Transparent communication, predictable milestones, documented metrics, and zero ambiguity in deliverables or codebase schemas.
+        </p>
+        <div class="value-foot">
+          <span class="value-pill">Predictable Sprints</span>
+          <span class="value-pill">Documented SOPs</span>
         </div>
-        <p>Treating every customer conversation, line of code, and medical claim with the dedication of true stakeholders.</p>
-        <span class="value-subtag">Empathy &bull; Active Listening &bull; Precision</span>
       </div>
-      <div class="value-item tilt-card">
-        <div class="value-header">
-          <span class="value-dot"></span>
-          <h4 data-scramble="Consistency">Consistency</h4>
+
+      <!-- Pillar 2: Care -->
+      <div class="value-card grid-frame scroll-3d-card">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="value-top">
+          <span class="value-num">02 // VALUE</span>
+          <span class="value-status">ENFORCED</span>
         </div>
-        <p>Repeatable operational excellence with strict multi-stage quality assurance and 99.8% SLA adherence.</p>
-        <span class="value-subtag">99.8% QA &bull; Automated Audits &bull; 24/7</span>
+        <h4 class="value-name">Care</h4>
+        <p class="value-desc">
+          Treating every customer conversation, line of code, and medical claim with the genuine dedication of invested company stakeholders.
+        </p>
+        <div class="value-foot">
+          <span class="value-pill">Active Listening</span>
+          <span class="value-pill">Defensive Code</span>
+        </div>
       </div>
+
+      <!-- Pillar 3: Consistency -->
+      <div class="value-card grid-frame scroll-3d-card">
+        <div class="crosshair crosshair-tl"></div>
+        <div class="crosshair crosshair-tr"></div>
+        <div class="value-top">
+          <span class="value-num">03 // VALUE</span>
+          <span class="value-status">ENFORCED</span>
+        </div>
+        <h4 class="value-name">Consistency</h4>
+        <p class="value-desc">
+          Repeatable operational excellence with strict multi-stage quality assurance, double-blind checks, and unbroken 99.8% SLA adherence.
+        </p>
+        <div class="value-foot">
+          <span class="value-pill">99.8% Precision</span>
+          <span class="value-pill">24/7 Handover</span>
+        </div>
+      </div>
+
     </div>
+
   </div>
 </section>
 
-<style is:global>
+<style>
   .vision-section {
-    padding-block: clamp(70px, 11vh, 130px);
-    background: var(--deep);
     position: relative;
+    padding-block: clamp(80px, 12vh, 140px);
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--border);
     overflow: hidden;
   }
+
+  /* Scroll-Driven Logo Ghost Aperture */
+  .vision-ghost-aperture {
+    position: absolute;
+    top: 15%;
+    right: -8vw;
+    width: clamp(400px, 45vw, 750px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.08;
+    will-change: transform, opacity;
+  }
+
+  .ghost-aperture-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform-origin: center center;
+  }
+
+  @supports (animation-timeline: scroll(root)) {
+    .ghost-aperture-img {
+      animation: ghost-aperture-spin linear both;
+      animation-timeline: scroll(root);
+    }
+
+    @keyframes ghost-aperture-spin {
+      from {
+        transform: rotate(-30deg) scale(0.9);
+      }
+      to {
+        transform: rotate(50deg) scale(1.3);
+      }
+    }
+  }
+
   .vision-container {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(36px, 6vh, 64px);
     position: relative;
     z-index: 2;
   }
-  .vision-top {
-    max-width: 700px;
-  }
-  .vision-headline {
-    font: 800 clamp(2.2rem, 4.4vw, 3.8rem)/1.08 var(--disp);
-    letter-spacing: -0.03em;
-    color: var(--ivory);
-    margin-top: 10px;
+
+  .vision-header {
+    margin-bottom: 56px;
   }
 
-  .vision-main-layout {
+  .eyebrow-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+
+  .sec-title-accent {
+    color: var(--accent);
+  }
+
+  .vision-main-grid {
     display: grid;
-    grid-template-columns: 400px 1fr;
-    gap: clamp(28px, 4vw, 56px);
-    align-items: stretch;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 32px;
+    margin-bottom: 32px;
   }
 
   /* Left Emblem Card */
   .vision-emblem-card {
-    background: rgba(6, 51, 64, 0.55);
-    border: 1px solid rgba(201, 162, 126, 0.28);
-    border-radius: 20px;
-    padding: clamp(28px, 4vw, 40px);
+    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
-    gap: 20px;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(14px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
   }
-  .vision-emblem-card::before {
-    content: "";
+
+  .emblem-reticle-box {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .emblem-rotate-ring {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle 320px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.16), transparent 70%);
-    pointer-events: none;
-  }
-  .emblem-wrapper {
-    position: relative;
-    width: min(240px, 70vw);
-    aspect-ratio: 1;
-    display: grid;
-    place-items: center;
-  }
-  .emblem-ambient-glow {
-    position: absolute;
-    inset: 10%;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(201, 162, 126, 0.25) 0%, transparent 70%);
-    filter: blur(20px);
-    pointer-events: none;
-  }
-  .vision-ring {
     width: 100%;
     height: 100%;
-    animation: ringSpin 24s linear infinite;
-    transform-origin: 50% 50%;
+    animation: slow-rotate 60s linear infinite;
   }
-  .vision-ring text {
-    fill: var(--tan);
-    font: 700 11.5px/1 var(--body);
-    letter-spacing: 0.18em;
-  }
-  @keyframes ringSpin {
+
+  @keyframes slow-rotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   }
-  .emblem-center {
-    position: absolute;
-    inset: 0;
+
+  .ring-guide,
+  .ring-guide-inner {
+    fill: none;
+    stroke: var(--border-strong);
+    stroke-width: 1;
+  }
+
+  .ring-text {
+    font-family: var(--mono);
+    font-size: 8.5px;
+    fill: var(--ink-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .emblem-core {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 6px;
   }
-  .emblem-logo {
-    transition: transform 0.3s ease;
+
+  .emblem-mark {
+    width: 54px;
+    height: auto;
   }
-  .vision-emblem-card:hover .emblem-logo {
-    transform: scale(1.1) rotate(6deg);
-  }
-  .emblem-year {
-    font-size: 11px;
-    text-transform: uppercase;
+  .emblem-light { display: none; }
+  .emblem-dark { display: block; }
+  [data-theme="blueprint"] .emblem-light,
+  .theme-blueprint .emblem-light { display: block; }
+  [data-theme="blueprint"] .emblem-dark,
+  .theme-blueprint .emblem-dark { display: none; }
+
+  .emblem-loc {
+    font-family: var(--mono);
+    font-size: 9px;
     letter-spacing: 0.08em;
-    color: var(--tan);
-    font-weight: 600;
-  }
-  .emblem-telemetry {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .telemetry-chip {
-    font-family: monospace;
-    font-size: 10px;
+    color: var(--accent);
     font-weight: 700;
-    padding: 3px 8px;
-    border-radius: 999px;
-    background: rgba(201, 162, 126, 0.12);
-    border: 1px solid rgba(201, 162, 126, 0.25);
-    color: var(--tan);
-  }
-  .emblem-quote {
-    font: italic 500 1.05rem/1.5 var(--body);
-    color: var(--ivory);
-    opacity: 0.88;
-    max-width: 28ch;
   }
 
-  /* Right Statements */
-  .vision-statements {
+  .emblem-stats-bar {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 20px;
+    padding: 12px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
   }
-  .statement-card {
-    background: rgba(6, 51, 64, 0.5);
-    border: 1px solid rgba(244, 240, 232, 0.1);
-    border-radius: 20px;
-    padding: clamp(28px, 4vw, 40px);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(14px);
-    transition: border-color 0.3s ease, background 0.3s ease;
-  }
-  .statement-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle 350px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.16), transparent 70%);
-    pointer-events: none;
-  }
-  .statement-card:hover {
-    border-color: rgba(201, 162, 126, 0.35);
-    background: rgba(6, 51, 64, 0.7);
-  }
-  .card-tag-pill {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 999px;
-    background: rgba(201, 162, 126, 0.15);
-    border: 1px solid rgba(201, 162, 126, 0.3);
-    color: var(--tan);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    width: fit-content;
-  }
-  .statement-title {
-    font: 700 clamp(1.4rem, 2.2vw, 1.9rem)/1.22 var(--disp);
-    color: var(--ivory);
-    letter-spacing: -0.02em;
-  }
-  .statement-desc {
-    font-size: 1rem;
-    line-height: 1.65;
-    color: var(--ivory);
-    opacity: 0.8;
-  }
-  .statement-stats-row {
-    display: flex;
-    gap: 24px;
-    padding-top: 12px;
-    border-top: 1px dashed rgba(244, 240, 232, 0.1);
-    margin-top: 4px;
-  }
-  .s-stat {
+
+  .e-stat {
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
-  .s-stat-num {
-    font: 700 1.4rem/1 var(--disp);
-    color: var(--tan);
-  }
-  .s-stat-lbl {
-    font-size: 11.5px;
-    color: var(--slate);
-  }
-  .mission-text {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: var(--ivory);
-    opacity: 0.88;
+
+  .e-val {
+    font-family: var(--mono);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
   }
 
-  /* 3 Values */
-  .values-grid {
+  .e-lbl {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--ink-muted);
+    letter-spacing: 0.06em;
+  }
+
+  .e-sep {
+    width: 1px;
+    height: 24px;
+    background: var(--border-strong);
+  }
+
+  .emblem-axiom {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+
+  /* Right Manifesto Col */
+  .vision-manifesto-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .manifesto-card,
+  .mission-card {
+    padding: 36px;
+  }
+
+  .manifesto-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .mono-meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-muted);
+    letter-spacing: 0.06em;
+  }
+
+  .manifesto-title {
+    font-family: var(--disp);
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+
+  .manifesto-body {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    margin-bottom: 28px;
+  }
+
+  .manifesto-metrics-row {
+    display: flex;
+    gap: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .m-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .m-num {
+    font-family: var(--mono);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .m-txt {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .mission-prose {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+
+  /* Values Triad */
+  .values-triad {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  .value-item {
-    background: rgba(4, 34, 43, 0.7);
-    border: 1px solid rgba(244, 240, 232, 0.08);
-    border-radius: 16px;
-    padding: clamp(20px, 2.8vw, 28px);
+
+  .value-card {
+    padding: 28px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    backdrop-filter: blur(12px);
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    justify-content: space-between;
   }
-  .value-item::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle 240px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(201, 162, 126, 0.15), transparent 70%);
-    pointer-events: none;
-  }
-  .value-item:hover {
-    border-color: rgba(201, 162, 126, 0.35);
-    transform: translateY(-3px);
-  }
-  .value-header {
+
+  .value-top {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-family: var(--mono);
+    font-size: 10px;
   }
-  .value-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--tan);
-    box-shadow: 0 0 10px var(--tan);
+
+  .value-num {
+    color: var(--accent);
+    font-weight: 700;
   }
-  .value-header h4 {
-    font: 700 clamp(1.2rem, 1.6vw, 1.45rem)/1.2 var(--disp);
-    color: var(--ivory);
-    letter-spacing: -0.01em;
+
+  .value-status {
+    color: var(--ink-muted);
+    border: 1px solid var(--border);
+    padding: 1px 5px;
+    background: var(--surface);
   }
-  .value-item p {
-    font-size: 0.94rem;
+
+  .value-name {
+    font-family: var(--disp);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .value-desc {
+    font-size: 14px;
     line-height: 1.6;
-    color: var(--ivory);
-    opacity: 0.8;
-  }
-  .value-subtag {
-    font-family: monospace;
-    font-size: 10.5px;
-    color: var(--tan);
-    opacity: 0.85;
-    margin-top: auto;
+    color: var(--ink-muted);
+    margin-bottom: 20px;
   }
 
-  @media (max-width: 1024px) {
-    .vision-main-layout {
-      grid-template-columns: 1fr;
-    }
-    .values-grid {
-      grid-template-columns: 1fr;
-    }
+  .value-foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .vision-ring {
-      animation: none !important;
+  .value-pill {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+  }
+
+  @media (max-width: 960px) {
+    .vision-main-grid {
+      grid-template-columns: 1fr;
+    }
+    .values-triad {
+      grid-template-columns: 1fr;
     }
   }
 </style>
