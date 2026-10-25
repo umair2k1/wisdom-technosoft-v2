@@ -43,7 +43,7 @@
     { id: "strip",    n: "At a glance",      x: 0,  y: 0,  s: 0.6,  o: 0,   sp: 0,  c: "#C9A27E" },
     { id: "vision",   n: "Vision",        x: 0,  y: 0,  s: 0.5,  o: 1,   sp: 0.7, c: "#C9A27E" },
     { id: "team",     n: "Team",          x: -36, y: 24, s: 0.35, o: 0.5, sp: 0.3, c: "#6E8FA8" },
-    { id: "contact",  n: "Contact",       x: -29, y: 20, s: 0.62, o: 1,   sp: 0,  c: "#C9A27E" }
+    { id: "contact",  n: "Contact",       x: -29, y: 20, s: 0.62, o: 0.12, sp: 0,  c: "#C9A27E" }
   ];
   var PC = ["#7FB0D0", "#D9B48F", "#8FD1B5", "#C9A27E", "#A8C0D8"];
   var PANEL_NAMES = ["Software", "Telecalling", "Data", "Business process", "Healthcare"];
@@ -113,7 +113,7 @@
     var p = clamp((y - tops[1]) / Math.max(1, sv.offsetHeight - H));
     var f = p * (panels.length - 1);
 
-    chap.style.opacity = y > introDist ? 1 : 0;
+    chap.style.opacity = (y > introDist && activeChapter !== 6) ? 1 : 0;
     if (y <= introDist) {
       activeChapter = 0;
       var t = sm(clamp(y / introDist));
@@ -202,6 +202,7 @@
         chap.textContent = lastChap;
       }
     }
+    chap.style.opacity = (y > introDist && activeChapter !== 6) ? 1 : 0;
 
     var dy = target - lastT;
     lastT = target;
